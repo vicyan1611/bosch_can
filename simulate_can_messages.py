@@ -1,14 +1,15 @@
-# simulate_can_messages.py
-
 import pandas as pd
 import can
 import cantools
 import time
 from typing import Literal
 from ecu_simulator import *
+import os
+from pathlib import Path
 
 # --- Configuration ---
-CSV_FILE_PATH = 'scoring/driving_simulation_data.csv'  # Make sure this matches your CSV file name
+BASE_DIR = Path(__file__).resolve().parent
+CSV_FILE_PATH = BASE_DIR / 'scoring' / 'driving_simulation_data.csv' # Make sure this matches your CSV file name
 DBC_FILE_PATH = 'BOSCH_CAN.dbc'     # Replace with the actual path to your DBC file
 BUS_TYPE = 'socketcan'                  # 'virtual', 'socketcan', 'pcan', etc.
 CHANNEL = 'vcan0'                     # 'vcan0' for virtual, or specify your CAN interface
@@ -64,7 +65,7 @@ def simulate_can_traffic(csv_file: str, dbc_file: str, bus_type: str, channel: s
                 time.sleep(time_difference)
         previous_timestamp = current_time
 
-        alive_counter = (alive_counter + 1) % 16 # Typically 4-bit counter (0-15)
+        alive_counter = (alive_counter + 1) % 4 # Typically 2-bit counter (due to data in file BOSCH_CAN)
 
         print(f"--- Time: {current_time:.2f}s ---")
 

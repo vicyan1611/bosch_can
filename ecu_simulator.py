@@ -1,5 +1,3 @@
-# ecu_simulator.py
-
 import can
 import cantools
 from typing import Literal
@@ -188,7 +186,7 @@ def create_vsa_1a4_message(
     vsa_tcs_act: bool = False,
     abs_ebd_act: bool = False,
     vsa_fail_mc_pressure_sensor: bool = False,
-    vsa_inhibit_mc_pressure_sensor: bool = False,
+    vsa_inhbit_mc_pressure_sensor: bool = False, 
     vsa_ess_act2: bool = False,
     vsa_ess_act1: bool = False,
     vsa_master_cylinder_pressure: float = 0.0,
@@ -218,12 +216,11 @@ def create_vsa_1a4_message(
 ) -> can.Message:
     """
     Encodes the VSA_1A4 CAN message with various VSA/ABS status and activation flags.
-    Includes VSA_VSA_TCS_ACT and VSA_ABS_EBD_ACT.
     """
     message_def = db.get_message_by_name('VSA_1A4')
     data_to_encode = {
         'VSA_FAIL_MC_PRESSURE_SENSOR': 1 if vsa_fail_mc_pressure_sensor else 0,
-        'VSA_INHIBIT_MC_PRESSURE_SENSOR': 1 if vsa_inhibit_mc_pressure_sensor else 0,
+        'VSA_INHBIT_MC_PRESSURE_SENSOR': 1 if vsa_inhbit_mc_pressure_sensor else 0,
         'VSA_ESS_ACT2': 1 if vsa_ess_act2 else 0,
         'VSA_ESS_ACT1': 1 if vsa_ess_act1 else 0,
         'VSA_MASTER_CYLINDER_PRESSURE': vsa_master_cylinder_pressure,
@@ -250,7 +247,7 @@ def create_vsa_1a4_message(
         'VSA_HSA_STATUS_ACT': 1 if vsa_hsa_status_act else 0,
         'VSA_ESS_ACT4': 1 if vsa_ess_act4 else 0,
         'VSA_ESS_ACT3': 1 if vsa_ess_act3 else 0,
-        'VSA_CHECKSU M_1A4': 0, # Assuming this is VSA_CHECKSUM_1A4
+        'VSA_CHECKSUM_1A4': 0,
         'VSA_ALIVE_COUNTER_1A4': alive_counter,
         'VSA_ABS_CTRL': 1 if vsa_abs_ctrl else 0,
         'VSA_VSA_CTRL': 1 if vsa_vsa_ctrl else 0,
