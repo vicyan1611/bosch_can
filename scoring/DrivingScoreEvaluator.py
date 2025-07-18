@@ -3,7 +3,7 @@ import time # For simulation of timestamps
 from CircularBuffer import CircularBuffer
 
 class DrivingScoreEvaluator:
-    def __init__(self, config=None, log_file_path='driving_events_log.txt'):
+    def __init__(self, config=None, log_file_path='Simulating/logs/driving_events_log.txt'):
         # --- Configuration (Tunable Parameters) ---
         self.config = {
             # Window Durations (seconds)
@@ -131,7 +131,10 @@ class DrivingScoreEvaluator:
         if not values:
             return 0.0
         return sum(values) / len(values)
-
+    
+    def _send_event_notification(self, timestamp, eco_score, safety_score, reminder):
+        
+        return 0
     def process_can_data(self, new_can_data_packet):
         current_timestamp = new_can_data_packet.timestamp
 
