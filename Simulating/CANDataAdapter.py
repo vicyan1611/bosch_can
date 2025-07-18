@@ -1,15 +1,21 @@
 from scoring.CANDataPackage import CANDataPackage
+from cantools.database.namedsignalvalue import NamedSignalValue
 
 class CANDataAdapter:
-    def __init__(self, can_data):
-        self.can_data = can_data
+    def __init__(self):
+        self.data_package = CANDataPackage(0)
 
-    def msg_to_package(self, decoded_data):
+    def msg_to_package(self, timestamp, decoded_data):
         """
         Convert a CAN message to a CANDataPackage.
         :param decoded_data: A decoded object.
         :return: A CANDataPackage object.
         """
-        timestamp = decoded_data['timestamp']
-        data = {k: v for k, v in decoded_data.items() if k != 'timestamp'}
-        return CANDataPackage(timestamp, **data)
+        normalized_data = {
+            k: v.value if isinstance(v, NamedSignalValue) else v
+            for k, v in decoded_data.items()
+        }
+        self.data_package.update(timestamp, **normalized_data)
+
+    def get_data_package(self):
+        return self.data_package

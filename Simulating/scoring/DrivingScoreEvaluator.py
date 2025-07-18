@@ -1,9 +1,9 @@
 import math
 import time # For simulation of timestamps
-from CircularBuffer import CircularBuffer
+from scoring.CircularBuffer import CircularBuffer
 
 class DrivingScoreEvaluator:
-    def __init__(self, config=None, log_file_path='Simulating/logs/driving_events_log.txt'):
+    def __init__(self, config=None, log_file_path='driving_events_log.txt'):
         # --- Configuration (Tunable Parameters) ---
         self.config = {
             # Window Durations (seconds)
@@ -97,6 +97,9 @@ class DrivingScoreEvaluator:
         self.last_jerky_steering_event_time = 0.0
         self.last_vsa_abs_act_event_time = 0.0
 
+        self.safety_score = 100
+        self.eco_score = 100
+        
         # --- Logging Setup ---
         self.log_file_path = log_file_path
         self.log_file = open(self.log_file_path, 'w') # 'w' will overwrite, 'a' will append
@@ -125,16 +128,16 @@ class DrivingScoreEvaluator:
         if len(values) < 2:
             return 0.0
         mean = sum(values)/len(values)
-        return math.sqrt(sum((x - mean)**2 for x in values) / (len(values) -1) if len(values) > 1 else len(values)) # Use N-1 for sample std dev
+        return math.sqrt(sum((x - mean)**2 for x in values) / (len(values) -1))
 
     def _calculate_average(self, values):
         if not values:
             return 0.0
         return sum(values) / len(values)
-    
-    def _send_event_notification(self, timestamp, eco_score, safety_score, reminder):
-        
-        return 0
+
+    def _send_event(self, safety_score, eco_score, feedback):
+        return
+
     def process_can_data(self, new_can_data_packet):
         current_timestamp = new_can_data_packet.timestamp
 
@@ -153,7 +156,8 @@ class DrivingScoreEvaluator:
         if (current_timestamp - self.last_safety_score_calc_time >= self.config['SAFETY_CALC_INTERVAL_SEC']):
             safety_score = self._calculate_safety_score(current_timestamp)
             self.last_safety_score_calc_time = current_timestamp
-            
+        self.safety_score = safety_score
+        self.eco_score = eco_score
         return eco_score, safety_score
 
     def _update_window_buffers(self, packet, current_timestamp):
@@ -166,6 +170,7 @@ class DrivingScoreEvaluator:
         self.eco_buffers['is_progress'].add((current_timestamp, packet.ENG_IS_PROGRESS))
 
         self.safety_buffers['lon_g'].add((current_timestamp, packet.VSA_LON_G))
+        print("VSA_LON_G", type(packet.VSA_LON_G))
         self.safety_buffers['lat_g'].add((current_timestamp, packet.VSA_LAT_G))
         self.safety_buffers['yaw'].add((current_timestamp, packet.VSA_YAW_1))
         self.safety_buffers['steering_angle'].add((current_timestamp, packet.STR_ANGLE))
@@ -183,7 +188,7 @@ class DrivingScoreEvaluator:
             buffer.trim_older_than(oldest_safety_ts)
 
     def _calculate_eco_score(self, current_timestamp):
-        # Retrieve current window data
+        # --- ECO SCORE USES PRIMITIVE TYPES - NO .value NEEDED ---
         trq_req_data = self.eco_buffers['trq_req'].get_all_items()
         pedal_pos_data = self.eco_buffers['pedal_pos'].get_all_items()
         speed_data = self.eco_buffers['speed'].get_all_items()
@@ -217,7 +222,9 @@ class DrivingScoreEvaluator:
 
         JT = self._calculate_std_dev(trq_req_deltas)
         JP = self._calculate_std_dev(pedal_pos_deltas)
-        VS = self._calculate_std_dev(self.eco_buffers['speed'].get_values_only())
+        
+        speed_values = [d[1] for d in speed_data]
+        VS = self._calculate_std_dev(speed_values)
 
         E_agg = 0
         aggressive_accel_detected = False
@@ -241,11 +248,11 @@ class DrivingScoreEvaluator:
 
         if aggressive_accel_detected:
             self._log_message(f"ECO: Aggressive Accel/Decel event detected (E_agg count: {E_agg})", current_timestamp)
-        if JT > 0.5: # Example threshold for high jerk, adjust as needed
+        if JT > 0.5:
              self._log_message(f"ECO: High Torque Request Jerk (JT: {JT:.2f})", current_timestamp)
-        if JP > 0.5: # Example threshold for high jerk, adjust as needed
+        if JP > 0.5:
              self._log_message(f"ECO: High Pedal Position Jerk (JP: {JP:.2f})", current_timestamp)
-        if VS > 5.0: # Example threshold for high speed variation
+        if VS > 5.0:
              self._log_message(f"ECO: High Speed Variation (VS: {VS:.2f})", current_timestamp)
 
         return S_accel
@@ -279,10 +286,12 @@ class DrivingScoreEvaluator:
         S_rpm = (self.config['w5_rpm'] * score_R_ratio +
                  self.config['w6_rpm'] * score_D_high_rpm) * 100
         
-        if D_high_rpm_proportion > 0.05: # If more than 5% of time is high RPM
+        if D_high_rpm_proportion > 0.05:
             self._log_message(f"ECO: Inefficient High RPM driving detected (Proportion: {D_high_rpm_proportion:.2f})", current_timestamp)
-        if R_ratio > 40: # Example threshold for high RPM/speed ratio
-             self._log_message(f"ECO: High RPM/Speed Ratio (R_ratio: {R_ratio:.2f})", current_timestamp)
+            self._send_event(self.safety_score, self.eco_score, "Inefficient High RPM driving detected")
+        if R_ratio > 40:
+            self._log_message(f"ECO: High RPM/Speed Ratio (R_ratio: {R_ratio:.2f})", current_timestamp)
+            self._send_event(self.safety_score, self.eco_score, "Inefficient High RPM driving detected")
 
         return S_rpm
 
@@ -290,12 +299,10 @@ class DrivingScoreEvaluator:
         T_idle = 0.0
         N_is_active = 0
         
-        # Track idle-stop activations
         for i in range(1, len(is_progress_data)):
             if is_progress_data[i][1] == True and is_progress_data[i-1][1] == False:
                 N_is_active += 1
 
-        # Calculate idle time
         total_duration_in_window = 0.0
         min_len = min(len(speed_data), len(rpm_data))
         for i in range(1, min_len):
@@ -316,21 +323,19 @@ class DrivingScoreEvaluator:
         S_idle = (self.config['w7_idle'] * score_T_idle +
                   self.config['w8_idle'] * score_IS) * 100
         
-        if T_idle_proportion > 0.1: # If more than 10% of window is inefficient idling
+        if T_idle_proportion > 0.1:
             self._log_message(f"ECO: Inefficient Idling detected (Proportion: {T_idle_proportion:.2f})", current_timestamp)
-        # We can also log if idle-stop was *not* active during a stop, but that requires more state logic.
-        # For now, just logging N_is_active provides insight.
+            self._send_event(self.safety_score, self.eco_score, 'Inefficient Idling detected')
         if N_is_active > 0:
             self._log_message(f"ECO: Idle-Stop activated (Count: {N_is_active})", current_timestamp)
 
         return S_idle
 
     def _calculate_safety_score(self, current_timestamp):
-        # Reset penalty sum if a new safety window period has started
+        # --- SAFETY SCORE USES A MIX OF TYPES ---
         if (current_timestamp - self.last_safety_window_reset_time >= self.config['SAFETY_WINDOW_DURATION_SEC']):
             self.current_safety_window_penalty_sum = 0.0
             self.last_safety_window_reset_time = current_timestamp
-            # Also reset event cooldowns for a new clean window
             self.last_hard_accel_event_time = 0.0
             self.last_hard_brake_event_time = 0.0
             self.last_aggressive_corner_event_time = 0.0
@@ -338,8 +343,6 @@ class DrivingScoreEvaluator:
             self.last_vsa_abs_act_event_time = 0.0
             self._log_message(f"Safety Window Reset. New window started.", current_timestamp)
 
-
-        # Get the most recent data point for immediate event checks
         last_lon_g_data = self.safety_buffers['lon_g'].get_last_value()
         last_lat_g_data = self.safety_buffers['lat_g'].get_last_value()
         last_yaw_data = self.safety_buffers['yaw'].get_last_value()
@@ -348,14 +351,9 @@ class DrivingScoreEvaluator:
         last_vsa_tcs_act_data = self.safety_buffers['vsa_tcs_act'].get_last_value()
         last_abs_ebd_act_data = self.safety_buffers['abs_ebd_act'].get_last_value()
 
-        # Only proceed if we have enough data in the buffers
         if not all([last_lon_g_data, last_lat_g_data, last_yaw_data, last_steering_angle_data, last_speed_data]):
-            return 100.0 # Return a perfect score if no data to evaluate unsafe acts
+            return 100.0
 
-        # Get relevant recent history for rate-of-change or duration checks
-        # These are used within the detect functions, no need to pass them explicitly here if functions fetch from self.buffers
-        
-        # Detect events and accumulate penalties
         self.current_safety_window_penalty_sum += \
             self._detect_hard_long_g_event(last_lon_g_data, current_timestamp)
 
@@ -368,22 +366,22 @@ class DrivingScoreEvaluator:
         self.current_safety_window_penalty_sum += \
             self._detect_system_intervention_event(last_vsa_tcs_act_data, last_abs_ebd_act_data, current_timestamp)
 
-        # Overall Safety Score
         score_safety = max(0, 100 - self.current_safety_window_penalty_sum)
         return score_safety
 
     def _detect_hard_long_g_event(self, current_lon_g_data, current_timestamp):
         penalty = 0.0
-        current_g = current_lon_g_data[1]
+        # CORRECTED: Use .value for this complex signal
+        print(type(current_lon_g_data))
+        current_g = float(current_lon_g_data[1])
         
-        # We need recent speed to ensure the vehicle is moving for G-force events
         recent_speed_history = self.safety_buffers['speed_safety'].get_all_items()
+        # CORRECTED: Do NOT use .value for this primitive signal
         current_speed = recent_speed_history[-1][1] if recent_speed_history else 0.0
         
-        if current_speed < self.config['MIN_DRIVING_SPEED_FOR_IDLE']: # Don't penalize G-force if vehicle is stopped
+        if current_speed < self.config['MIN_DRIVING_SPEED_FOR_IDLE']:
             return 0.0
 
-        # Check for hard acceleration
         if current_g > self.config['G_ACCEL_THRESHOLD_STATIC'] and \
            (current_timestamp - self.last_hard_accel_event_time >= self.config['EVENT_COOLDOWN_SEC']):
             if self.config['G_MAX_EXPECTED_ACCEL'] > 0:
@@ -392,9 +390,9 @@ class DrivingScoreEvaluator:
                     new_penalty = self.config['C_LonG'] * (penalty_factor ** self.config['ALPHA_LON_G'])
                     penalty += new_penalty
                     self._log_message(f"SAFETY: Hard Accel detected! G={current_g:.2f}, Penalty={new_penalty:.2f}", current_timestamp)
+                    self._send_event(self.safety_score, self.eco_score, "Hard Accelleration detected")
             self.last_hard_accel_event_time = current_timestamp
 
-        # Check for hard braking
         if current_g < -self.config['G_BRAKE_THRESHOLD_STATIC'] and \
            (current_timestamp - self.last_hard_brake_event_time >= self.config['EVENT_COOLDOWN_SEC']):
             if self.config['G_MAX_EXPECTED_BRAKE'] > 0:
@@ -403,46 +401,47 @@ class DrivingScoreEvaluator:
                     new_penalty = self.config['C_LonG'] * (penalty_factor ** self.config['ALPHA_LON_G'])
                     penalty += new_penalty
                     self._log_message(f"SAFETY: Hard Brake detected! G={current_g:.2f}, Penalty={new_penalty:.2f}", current_timestamp)
+                    self._send_event(self.safety_score, self.eco_score, "Hard Brake detected")
+
             self.last_hard_brake_event_time = current_timestamp
 
         return penalty
 
     def _detect_aggressive_cornering_event(self, current_lat_g_data, current_yaw_data, current_timestamp):
         penalty = 0.0
-        current_lat_g = current_lat_g_data[1]
-        current_yaw = current_yaw_data[1]
+        # CORRECTED: Use .value for these complex signals
+        current_lat_g = float(current_lat_g_data[1])
+        current_yaw = float(current_yaw_data[1])
         
         recent_speed_history = self.safety_buffers['speed_safety'].get_all_items()
+        # CORRECTED: Do NOT use .value for this primitive signal
         current_speed = recent_speed_history[-1][1] if recent_speed_history else 0.0
 
-        if current_speed < self.config['MIN_DRIVING_SPEED_FOR_IDLE']: # Don't penalize cornering if vehicle is stopped
+        if current_speed < self.config['MIN_DRIVING_SPEED_FOR_IDLE']:
             return 0.0
 
-        # Determine speed-dependent thresholds (linear interpolation)
-        speed_ratio = max(0, min(1, (current_speed - 0) / (100 - 0))) # Normalize speed to 0-1 for interpolation
+        speed_ratio = max(0, min(1, (current_speed - 0) / (100 - 0)))
         lat_g_threshold = self.config['LAT_G_THRESHOLD_DYNAMIC_LOW_SPEED'] + \
                               (self.config['LAT_G_THRESHOLD_DYNAMIC_HIGH_SPEED'] - self.config['LAT_G_THRESHOLD_DYNAMIC_LOW_SPEED']) * speed_ratio
         yaw_threshold = self.config['YAW_THRESHOLD_DYNAMIC_LOW_SPEED'] + \
                         (self.config['YAW_THRESHOLD_DYNAMIC_HIGH_SPEED'] - self.config['YAW_THRESHOLD_DYNAMIC_LOW_SPEED']) * speed_ratio
             
-        # Ensure thresholds are within reasonable bounds
         lat_g_threshold = max(0.5, min(self.config['MAX_LAT_G'], lat_g_threshold))
         yaw_threshold = max(5, min(self.config['MAX_YAW_RATE'], yaw_threshold))
-
 
         if (abs(current_lat_g) > lat_g_threshold or abs(current_yaw) > yaw_threshold) and \
            (current_timestamp - self.last_aggressive_corner_event_time >= self.config['EVENT_COOLDOWN_SEC']):
 
-            # Calculate severity factor
             severity_lat_g = max(0, (abs(current_lat_g) - lat_g_threshold) / (self.config['MAX_LAT_G'] - lat_g_threshold)) if (self.config['MAX_LAT_G'] - lat_g_threshold) > 0 else 0
             severity_yaw = max(0, (abs(current_yaw) - yaw_threshold) / (self.config['MAX_YAW_RATE'] - yaw_threshold)) if (self.config['MAX_YAW_RATE'] - yaw_threshold) > 0 else 0
-
-            severity_factor = max(severity_lat_g, severity_yaw) # Or average, or weighted sum
+            severity_factor = max(severity_lat_g, severity_yaw)
 
             if severity_factor > 0:
                 new_penalty = self.config['C_LatG_Yaw'] * (severity_factor ** self.config['BETA_LAT_G_YAW'])
                 penalty += new_penalty
                 self._log_message(f"SAFETY: Aggressive Cornering detected! LatG={current_lat_g:.2f}, Yaw={current_yaw:.2f}, Penalty={new_penalty:.2f}", current_timestamp)
+                self._send_event(self.safety_score, self.eco_score, "Aggressive Cornering detected")
+
                 self.last_aggressive_corner_event_time = current_timestamp
 
         return penalty
@@ -451,16 +450,19 @@ class DrivingScoreEvaluator:
         penalty = 0.0
         recent_steering_history = self.safety_buffers['steering_angle'].get_all_items()
 
-        # Need at least two points to calculate rate of change accurately
         if len(recent_steering_history) < 2:
             return 0.0
 
-        angle_prev_ts, angle_prev = recent_steering_history[-2]
-        angle_curr_ts, angle_curr = recent_steering_history[-1]
+        angle_prev_ts, angle_prev_val = recent_steering_history[-2]
+        angle_curr_ts, angle_curr_val = recent_steering_history[-1]
+        
+        # CORRECTED: Use .value for these complex signals
+        angle_prev = float(angle_prev_val)
+        angle_curr = float(angle_curr_val)
 
         delta_t = angle_curr_ts - angle_prev_ts
         if delta_t > 0:
-            steering_rate = abs((angle_curr - angle_prev) / delta_t) # degrees per second
+            steering_rate = abs((angle_curr - angle_prev) / delta_t)
 
             if steering_rate > self.config['STEERING_RATE_THRESHOLD'] and \
                (current_timestamp - self.last_jerky_steering_event_time >= self.config['EVENT_COOLDOWN_SEC']):
@@ -471,6 +473,8 @@ class DrivingScoreEvaluator:
                     new_penalty = self.config['C_Steering'] * (penalty_factor ** self.config['GAMMA_STEERING'])
                     penalty += new_penalty
                     self._log_message(f"SAFETY: Jerky Steering detected! Rate={steering_rate:.2f} deg/s, Penalty={new_penalty:.2f}", current_timestamp)
+                    self._send_event(self.safety_score, self.eco_score, "Jerky Steering detected")
+
                 self.last_jerky_steering_event_time = current_timestamp
 
         return penalty
@@ -478,20 +482,24 @@ class DrivingScoreEvaluator:
     def _detect_system_intervention_event(self, current_vsa_tcs_act_data, current_abs_ebd_act_data, current_timestamp):
         penalty = 0.0
         
-        # Check for VSA/TCS activation
+        # CORRECTED: Use .value for these complex signals
         if current_vsa_tcs_act_data and current_vsa_tcs_act_data[1] == True and \
            (current_timestamp - self.last_vsa_abs_act_event_time >= self.config['EVENT_COOLDOWN_SEC']):
             new_penalty = self.config['C_Intervention']
             penalty += new_penalty
             self._log_message(f"SAFETY: VSA/TCS Activation detected! Penalty={new_penalty:.2f}", current_timestamp)
-            self.last_vsa_abs_act_event_time = current_timestamp # Update cooldown
+            self._send_event(self.safety_score, self.eco_score, "JVSA/TCS Activation detected")
 
-        # Check for ABS/EBD activation
+            self.last_vsa_abs_act_event_time = current_timestamp
+
+        # CORRECTED: Use .value for these complex signals
         if current_abs_ebd_act_data and current_abs_ebd_act_data[1] == True and \
            (current_timestamp - self.last_vsa_abs_act_event_time >= self.config['EVENT_COOLDOWN_SEC']):
             new_penalty = self.config['C_Intervention']
             penalty += new_penalty
             self._log_message(f"SAFETY: ABS/EBD Activation detected! Penalty={new_penalty:.2f}", current_timestamp)
+            self._send_event(self.safety_score, self.eco_score, "JVSA/TCS Activation detected")
+
             self.last_vsa_abs_act_event_time = current_timestamp
 
         return penalty
