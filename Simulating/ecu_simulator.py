@@ -1,3 +1,5 @@
+# ecu_simulator.py
+
 import can
 import cantools
 from typing import Literal
@@ -180,13 +182,18 @@ def create_vsa_255_message(
     encoded_payload = message_def.encode(data_to_encode)
     return can.Message(arbitration_id=message_def.frame_id, data=encoded_payload)
 
+# Trong file ecu_simulator.py
+
+# ... (các hàm khác giữ nguyên) ...
+
 def create_vsa_1a4_message(
     db: cantools.db.Database,
     alive_counter: int,
     vsa_tcs_act: bool = False,
     abs_ebd_act: bool = False,
     vsa_fail_mc_pressure_sensor: bool = False,
-    vsa_inhbit_mc_pressure_sensor: bool = False, 
+    # SỬA LỖI CHÍNH TẢ Ở ĐÂY:
+    vsa_inhbit_mc_pressure_sensor: bool = False, # Đã đổi tên tham số cho đúng
     vsa_ess_act2: bool = False,
     vsa_ess_act1: bool = False,
     vsa_master_cylinder_pressure: float = 0.0,
@@ -247,7 +254,7 @@ def create_vsa_1a4_message(
         'VSA_HSA_STATUS_ACT': 1 if vsa_hsa_status_act else 0,
         'VSA_ESS_ACT4': 1 if vsa_ess_act4 else 0,
         'VSA_ESS_ACT3': 1 if vsa_ess_act3 else 0,
-        'VSA_CHECKSUM_1A4': 0,
+        'VSA_CHECKSUM_1A4': 0, 
         'VSA_ALIVE_COUNTER_1A4': alive_counter,
         'VSA_ABS_CTRL': 1 if vsa_abs_ctrl else 0,
         'VSA_VSA_CTRL': 1 if vsa_vsa_ctrl else 0,

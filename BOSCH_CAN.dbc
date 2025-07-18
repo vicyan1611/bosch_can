@@ -35,117 +35,117 @@ BS_:
 
 BU_: ACC SRS SMART NAVI AHU FCM EPS HDS SS30 METER CVT STR ENG ABS VSA
 VAL_TABLE_ VSA_DTC_STORAGE_STATUS 1 "DTC Stored(History or Current)" 0 "DTC Not Stored" ;
-VAL_TABLE_ VSA_ABS_DISABLE_EDR 1 "ABSŒÌá’†" ;
-VAL_TABLE_ VSA_STABILITY_CTRL1_DISABLE_EDR 1 "STABILITY CONTROL1§Œä‚Ì‚¤‚¿A­‚È‚­‚Æ‚à‚P‚Â‹ÖŽ~‚µ‚Ä‚¢‚é‚Æ‚«" 0 "STABILITY CONTROL1§Œä‚Ì‚¤‚¿A‚·‚×‚Ä‹ÖŽ~‚µ‚Ä‚¢‚È‚¢‚Æ‚«" ;
-VAL_TABLE_ VSA_STABILITY_CTRL2_DISABLE_EDR 1 "STABILITY CONTROL2§Œä‚Ì‚¤‚¿A­‚È‚­‚Æ‚à‚P‚Â‹ÖŽ~‚µ‚Ä‚¢‚é‚Æ‚«" 0 "STABILITY CONTROL2§Œä‚Ì‚¤‚¿A‚·‚×‚Ä‹ÖŽ~‚µ‚Ä‚¢‚È‚¢‚Æ‚«" ;
-VAL_TABLE_ VSA_VSA_EQUIPPED_EDR 1 "VSA‘•”õ‚ ‚è" 0 "VSA‘•”õ‚È‚µ(ABS‘•”õ)" ;
-VAL_TABLE_ VSA_ABS_ACT_EDR 1 "ABSì“®’†" ;
-VAL_TABLE_ VSA_STABILITY_CTRL_ACT_EDR 1 "STABILITY CONTROLì“®’†" ;
-VAL_TABLE_ VSA_VSA_OFF_STATUS_EDR 1 "VSA OFF ’†" ;
-VAL_TABLE_ VSA_L_MODE_ABS_EBD 1 "ABS,EBD L-MODE’†" ;
-VAL_TABLE_ ENG_STRNNEND 1 "Š®”šó‘Ô" ;
-VAL_TABLE_ ENG_SW_STATUS_SCS 1 "SCSƒXƒCƒbƒ`ƒIƒ“" ;
-VAL_TABLE_ SS30_REQ_PREBRAKE 1 "—\ˆ³—v‹" ;
-VAL_TABLE_ SS30_REQ_BRAKE 1 "Œ¸‘¬—v‹" ;
-VAL_TABLE_ SS30_REQ_BRAKEHOLD 1 "ƒuƒŒ[ƒL•ÛŽ—v‹" ;
-VAL_TABLE_ SS30_STATUS_FAIL 1 "SS30ŒÌá" ;
-VAL_TABLE_ METER_SW_STATUS_PARK_BRAKE 1 "ƒp[ƒLƒ“ƒOƒuƒŒ[ƒL ƒXƒCƒbƒ` ƒIƒ“" ;
-VAL_TABLE_ METER_SW_STATUS_BRAKE_FLUID 1 "ƒuƒŒ[ƒLƒtƒ‹[ƒh ƒŒƒxƒ‹ ƒXƒCƒbƒ` ƒIƒ“" ;
-VAL_TABLE_ METER_SW_STATUS_VSA_OFF 1 "VSA-ƒIƒt ƒXƒCƒbƒ` ƒIƒ“  " ;
-VAL_TABLE_ CVT_REFUSE_VSA_CONTROL 1 "VSA§Œä‚ð‹‘â‚·‚éCVTŒÌá”­¶’†" ;
-VAL_TABLE_ CVT_GEAR_POSITION_IND_CVT 15 "LƒŒƒ“ƒW§Œä’†" 8 "8th" 7 "7th" 6 "6th" 5 "5th" 4 "4th" 3 "3rd" 2 "2nd" 1 "1st" 0 "ƒIƒt" ;
-VAL_TABLE_ CVT_SHFT_IN_PARKING 1 "ƒp[ƒLƒ“ƒO" ;
-VAL_TABLE_ CVT_SHFT_IN_REVERSE 1 "ƒŠƒo[ƒX" ;
-VAL_TABLE_ CVT_SHFT_IN_NEUTRAL 1 "ƒjƒ…[ƒgƒ‰ƒ‹" ;
+VAL_TABLE_ VSA_ABS_DISABLE_EDR 1 "ABSï¿½Ìá’†" ;
+VAL_TABLE_ VSA_STABILITY_CTRL1_DISABLE_EDR 1 "STABILITY CONTROL1ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½È‚ï¿½ï¿½Æ‚ï¿½ï¿½Pï¿½Â‹ÖŽ~ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Æ‚ï¿½" 0 "STABILITY CONTROL1ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½×‚Ä‹ÖŽ~ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½Æ‚ï¿½" ;
+VAL_TABLE_ VSA_STABILITY_CTRL2_DISABLE_EDR 1 "STABILITY CONTROL2ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½È‚ï¿½ï¿½Æ‚ï¿½ï¿½Pï¿½Â‹ÖŽ~ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Æ‚ï¿½" 0 "STABILITY CONTROL2ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½×‚Ä‹ÖŽ~ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½Æ‚ï¿½" ;
+VAL_TABLE_ VSA_VSA_EQUIPPED_EDR 1 "VSAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" 0 "VSAï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½(ABSï¿½ï¿½ï¿½ï¿½)" ;
+VAL_TABLE_ VSA_ABS_ACT_EDR 1 "ABSï¿½ì“®ï¿½ï¿½" ;
+VAL_TABLE_ VSA_STABILITY_CTRL_ACT_EDR 1 "STABILITY CONTROLï¿½ì“®ï¿½ï¿½" ;
+VAL_TABLE_ VSA_VSA_OFF_STATUS_EDR 1 "VSA OFF ï¿½ï¿½" ;
+VAL_TABLE_ VSA_L_MODE_ABS_EBD 1 "ABS,EBD L-MODEï¿½ï¿½" ;
+VAL_TABLE_ ENG_STRNNEND 1 "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ ENG_SW_STATUS_SCS 1 "SCSï¿½Xï¿½Cï¿½bï¿½`ï¿½Iï¿½ï¿½" ;
+VAL_TABLE_ SS30_REQ_PREBRAKE 1 "ï¿½\ï¿½ï¿½ï¿½vï¿½ï¿½" ;
+VAL_TABLE_ SS30_REQ_BRAKE 1 "ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½" ;
+VAL_TABLE_ SS30_REQ_BRAKEHOLD 1 "ï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½ÛŽï¿½ï¿½vï¿½ï¿½" ;
+VAL_TABLE_ SS30_STATUS_FAIL 1 "SS30ï¿½Ìï¿½" ;
+VAL_TABLE_ METER_SW_STATUS_PARK_BRAKE 1 "ï¿½pï¿½[ï¿½Lï¿½ï¿½ï¿½Oï¿½uï¿½ï¿½ï¿½[ï¿½L ï¿½Xï¿½Cï¿½bï¿½` ï¿½Iï¿½ï¿½" ;
+VAL_TABLE_ METER_SW_STATUS_BRAKE_FLUID 1 "ï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½tï¿½ï¿½ï¿½[ï¿½h ï¿½ï¿½ï¿½xï¿½ï¿½ ï¿½Xï¿½Cï¿½bï¿½` ï¿½Iï¿½ï¿½" ;
+VAL_TABLE_ METER_SW_STATUS_VSA_OFF 1 "VSA-ï¿½Iï¿½t ï¿½Xï¿½Cï¿½bï¿½` ï¿½Iï¿½ï¿½  " ;
+VAL_TABLE_ CVT_REFUSE_VSA_CONTROL 1 "VSAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â‚·ï¿½ï¿½CVTï¿½Ìá”­ï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ CVT_GEAR_POSITION_IND_CVT 15 "Lï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ä’†" 8 "8th" 7 "7th" 6 "6th" 5 "5th" 4 "4th" 3 "3rd" 2 "2nd" 1 "1st" 0 "ï¿½Iï¿½t" ;
+VAL_TABLE_ CVT_SHFT_IN_PARKING 1 "ï¿½pï¿½[ï¿½Lï¿½ï¿½ï¿½O" ;
+VAL_TABLE_ CVT_SHFT_IN_REVERSE 1 "ï¿½ï¿½ï¿½oï¿½[ï¿½X" ;
+VAL_TABLE_ CVT_SHFT_IN_NEUTRAL 1 "ï¿½jï¿½ï¿½ï¿½[ï¿½gï¿½ï¿½ï¿½ï¿½" ;
 VAL_TABLE_ CVT_SHFT_IN_D 1 "'D'" ;
 VAL_TABLE_ CVT_SHFT_IN_S 1 "'S'" ;
 VAL_TABLE_ CVT_SHFT_IN_L 1 "'L'" ;
-VAL_TABLE_ ENG_IS_PRE_PROGRESS 1 "ƒAƒCƒhƒ‹ƒXƒgƒbƒvŽÀŽ{—\‚©‚çƒAƒCƒhƒ‹ƒXƒgƒbƒv•œ‹A—\‚Ü‚Å‚ðŽ¦‚·" ;
-VAL_TABLE_ ENG_IS_PRE_RESTART 1 "ƒAƒCƒhƒ‹ƒXƒgƒbƒv•œ‹A—\‚ðŽ¦‚·" ;
-VAL_TABLE_ ENG_IS_PROGRESS 1 "ƒAƒCƒhƒ‹ƒXƒgƒbƒv§ŒäŠJŽn‚¨‚æ‚Ñis’†‚ðŽ¦‚·" ;
-VAL_TABLE_ ENG_CRUISE_STATUS_CRUISE_LMP 1 "ƒNƒ‹[ƒY§Œäƒ‰ƒ“ƒv“_“”" ;
-VAL_TABLE_ CVT_CAS_ON 1 "VSA‚Ö‚ÌCAS_ON—v‹" ;
-VAL_TABLE_ STR_ANGLE 32767 "ŒÌáŽžiInvalidj" 7560 "+756[deg]" 0 "0[deg]" 57976 "-756[deg]" ;
+VAL_TABLE_ ENG_IS_PRE_PROGRESS 1 "ï¿½Aï¿½Cï¿½hï¿½ï¿½ï¿½Xï¿½gï¿½bï¿½vï¿½ï¿½ï¿½{ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Cï¿½hï¿½ï¿½ï¿½Xï¿½gï¿½bï¿½vï¿½ï¿½ï¿½Aï¿½\ï¿½ï¿½ï¿½Ü‚Å‚ï¿½ï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ ENG_IS_PRE_RESTART 1 "ï¿½Aï¿½Cï¿½hï¿½ï¿½ï¿½Xï¿½gï¿½bï¿½vï¿½ï¿½ï¿½Aï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ ENG_IS_PROGRESS 1 "ï¿½Aï¿½Cï¿½hï¿½ï¿½ï¿½Xï¿½gï¿½bï¿½vï¿½ï¿½ï¿½ï¿½Jï¿½nï¿½ï¿½ï¿½ï¿½Ñiï¿½sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ ENG_CRUISE_STATUS_CRUISE_LMP 1 "ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½äƒ‰ï¿½ï¿½ï¿½vï¿½_ï¿½ï¿½" ;
+VAL_TABLE_ CVT_CAS_ON 1 "VSAï¿½Ö‚ï¿½CAS_ONï¿½vï¿½ï¿½" ;
+VAL_TABLE_ STR_ANGLE 32767 "ï¿½ÌáŽžï¿½iInvalidï¿½j" 7560 "+756[deg]" 0 "0[deg]" 57976 "-756[deg]" ;
 VAL_TABLE_ ENG_NEUTRAL_SENSOR_FAIL 1 "NEUTRAL SENSOR FAIL" ;
-VAL_TABLE_ ENG_RECEIVE_ERROR_1AC 1 "ŽóMƒGƒ‰[‚ ‚è" ;
-VAL_TABLE_ ENG_SHFT_IN_NEUTRAL 1 "ƒVƒtƒgƒŒƒo[‚ªNEUTRAL‚ÌˆÊ’u‚É‚ ‚é‚Æ‚«" ;
-VAL_TABLE_ ENG_CLUTCH_SW_CC 0 "ƒNƒ‰ƒbƒ`ƒyƒ_ƒ‹‚ª“¥‚Ü‚ê‚Ä‚¢‚éŽžiSW‚ªOFFj" 1 "ƒNƒ‰ƒbƒ`ƒyƒ_ƒ‹‚ª“¥‚Ü‚ê‚Ä‚¢‚È‚¢ŽžiSW‚ªONj" ;
-VAL_TABLE_ ENG_VSA_ACK1 2 "‘S‹C“›F/C" 1 "“_‰ÎƒŠƒ^[ƒh" 0 "”R—¿/“_‰Î§Œä–³‚µ(THL§Œä‚Ì‚Ý)" ;
-VAL_TABLE_ ENG_VSA_PERMIT_PLUS_TRQ 1 "ƒvƒ‰ƒXƒgƒ‹ƒN‹–‰Â’†" ;
-VAL_TABLE_ ENG_VSA_INHIBIT_VSA_CONTROL 1 "ˆêŽž“I‚ÈVSA F/C§Œä’âŽ~" ;
-VAL_TABLE_ ENG_VSA_REFUSED_VSA_CONTROL 1 "VSA§Œä‚ð‹‘â‚·‚éŒÌá”­¶’†" ;
+VAL_TABLE_ ENG_RECEIVE_ERROR_1AC 1 "ï¿½ï¿½Mï¿½Gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ ENG_SHFT_IN_NEUTRAL 1 "ï¿½Vï¿½tï¿½gï¿½ï¿½ï¿½oï¿½[ï¿½ï¿½NEUTRALï¿½ÌˆÊ’uï¿½É‚ï¿½ï¿½ï¿½Æ‚ï¿½" ;
+VAL_TABLE_ ENG_CLUTCH_SW_CC 0 "ï¿½Nï¿½ï¿½ï¿½bï¿½`ï¿½yï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½Ä‚ï¿½ï¿½éŽžï¿½iSWï¿½ï¿½OFFï¿½j" 1 "ï¿½Nï¿½ï¿½ï¿½bï¿½`ï¿½yï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½iSWï¿½ï¿½ONï¿½j" ;
+VAL_TABLE_ ENG_VSA_ACK1 2 "ï¿½Sï¿½Cï¿½ï¿½F/C" 1 "ï¿½_ï¿½Îƒï¿½ï¿½^ï¿½[ï¿½h" 0 "ï¿½Rï¿½ï¿½/ï¿½_ï¿½Îï¿½ï¿½ä–³ï¿½ï¿½(THLï¿½ï¿½ï¿½ï¿½Ì‚ï¿½)" ;
+VAL_TABLE_ ENG_VSA_PERMIT_PLUS_TRQ 1 "ï¿½vï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½Â’ï¿½" ;
+VAL_TABLE_ ENG_VSA_INHIBIT_VSA_CONTROL 1 "ï¿½êŽžï¿½Iï¿½ï¿½VSA F/Cï¿½ï¿½ï¿½ï¿½ï¿½~" ;
+VAL_TABLE_ ENG_VSA_REFUSED_VSA_CONTROL 1 "VSAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â‚·ï¿½ï¿½Ìá”­ï¿½ï¿½ï¿½ï¿½" ;
 VAL_TABLE_ VSA_COMMAND_CODE 5 "Reset of the Calibration" 3 "Calibration" ;
-VAL_TABLE_ VSA_SPECIFY_CODE_SYS 1 "HMƒR[ƒh" 0 "SAEƒR[ƒh" ;
-VAL_TABLE_ VSA_DTC_STORAGE 1 "Ši”[" 0 "–¢Ši”[" ;
-VAL_TABLE_ VSA_MAEPS_REVERSE_F 1 "ØÊÞ°½ó‘Ô" ;
-VAL_TABLE_ VSA_SYSTEM_F 1 "VSA¼½ÃÑŒÌá" ;
-VAL_TABLE_ VSA_REQ_CVT_TCS 1 "TCSì“®‹–‰Âó‘Ô" ;
-VAL_TABLE_ VSA_REQ_CVT_PRS 1 "‰Áˆ³’†" ;
-VAL_TABLE_ VSA_CONTROL_MODE_CVT 3 "—\”õ" 2 "—\”õ" 1 "TCSì“®’†" 0 "VSA§Œä‰Â”\ó‘Ô" ;
-VAL_TABLE_ VSA_ABS_STATUS_FR_ABS_EBD_ACT 1 "FR—ÖABSAEBDì“®’†" ;
-VAL_TABLE_ VSA_ABS_STATUS_FL_ABS_EBD_ACT 1 "FL—ÖABSAEBDì“®’†" ;
-VAL_TABLE_ VSA_ABS_STATUS_RR_ABS_EBD_ACT 1 "RR—ÖABSAEBDì“®’†" ;
-VAL_TABLE_ VSA_ABS_STATUS_RL_ABS_EBD_ACT 1 "RL—ÖABSAEBDì“®’†" ;
-VAL_TABLE_ VSA_FAIL_STEERING_SENSOR 1 "‘ÇŠpƒZƒ“ƒTˆÙí" ;
-VAL_TABLE_ VSA_FAIL_YAW_RATE_SENSOR 1 "ƒˆ[ƒŒƒCƒgƒZƒ“ƒTˆÙí" ;
-VAL_TABLE_ VSA_FAIL_MC_PRESSURE_SENSOR_1B0 1 "M/Cˆ³ƒZƒ“ƒTˆÙí" ;
-VAL_TABLE_ VSA_ABS_FAIL_FR_VW_SENSOR 1 "ŽÔ—Ö‘¬ƒZƒ“ƒTFR—ÖˆÙí" ;
-VAL_TABLE_ VSA_ABS_FAIL_FL_VW_SENSOR 1 "ŽÔ—Ö‘¬ƒZƒ“ƒTFL—ÖˆÙí" ;
-VAL_TABLE_ VSA_ABS_FAIL_RR_VW_SENSOR 1 "ŽÔ—Ö‘¬ƒZƒ“ƒTRR—ÖˆÙí" ;
-VAL_TABLE_ VSA_ABS_FAIL_RL_VW_SENSOR 1 "ŽÔ—Ö‘¬ƒZƒ“ƒTRL—ÖˆÙí" ;
-VAL_TABLE_ VSA_ABS_INHBIT_VW_SENSOR 1 "ŽÔ—Ö‘¬ƒZƒ“ƒT³í–¢Šm’è" ;
-VAL_TABLE_ VSA_ACC_INHIBIT_CVRS_BRAKE 1 "CVRSƒuƒŒ[ƒLˆêŽž‹ÖŽ~" ;
-VAL_TABLE_ VSA_ACC_REFUSE_CVRS_BRAKE 1 "CVRSƒuƒŒ[ƒL‚ð‹‘â‚·‚éŒÌá‚ª”­¶" ;
-VAL_TABLE_ VSA_VW_PULSE_CAPTURED 1 "ŽÔ—Ö‘¬ƒpƒ‹ƒX‚ ‚è" ;
-VAL_TABLE_ VSA_INHBIT_STEERING_SENSOR 1 "‘ÇŠpƒZƒ“ƒT³í–¢Šm’è" ;
-VAL_TABLE_ VSA_INHBIT_YAW_RATE_SENSOR 1 "ƒˆ[ƒŒ[ƒgƒZƒ“ƒT³í–¢Šm’è" 0 "ƒˆ[ƒŒ[ƒgƒZƒ“ƒT³íŠm’è" ;
-VAL_TABLE_ VSA_FAIL_BRAKERELAY 1 "BRAKEƒŠƒŒ[@ŒÌá" ;
-VAL_TABLE_ VSA_SS30_BRAKE_ACT 1 "SS30ƒuƒŒ[ƒLì“®’†" ;
-VAL_TABLE_ VSA_REQ_MSR_PLUS_TRQ 1 "ƒvƒ‰ƒXƒgƒ‹ƒN—v‹’†" ;
-VAL_TABLE_ VSA_IS_SHIFT_INHIBIT_REQUEST 1 "ƒAƒCƒhƒ‹ƒXƒgƒbƒvˆÚs‹ÖŽ~—v‹’†" 0 "’ÊíŽž" ;
-VAL_TABLE_ VSA_TRQ_CONTROL_MODE 3 "VSA/TCS‹ÖŽ~iVSAŒÌáj" 2 "‰Á‘¬§Œä—v‹(ƒGƒ“ƒWƒ“§Œä‚ª•K—v‚Èê‡‚É‚±‚Ì’l‚ðSET‚·‚é)" 1 "MSR§Œä—v‹" 0 "VSA/TCS”ñ§Œä’†(ƒm[ƒ}ƒ‹)" ;
-VAL_TABLE_ VSA_SHIFT_REQ_1AC 3 "ƒVƒtƒgDOWN—v‹" 2 "ƒVƒtƒgUP—v‹" 1 "ƒVƒtƒgƒz[ƒ‹ƒh—v‹" 0 "VSA‚©‚ç‚ÌƒVƒtƒg§Œä—v‹–³‚µ(EATƒIƒŠƒWƒiƒ‹§Œä)" ;
-VAL_TABLE_ VSA_TRQ_DOWN_REQ_FUEL_CUT 2 "‘S‹C“›F/C{“_‰ÎƒŠƒ^[ƒh" 1 "“_‰ÎƒŠƒ^[ƒh" 0 "”R—¿/“_‰Î§Œä–³‚µ(THL§Œä‚Ì‚Ý)" ;
-VAL_TABLE_ VSA_ABS_CTRL 1 "ABS§Œä’†" ;
-VAL_TABLE_ VSA_VSA_CTRL 1 "VSA§Œä’†" ;
+VAL_TABLE_ VSA_SPECIFY_CODE_SYS 1 "HMï¿½Rï¿½[ï¿½h" 0 "SAEï¿½Rï¿½[ï¿½h" ;
+VAL_TABLE_ VSA_DTC_STORAGE 1 "ï¿½iï¿½[" 0 "ï¿½ï¿½ï¿½iï¿½[" ;
+VAL_TABLE_ VSA_MAEPS_REVERSE_F 1 "ï¿½ï¿½Þ°ï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_SYSTEM_F 1 "VSAï¿½ï¿½ï¿½ÑŒÌï¿½" ;
+VAL_TABLE_ VSA_REQ_CVT_TCS 1 "TCSï¿½ì“®ï¿½ï¿½ï¿½Âï¿½ï¿½" ;
+VAL_TABLE_ VSA_REQ_CVT_PRS 1 "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_CONTROL_MODE_CVT 3 "ï¿½\ï¿½ï¿½" 2 "ï¿½\ï¿½ï¿½" 1 "TCSï¿½ì“®ï¿½ï¿½" 0 "VSAï¿½ï¿½ï¿½ï¿½Â”\ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_ABS_STATUS_FR_ABS_EBD_ACT 1 "FRï¿½ï¿½ABSï¿½AEBDï¿½ì“®ï¿½ï¿½" ;
+VAL_TABLE_ VSA_ABS_STATUS_FL_ABS_EBD_ACT 1 "FLï¿½ï¿½ABSï¿½AEBDï¿½ì“®ï¿½ï¿½" ;
+VAL_TABLE_ VSA_ABS_STATUS_RR_ABS_EBD_ACT 1 "RRï¿½ï¿½ABSï¿½AEBDï¿½ì“®ï¿½ï¿½" ;
+VAL_TABLE_ VSA_ABS_STATUS_RL_ABS_EBD_ACT 1 "RLï¿½ï¿½ABSï¿½AEBDï¿½ì“®ï¿½ï¿½" ;
+VAL_TABLE_ VSA_FAIL_STEERING_SENSOR 1 "ï¿½ÇŠpï¿½Zï¿½ï¿½ï¿½Tï¿½Ùï¿½" ;
+VAL_TABLE_ VSA_FAIL_YAW_RATE_SENSOR 1 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Cï¿½gï¿½Zï¿½ï¿½ï¿½Tï¿½Ùï¿½" ;
+VAL_TABLE_ VSA_FAIL_MC_PRESSURE_SENSOR_1B0 1 "M/Cï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½Ùï¿½" ;
+VAL_TABLE_ VSA_ABS_FAIL_FR_VW_SENSOR 1 "ï¿½Ô—Ö‘ï¿½ï¿½Zï¿½ï¿½ï¿½TFRï¿½ÖˆÙï¿½" ;
+VAL_TABLE_ VSA_ABS_FAIL_FL_VW_SENSOR 1 "ï¿½Ô—Ö‘ï¿½ï¿½Zï¿½ï¿½ï¿½TFLï¿½ÖˆÙï¿½" ;
+VAL_TABLE_ VSA_ABS_FAIL_RR_VW_SENSOR 1 "ï¿½Ô—Ö‘ï¿½ï¿½Zï¿½ï¿½ï¿½TRRï¿½ÖˆÙï¿½" ;
+VAL_TABLE_ VSA_ABS_FAIL_RL_VW_SENSOR 1 "ï¿½Ô—Ö‘ï¿½ï¿½Zï¿½ï¿½ï¿½TRLï¿½ÖˆÙï¿½" ;
+VAL_TABLE_ VSA_ABS_INHBIT_VW_SENSOR 1 "ï¿½Ô—Ö‘ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½í–¢ï¿½mï¿½ï¿½" ;
+VAL_TABLE_ VSA_ACC_INHIBIT_CVRS_BRAKE 1 "CVRSï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½êŽžï¿½ÖŽ~" ;
+VAL_TABLE_ VSA_ACC_REFUSE_CVRS_BRAKE 1 "CVRSï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½â‚·ï¿½ï¿½Ìá‚ªï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_VW_PULSE_CAPTURED 1 "ï¿½Ô—Ö‘ï¿½ï¿½pï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_INHBIT_STEERING_SENSOR 1 "ï¿½ÇŠpï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½í–¢ï¿½mï¿½ï¿½" ;
+VAL_TABLE_ VSA_INHBIT_YAW_RATE_SENSOR 1 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½[ï¿½gï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½í–¢ï¿½mï¿½ï¿½" 0 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½[ï¿½gï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½ï¿½mï¿½ï¿½" ;
+VAL_TABLE_ VSA_FAIL_BRAKERELAY 1 "BRAKEï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½@ï¿½Ìï¿½" ;
+VAL_TABLE_ VSA_SS30_BRAKE_ACT 1 "SS30ï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½ì“®ï¿½ï¿½" ;
+VAL_TABLE_ VSA_REQ_MSR_PLUS_TRQ 1 "ï¿½vï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½vï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_IS_SHIFT_INHIBIT_REQUEST 1 "ï¿½Aï¿½Cï¿½hï¿½ï¿½ï¿½Xï¿½gï¿½bï¿½vï¿½Úsï¿½ÖŽ~ï¿½vï¿½ï¿½ï¿½ï¿½" 0 "ï¿½ÊíŽž" ;
+VAL_TABLE_ VSA_TRQ_CONTROL_MODE 3 "VSA/TCSï¿½ÖŽ~ï¿½iVSAï¿½Ìï¿½j" 2 "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½(ï¿½Gï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½ä‚ªï¿½Kï¿½vï¿½Èê‡ï¿½É‚ï¿½ï¿½Ì’lï¿½ï¿½SETï¿½ï¿½ï¿½ï¿½)" 1 "MSRï¿½ï¿½ï¿½ï¿½vï¿½ï¿½" 0 "VSA/TCSï¿½ñ§Œä’†(ï¿½mï¿½[ï¿½}ï¿½ï¿½)" ;
+VAL_TABLE_ VSA_SHIFT_REQ_1AC 3 "ï¿½Vï¿½tï¿½gDOWNï¿½vï¿½ï¿½" 2 "ï¿½Vï¿½tï¿½gUPï¿½vï¿½ï¿½" 1 "ï¿½Vï¿½tï¿½gï¿½zï¿½[ï¿½ï¿½ï¿½hï¿½vï¿½ï¿½" 0 "VSAï¿½ï¿½ï¿½ï¿½ÌƒVï¿½tï¿½gï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(EATï¿½Iï¿½ï¿½ï¿½Wï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)" ;
+VAL_TABLE_ VSA_TRQ_DOWN_REQ_FUEL_CUT 2 "ï¿½Sï¿½Cï¿½ï¿½F/Cï¿½{ï¿½_ï¿½Îƒï¿½ï¿½^ï¿½[ï¿½h" 1 "ï¿½_ï¿½Îƒï¿½ï¿½^ï¿½[ï¿½h" 0 "ï¿½Rï¿½ï¿½/ï¿½_ï¿½Îï¿½ï¿½ä–³ï¿½ï¿½(THLï¿½ï¿½ï¿½ï¿½Ì‚ï¿½)" ;
+VAL_TABLE_ VSA_ABS_CTRL 1 "ABSï¿½ï¿½ï¿½ä’†" ;
+VAL_TABLE_ VSA_VSA_CTRL 1 "VSAï¿½ï¿½ï¿½ä’†" ;
 VAL_TABLE_ VSA_WARN_STATUS_HSA 1 "HSA warning is illuminated" ;
-VAL_TABLE_ VSA_HSA_STATUS_ACT 1 "ì“®’†" 0 "”ñì“®’†" ;
-VAL_TABLE_ VSA_ESS_ACT4 1 "ABSÌÙ»²¸ØÝ¸Þ‚É‚æ‚éESSì“®Œp‘±‹–‰Â" 0 "ABSÌÙ»²¸ØÝ¸Þ‚É‚æ‚éESSì“®Œp‘±‹ÖŽ~" ;
-VAL_TABLE_ VSA_ESS_ACT3 1 "ABSÌÙ»²¸ØÝ¸Þ‚É‚æ‚éESSì“®ŠJŽn‹–‰Â" 0 "ABSÌÙ»²¸ØÝ¸Þ‚É‚æ‚éESSì“®ŠJŽn‹ÖŽ~" ;
-VAL_TABLE_ VSA_REWRITE_START 1 "VSAŽsê‘Š·ŠJŽn" ;
-VAL_TABLE_ VSA_BUZZER_STATUS 1 "ƒuƒU[ƒIƒ“" 0 "ƒuƒU[ƒIƒt" ;
-VAL_TABLE_ VSA_MID_REQUEST_VSA 1 "VSA MIDŠg‘åƒ[ƒjƒ“ƒO•\Ž¦‹–‰Â" ;
-VAL_TABLE_ VSA_LAMP_STATUS_VSA_OFF 1 "VSA@OFF×ÝÌß“_“”" ;
-VAL_TABLE_ VSA_WARN_STATUS_VSA 1 "VSA ƒEƒH[ƒjƒ“ƒOƒ‰ƒ“ƒv“_“”" ;
-VAL_TABLE_ VSA_WARN_STATUS_ABS 1 "ABS ƒEƒH[ƒjƒ“ƒOƒ‰ƒ“ƒv“_“”" ;
-VAL_TABLE_ VSA_WARN_STATUS_BRAKE 1 "BRAKE ƒEƒH[ƒjƒ“ƒOƒ‰ƒ“ƒv“_“”" ;
-VAL_TABLE_ VSA_VSA_TCS_ACT 1 "VSA,TCSì“®’†" ;
-VAL_TABLE_ VSA_ABS_EBD_ACT 1 "ABS,EBDì“®’†" ;
-VAL_TABLE_ VSA_VSA_TCS_MIL 1 "VSA,TCSŒÌá’†" ;
-VAL_TABLE_ VSA_ABS_EBD_MIL 1 "ABS,EBDŒÌá’†" ;
-VAL_TABLE_ VSA_CASEN 1 "CASì“®‹–‰Â" ;
-VAL_TABLE_ VSA_CAS_ACT 1 "CASì“®’†" ;
-VAL_TABLE_ VSA_BA_ACT 1 "BAì“®’†" ;
+VAL_TABLE_ VSA_HSA_STATUS_ACT 1 "ï¿½ì“®ï¿½ï¿½" 0 "ï¿½ï¿½ì“®ï¿½ï¿½" ;
+VAL_TABLE_ VSA_ESS_ACT4 1 "ABSï¿½Ù»ï¿½ï¿½ï¿½Ý¸Þ‚É‚ï¿½ï¿½ESSï¿½ì“®ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" 0 "ABSï¿½Ù»ï¿½ï¿½ï¿½Ý¸Þ‚É‚ï¿½ï¿½ESSï¿½ì“®ï¿½pï¿½ï¿½ï¿½ÖŽ~" ;
+VAL_TABLE_ VSA_ESS_ACT3 1 "ABSï¿½Ù»ï¿½ï¿½ï¿½Ý¸Þ‚É‚ï¿½ï¿½ESSï¿½ì“®ï¿½Jï¿½nï¿½ï¿½ï¿½ï¿½" 0 "ABSï¿½Ù»ï¿½ï¿½ï¿½Ý¸Þ‚É‚ï¿½ï¿½ESSï¿½ì“®ï¿½Jï¿½nï¿½ÖŽ~" ;
+VAL_TABLE_ VSA_REWRITE_START 1 "VSAï¿½sï¿½ê‘ï¿½ï¿½ï¿½Jï¿½n" ;
+VAL_TABLE_ VSA_BUZZER_STATUS 1 "ï¿½uï¿½Uï¿½[ï¿½Iï¿½ï¿½" 0 "ï¿½uï¿½Uï¿½[ï¿½Iï¿½t" ;
+VAL_TABLE_ VSA_MID_REQUEST_VSA 1 "VSA MIDï¿½gï¿½åƒï¿½[ï¿½jï¿½ï¿½ï¿½Oï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_LAMP_STATUS_VSA_OFF 1 "VSAï¿½@OFFï¿½ï¿½ï¿½ß“_ï¿½ï¿½" ;
+VAL_TABLE_ VSA_WARN_STATUS_VSA 1 "VSA ï¿½Eï¿½Hï¿½[ï¿½jï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½vï¿½_ï¿½ï¿½" ;
+VAL_TABLE_ VSA_WARN_STATUS_ABS 1 "ABS ï¿½Eï¿½Hï¿½[ï¿½jï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½vï¿½_ï¿½ï¿½" ;
+VAL_TABLE_ VSA_WARN_STATUS_BRAKE 1 "BRAKE ï¿½Eï¿½Hï¿½[ï¿½jï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½vï¿½_ï¿½ï¿½" ;
+VAL_TABLE_ VSA_VSA_TCS_ACT 1 "VSA,TCSï¿½ì“®ï¿½ï¿½" ;
+VAL_TABLE_ VSA_ABS_EBD_ACT 1 "ABS,EBDï¿½ì“®ï¿½ï¿½" ;
+VAL_TABLE_ VSA_VSA_TCS_MIL 1 "VSA,TCSï¿½Ìá’†" ;
+VAL_TABLE_ VSA_ABS_EBD_MIL 1 "ABS,EBDï¿½Ìá’†" ;
+VAL_TABLE_ VSA_CASEN 1 "CASï¿½ì“®ï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_CAS_ACT 1 "CASï¿½ì“®ï¿½ï¿½" ;
+VAL_TABLE_ VSA_BA_ACT 1 "BAï¿½ì“®ï¿½ï¿½" ;
 VAL_TABLE_ VSA_MASTER_CYLINDER_PRESSURE 921 "19623.24kPa" 102 "0kPa" ;
-VAL_TABLE_ VSA_FAIL_MC_PRESSURE_SENSOR 1 "ƒ}ƒXƒ^ˆ³ƒZƒ“ƒTˆÙí" ;
-VAL_TABLE_ VSA_INHBIT_MC_PRESSURE_SENSOR 1 "ƒ}ƒXƒ^ˆ³ƒZƒ“ƒT³í–¢Šm’è" ;
-VAL_TABLE_ VSA_ESS_ACT2 1 "Œ¸‘¬“x‚É‚æ‚éESSì“®Œp‘±‹–‰Â" 0 "Œ¸‘¬“x‚É‚æ‚éESSì“®Œp‘±‹ÖŽ~" ;
-VAL_TABLE_ VSA_ESS_ACT1 1 "Œ¸‘¬“x‚É‚æ‚éESSì“®ŠJŽn‹–‰Â" 0 "Œ¸‘¬“x‚É‚æ‚éESSì“®ŠJŽn‹ÖŽ~" ;
-VAL_TABLE_ VSA_SENSOR_START_UP 1 "‹N“®’†(ƒZƒ“ƒTo—Í‚ª•ÛØ‚Å‚«‚È‚¢Žž)" ;
-VAL_TABLE_ VSA_SENSOR_ERR_MC 1 "ƒ}ƒCƒRƒ“‹y‚Ñ‚»‚ê‚ÉŠÖ‚í‚éf’f‚ªŒÌá”»’è‚µ‚½Žž" ;
-VAL_TABLE_ VSA_SENSOR_STATE_IG 1 "‹Ÿ‹‹“dˆ³(IG)‚ªƒZƒ“ƒT‚Ì‹@”\/«”\‚ðŽç‚ê‚È‚¢Žž" ;
-VAL_TABLE_ VSA_P_ERR_LON_G 1 "‘OŒãG‰Á‘¬“x‚ðŒÌá”»’è‚µ‚½Žž" ;
-VAL_TABLE_ VSA_P_ERR_LAT_G 1 "‰¡G‰Á‘¬“x‚ðŒÌá”»’è‚µ‚½Žž" ;
-VAL_TABLE_ VSA_P_ERR_DEGC 1 "ƒˆ[ƒŒ[ƒg1‰·“xƒf[ƒ^‚ðŒÌá”»’è‚µ‚½Žž" ;
-VAL_TABLE_ VSA_P_ERR_YAW1 1 "ƒˆ[ƒŒ[ƒg1‚ðŒÌá”»’è‚µ‚½Žž" ;
-VAL_TABLE_ VSA_T_ERR_LON_G 1 "‘OŒãG‰Á‘¬“x‚ª•ÛØ‚Å‚«‚È‚¢Žž" ;
-VAL_TABLE_ VSA_T_ERR_LAT_G 1 "‰¡G‰Á‘¬“x‚ª•ÛØ‚Å‚«‚È‚¢Žž" ;
-VAL_TABLE_ VSA_T_ERR_DEGC 1 "ƒˆ[ƒŒ[ƒg1‰·“xƒf[ƒ^‚ª•ÛØ‚Å‚«‚È‚¢Žž" ;
-VAL_TABLE_ VSA_T_ERR_YAW1 1 "ƒˆ[ƒŒ[ƒg1‚ª•ÛØ‚Å‚«‚È‚¢Žž" ;
+VAL_TABLE_ VSA_FAIL_MC_PRESSURE_SENSOR 1 "ï¿½}ï¿½Xï¿½^ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½Ùï¿½" ;
+VAL_TABLE_ VSA_INHBIT_MC_PRESSURE_SENSOR 1 "ï¿½}ï¿½Xï¿½^ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½í–¢ï¿½mï¿½ï¿½" ;
+VAL_TABLE_ VSA_ESS_ACT2 1 "ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½É‚ï¿½ï¿½ESSï¿½ì“®ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" 0 "ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½É‚ï¿½ï¿½ESSï¿½ì“®ï¿½pï¿½ï¿½ï¿½ÖŽ~" ;
+VAL_TABLE_ VSA_ESS_ACT1 1 "ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½É‚ï¿½ï¿½ESSï¿½ì“®ï¿½Jï¿½nï¿½ï¿½ï¿½ï¿½" 0 "ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½É‚ï¿½ï¿½ESSï¿½ì“®ï¿½Jï¿½nï¿½ÖŽ~" ;
+VAL_TABLE_ VSA_SENSOR_START_UP 1 "ï¿½Nï¿½ï¿½ï¿½ï¿½(ï¿½Zï¿½ï¿½ï¿½Tï¿½oï¿½Í‚ï¿½ï¿½ÛØ‚Å‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½)" ;
+VAL_TABLE_ VSA_SENSOR_ERR_MC 1 "ï¿½}ï¿½Cï¿½Rï¿½ï¿½ï¿½yï¿½Ñ‚ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½fï¿½fï¿½ï¿½ï¿½Ìá”»ï¿½è‚µï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_SENSOR_STATE_IG 1 "ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½ï¿½(IG)ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½Ì‹@ï¿½\/ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_P_ERR_LON_G 1 "ï¿½Oï¿½ï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½Ìá”»ï¿½è‚µï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_P_ERR_LAT_G 1 "ï¿½ï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½Ìá”»ï¿½è‚µï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_P_ERR_DEGC 1 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½[ï¿½g1ï¿½ï¿½ï¿½xï¿½fï¿½[ï¿½^ï¿½ï¿½ï¿½Ìá”»ï¿½è‚µï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_P_ERR_YAW1 1 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½[ï¿½g1ï¿½ï¿½ï¿½Ìá”»ï¿½è‚µï¿½ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_T_ERR_LON_G 1 "ï¿½Oï¿½ï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ÛØ‚Å‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_T_ERR_LAT_G 1 "ï¿½ï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ÛØ‚Å‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_T_ERR_DEGC 1 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½[ï¿½g1ï¿½ï¿½ï¿½xï¿½fï¿½[ï¿½^ï¿½ï¿½ï¿½ÛØ‚Å‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½" ;
+VAL_TABLE_ VSA_T_ERR_YAW1 1 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½[ï¿½g1ï¿½ï¿½ï¿½ÛØ‚Å‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½" ;
 VAL_TABLE_ VSA_LON_G 1023 "24.5 [m/s2]" 512 "0 [m/s2]" 0 "-24.5 [m/s2]" ;
 VAL_TABLE_ VSA_LAT_G 1023 "24.5 [m/s2]" 512 "0 [m/s2]" 0 "-24.5 [m/s2]" ;
-VAL_TABLE_ VSA_DEGC 255 "+152 [Ž]" 128 "+25 [Ž]" 0 "-103 [Ž]" ;
-VAL_TABLE_ VSA_YAW_1 1023 "125.0 [‹/s]" 512 "0 [‹/s]" 0 "-125.0 [‹/s]" ;
+VAL_TABLE_ VSA_DEGC 255 "+152 [ï¿½ï¿½]" 128 "+25 [ï¿½ï¿½]" 0 "-103 [ï¿½ï¿½]" ;
+VAL_TABLE_ VSA_YAW_1 1023 "125.0 [ï¿½ï¿½/s]" 512 "0 [ï¿½ï¿½/s]" 0 "-125.0 [ï¿½ï¿½/s]" ;
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
@@ -601,7 +601,7 @@ BA_ "PS" BO_ 145 5;
 BA_ "GenMsgCycleTime" BO_ 145 10;
 BA_ "GenMsgSendType" BO_ 145 0;
 BA_ "DescriptionE" SG_ 3221225472 ENG_CRUISE_STATUS_CRUISE_INH "Indicates inhibition of cruise control.";
-BA_ "DescriptionJ" SG_ 3221225472 ENG_CRUISE_STATUS_CRUISE_INH "ƒNƒ‹[ƒY§Œä‹ÖŽ~‚ðŽ¦‚·";
+BA_ "DescriptionJ" SG_ 3221225472 ENG_CRUISE_STATUS_CRUISE_INH "ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½ï¿½ÖŽ~ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 3221225472 ENG_CRUISE_STATUS_CRUISE_INH 0;
 BA_ "GenSigStartValue" SG_ 422 METER_RL_STATUS_1A6 0;
 BA_ "ValueTableE" SG_ 422 METER_RL_STATUS_1A6 "1: Parking brake SW ON";
@@ -612,10 +612,12 @@ BA_ "GenSigStartValue" SG_ 422 METER_SW_STATUS_PARK_BRAKE_1A6 0;
 BA_ "ValueTableE" SG_ 422 METER_SW_STATUS_BRAKE_FLUID_1A6 "1: Brake fluid level SW ON";
 BA_ "GenSigStartValue" SG_ 422 METER_SW_STATUS_BRAKE_FLUID_1A6 0;
 BA_ "GenSigStartValue" SG_ 422 METER_CHECKSUM_1A6 0;
-BA_ "DescriptionE" SG_ 422 METER_ALIVE_COUNTER_1A6 "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 422 METER_ALIVE_COUNTER_1A6 "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 422 METER_ALIVE_COUNTER_1A6 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 422 METER_ALIVE_COUNTER_1A6 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 422 METER_ALIVE_COUNTER_1A6 0;
 BA_ "GenSigStartValue" SG_ 884 METER_CHECKSUM_374 0;
 BA_ "GenSigStartValue" SG_ 884 METER_ALIVE_COUNTER_374 0;
@@ -630,152 +632,199 @@ BA_ "ValueTableE" SG_ 661 METER_DWS_INIT_REQ "1: Request DWS initialization";
 BA_ "GenSigStartValue" SG_ 660 METER_CHECKSUM_294 0;
 BA_ "GenSigStartValue" SG_ 660 METER_ALIVE_COUNTER_294 0;
 BA_ "GenSigStartValue" SG_ 660 METER_ODO_DATA 0;
-BA_ "ValueTableE" SG_ 426 VSA_SHIFT_REQ_1AA "0: No shift control request from VSA?(EAT?original control)
-1: ?Request shift hold
-2: Request upshift
+BA_ "ValueTableE" SG_ 426 VSA_SHIFT_REQ_1AA "0: No shift control request from VSA?(EAT?original control)
+
+1: ?Request shift hold
+
+2: Request upshift
+
 3: Request downshift";
-BA_ "DescriptionE" SG_ 426 VSA_SHIFT_REQ_1AA "VSA shift control request
+BA_ "DescriptionE" SG_ 426 VSA_SHIFT_REQ_1AA "VSA shift control request
+
 ID:?Valid only when the data of 1AAh 2.1-2.0 VSA_TRQ_CONTROL_MODE is '2.'";
-BA_ "DescriptionJ" SG_ 426 VSA_SHIFT_REQ_1AA "VSAƒVƒtƒg§Œä—v‹
-ID: 1AAh 2.1-2.0 VSA_TRQ_CONTROL_MODE ‚Ìƒf[ƒ^‚ª '2' ‚ÌŽž‚Ì‚Ý—LŒø‚Æ‚·‚éB";
+BA_ "DescriptionJ" SG_ 426 VSA_SHIFT_REQ_1AA "VSAï¿½Vï¿½tï¿½gï¿½ï¿½ï¿½ï¿½vï¿½ï¿½
+
+ID: 1AAh 2.1-2.0 VSA_TRQ_CONTROL_MODE ï¿½Ìƒfï¿½[ï¿½^ï¿½ï¿½ '2' ï¿½ÌŽï¿½ï¿½Ì‚Ý—Lï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½B";
 BA_ "GenSigStartValue" SG_ 426 VSA_SHIFT_REQ_1AA 0;
-BA_ "ValueTableE" SG_ 426 VSA_TRQ_DOWN_REQ_FUEL_CUT_1AA "0: No fuel/ignition control (THL?control only)
-1: Ignition retard
+BA_ "ValueTableE" SG_ 426 VSA_TRQ_DOWN_REQ_FUEL_CUT_1AA "0: No fuel/ignition control (THL?control only)
+
+1: Ignition retard
+
 2: ?All cylinders F/C + Ignition?retard";
-BA_ "DescriptionE" SG_ 426 VSA_TRQ_DOWN_REQ_FUEL_CUT_1AA "Fuel control request signal
+BA_ "DescriptionE" SG_ 426 VSA_TRQ_DOWN_REQ_FUEL_CUT_1AA "Fuel control request signal
+
 ID:?Valid only when the data of 1AAh 2.1-2.0 VSA_TRQ_CONTROL_MODE is '2.'";
-BA_ "DescriptionJ" SG_ 426 VSA_TRQ_DOWN_REQ_FUEL_CUT_1AA "”R—¿§Œä—v‹M†
-ID: 1AAh 2.1-2.0 VSA_TRQ_CONTROL_MODE ‚Ìƒf[ƒ^‚ª '2' ‚ÌŽž‚Ì‚Ý—LŒø‚Æ‚·‚éB";
+BA_ "DescriptionJ" SG_ 426 VSA_TRQ_DOWN_REQ_FUEL_CUT_1AA "ï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Mï¿½ï¿½
+
+ID: 1AAh 2.1-2.0 VSA_TRQ_CONTROL_MODE ï¿½Ìƒfï¿½[ï¿½^ï¿½ï¿½ '2' ï¿½ÌŽï¿½ï¿½Ì‚Ý—Lï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½B";
 BA_ "GenSigStartValue" SG_ 426 VSA_TRQ_DOWN_REQ_FUEL_CUT_1AA 0;
-BA_ "DescriptionE" SG_ 426 VSA_ALIVE_COUNTER_1AA "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 426 VSA_ALIVE_COUNTER_1AA "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 426 VSA_ALIVE_COUNTER_1AA "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 426 VSA_ALIVE_COUNTER_1AA "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 426 VSA_ALIVE_COUNTER_1AA 0;
 BA_ "GenSigStartValue" SG_ 426 VSA_CHECKSUM_1AA 0;
 BA_ "ValueTableE" SG_ 426 VSA_REQ_MSR_PLUS_TRQ_1AA "1: ?Positive torque requested";
 BA_ "DescriptionE" SG_ 426 VSA_REQ_MSR_PLUS_TRQ_1AA "MSR?positive torque request flag";
-BA_ "DescriptionJ" SG_ 426 VSA_REQ_MSR_PLUS_TRQ_1AA "‚l‚r‚qƒvƒ‰ƒXƒgƒ‹ƒN—v‹ƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 426 VSA_REQ_MSR_PLUS_TRQ_1AA "ï¿½lï¿½rï¿½qï¿½vï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½vï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O";
 BA_ "GenSigStartValue" SG_ 426 VSA_REQ_MSR_PLUS_TRQ_1AA 0;
-BA_ "ValueTableE" SG_ 426 VSA_TRQ_CONTROL_MODE_1AA "0: VSA/TCS control inactive (normal)
-1: Request MSR?control
-2: Request acceleration control (This value is set when engine control is required)
+BA_ "ValueTableE" SG_ 426 VSA_TRQ_CONTROL_MODE_1AA "0: VSA/TCS control inactive (normal)
+
+1: Request MSR?control
+
+2: Request acceleration control (This value is set when engine control is required)
+
 3: Inhibit VSA/TCS (VSA?failure)";
-BA_ "DescriptionE" SG_ 426 VSA_TRQ_CONTROL_MODE_1AA "Control mode
+BA_ "DescriptionE" SG_ 426 VSA_TRQ_CONTROL_MODE_1AA "Control mode
+
 If the data has remained '3'?for 70 msec, the VSA is judged faulty and no request will be accepted from the VSA?until a reset is performed via IG?operation.";
-BA_ "DescriptionJ" SG_ 426 VSA_TRQ_CONTROL_MODE_1AA "§Œäƒ‚[ƒh
-ƒf[ƒ^‚ª '3' ‚ª70msecŒp‘±‚µ‚½ê‡AVSAŒÌá‚Æ”»’f‚µˆÈŒãIG‘€ì‚É‚æ‚éØ¾¯Ä‚Ü‚ÅVSA‚©‚ç‚Ì—v‹‚ðŽó‚¯•t‚¯‚È‚¢Ž–‚Æ‚·‚éB";
+BA_ "DescriptionJ" SG_ 426 VSA_TRQ_CONTROL_MODE_1AA "ï¿½ï¿½ï¿½äƒ‚ï¿½[ï¿½h
+
+ï¿½fï¿½[ï¿½^ï¿½ï¿½ '3' ï¿½ï¿½70msecï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‡ï¿½AVSAï¿½Ìï¿½Æ”ï¿½ï¿½fï¿½ï¿½ï¿½ÈŒï¿½IGï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½Ø¾ï¿½Ä‚Ü‚ï¿½VSAï¿½ï¿½ï¿½ï¿½Ì—vï¿½ï¿½ï¿½ï¿½ï¿½ó‚¯•tï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½B";
 BA_ "GenSigStartValue" SG_ 426 VSA_TRQ_CONTROL_MODE_1AA 0;
-BA_ "DescriptionE" SG_ 426 VSA_REQ_TRQ_1AA "Indicates the crankshaft torque.
--32768 to 32767 Nm
+BA_ "DescriptionE" SG_ 426 VSA_REQ_TRQ_1AA "Indicates the crankshaft torque.
+
+-32768 to 32767 Nm
+
 Indicates the crankshaft torque. ";
-BA_ "DescriptionJ" SG_ 426 VSA_REQ_TRQ_1AA "ƒNƒ‰ƒ“ƒNƒVƒƒƒtƒgƒgƒ‹ƒN‚ðŽ¦‚·
--32768`32767Nm
-ƒNƒ‰ƒ“ƒNƒVƒƒƒtƒgƒgƒ‹ƒN‚ðŽ¦‚·";
+BA_ "DescriptionJ" SG_ 426 VSA_REQ_TRQ_1AA "ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½Vï¿½ï¿½ï¿½tï¿½gï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+-32768ï¿½`32767Nm
+
+ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½Vï¿½ï¿½ï¿½tï¿½gï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 426 VSA_REQ_TRQ_1AA 0;
 BA_ "GenSigStartValue" SG_ 506 ACC_TARGET_CALIPER_PRESSURE_FR 1020;
 BA_ "GenSigStartValue" SG_ 506 ACC_TARGET_CALIPER_PRESSURE_FL 1020;
 BA_ "GenSigStartValue" SG_ 316 ENG_SHFT_IN_REVERSE_13C 1;
 BA_ "DescriptionJ" SG_ 316 ENG_SHFT_IN_REVERSE_13C "*";
 BA_ "ValueTableE" SG_ 316 ENG_SHFT_IN_REVERSE_13C "*";
-BA_ "ValueTableE" SG_ 316 ENG_CLUTCH_SW_CC_13C "1: Clutch pedal is not depressed(SW ON)
+BA_ "ValueTableE" SG_ 316 ENG_CLUTCH_SW_CC_13C "1: Clutch pedal is not depressed(SW ON)
+
 0: Clutch pedal is depressed(SW OFF)";
 BA_ "DescriptionE" SG_ 316 ENG_CLUTCH_SW_CC_13C "Clutch sw signal for Cruise control";
-BA_ "DescriptionJ" SG_ 316 ENG_CLUTCH_SW_CC_13C "ƒNƒ‹[ƒYƒRƒ“ƒgƒ[ƒ‹—pƒNƒ‰ƒbƒ`ƒXƒCƒbƒ`M†";
+BA_ "DescriptionJ" SG_ 316 ENG_CLUTCH_SW_CC_13C "ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½Rï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½pï¿½Nï¿½ï¿½ï¿½bï¿½`ï¿½Xï¿½Cï¿½bï¿½`ï¿½Mï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 316 ENG_CLUTCH_SW_CC_13C 1;
-BA_ "ValueTableE" SG_ 316 ENG_VSA_ACK1_13C "0: No fuel/ignition control (THL?control only)
-1: Ignition retard
+BA_ "ValueTableE" SG_ 316 ENG_VSA_ACK1_13C "0: No fuel/ignition control (THL?control only)
+
+1: Ignition retard
+
 2: ?All cylinders in the F/C mode";
 BA_ "DescriptionE" SG_ 316 ENG_VSA_ACK1_13C "Response to VSA fuel control request";
-BA_ "DescriptionJ" SG_ 316 ENG_VSA_ACK1_13C "VSA”R—¿§Œä—v‹‚Ö‚Ì‰ž“š     ";
+BA_ "DescriptionJ" SG_ 316 ENG_VSA_ACK1_13C "VSAï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Ö‚Ì‰ï¿½ï¿½ï¿½     ";
 BA_ "GenSigStartValue" SG_ 316 ENG_VSA_ACK1_13C 0;
 BA_ "ValueTableE" SG_ 316 ENG_VSA_PERMIT_PLUS_TRQ_13C "1: ?Positive torque permitted";
 BA_ "DescriptionE" SG_ 316 ENG_VSA_PERMIT_PLUS_TRQ_13C "MSR?positive torque permission flag";
-BA_ "DescriptionJ" SG_ 316 ENG_VSA_PERMIT_PLUS_TRQ_13C "‚l‚r‚qƒvƒ‰ƒXƒgƒ‹ƒN‹–‰Âƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 316 ENG_VSA_PERMIT_PLUS_TRQ_13C "ï¿½lï¿½rï¿½qï¿½vï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½Âƒtï¿½ï¿½ï¿½O";
 BA_ "GenSigStartValue" SG_ 316 ENG_VSA_PERMIT_PLUS_TRQ_13C 0;
-BA_ "DescriptionE" SG_ 316 ENG_ALIVE_COUNTER_13C "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 316 ENG_ALIVE_COUNTER_13C "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 316 ENG_ALIVE_COUNTER_13C "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 316 ENG_ALIVE_COUNTER_13C "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 316 ENG_ALIVE_COUNTER_13C 0;
 BA_ "GenSigStartValue" SG_ 316 ENG_CHECKSUM_13C 0;
 BA_ "ValueTableE" SG_ 316 ENG_RECEIVE_ERROR_1AA "1: Reception error detected";
-BA_ "DescriptionE" SG_ 316 ENG_RECEIVE_ERROR_1AA "Flag indicating whether or not a reception error is present
+BA_ "DescriptionE" SG_ 316 ENG_RECEIVE_ERROR_1AA "Flag indicating whether or not a reception error is present
+
 ID:?'1'?if at least one of the 1AAh alive counter refresh error, checksum error or timeout has continued for 60 msec.";
-BA_ "DescriptionJ" SG_ 316 ENG_RECEIVE_ERROR_1AA "ŽóMƒGƒ‰[‚Ì—L–³‚ðŽ¦‚·ƒtƒ‰ƒO
-ID: 1AAh‚ÌƒAƒ‰ƒCƒuƒJƒEƒ“ƒ^XVˆÙíAƒ`ƒFƒbƒNƒTƒ€ˆÙíAƒ^ƒCƒ€ƒAƒEƒg‚Ì­‚È‚­‚Æ‚àˆê‚Â‚ª60msecŠÔŒp‘±‚µ‚½ê‡'1'‚Æ‚·‚é";
+BA_ "DescriptionJ" SG_ 316 ENG_RECEIVE_ERROR_1AA "ï¿½ï¿½Mï¿½Gï¿½ï¿½ï¿½[ï¿½Ì—Lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O
+
+ID: 1AAhï¿½ÌƒAï¿½ï¿½ï¿½Cï¿½uï¿½Jï¿½Eï¿½ï¿½ï¿½^ï¿½Xï¿½Vï¿½Ùï¿½Aï¿½`ï¿½Fï¿½bï¿½Nï¿½Tï¿½ï¿½ï¿½Ùï¿½Aï¿½^ï¿½Cï¿½ï¿½ï¿½Aï¿½Eï¿½gï¿½Ìï¿½ï¿½È‚ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½Â‚ï¿½60msecï¿½ÔŒpï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‡'1'ï¿½Æ‚ï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 316 ENG_RECEIVE_ERROR_1AA 0;
 BA_ "ValueTableE" SG_ 316 ENG_VSA_INHIBIT_VSA_CONTROL_13C "1: VSA F/C?control temporarily stopped";
 BA_ "DescriptionE" SG_ 316 ENG_VSA_INHIBIT_VSA_CONTROL_13C "VSA control permission/inhibition information";
-BA_ "DescriptionJ" SG_ 316 ENG_VSA_INHIBIT_VSA_CONTROL_13C "VSA§Œä‹–‰Â^‹ÖŽ~î•ñ ";
+BA_ "DescriptionJ" SG_ 316 ENG_VSA_INHIBIT_VSA_CONTROL_13C "VSAï¿½ï¿½ï¿½ä‹–ï¿½Â^ï¿½ÖŽ~ï¿½ï¿½ï¿½ ";
 BA_ "GenSigStartValue" SG_ 316 ENG_VSA_INHIBIT_VSA_CONTROL_13C 0;
 BA_ "ValueTableE" SG_ 316 ENG_VSA_REFUSED_VSA_CONTROL_13C "1: ?Failure that disables VSA control is present";
 BA_ "DescriptionE" SG_ 316 ENG_VSA_REFUSED_VSA_CONTROL_13C "VSA control permission/inhibition information";
-BA_ "DescriptionJ" SG_ 316 ENG_VSA_REFUSED_VSA_CONTROL_13C "VSA§Œä‹–‰Â^‹ÖŽ~î•ñ ";
+BA_ "DescriptionJ" SG_ 316 ENG_VSA_REFUSED_VSA_CONTROL_13C "VSAï¿½ï¿½ï¿½ä‹–ï¿½Â^ï¿½ÖŽ~ï¿½ï¿½ï¿½ ";
 BA_ "GenSigStartValue" SG_ 316 ENG_VSA_REFUSED_VSA_CONTROL_13C 0;
-BA_ "DescriptionE" SG_ 316 ENG_SMART_ACCELE_PEDAL_POS_13C "Acceleration pedal position (%)
+BA_ "DescriptionE" SG_ 316 ENG_SMART_ACCELE_PEDAL_POS_13C "Acceleration pedal position (%)
+
 ( at the time of a Smart Pedal System Application )";
-BA_ "DescriptionJ" SG_ 316 ENG_SMART_ACCELE_PEDAL_POS_13C "ƒAƒNƒZƒ‹ƒyƒ_ƒ‹ˆÊ’u
-iƒXƒ}[ƒgƒyƒ_ƒ‹ƒVƒXƒeƒ€“K—pŽžj";
+BA_ "DescriptionJ" SG_ 316 ENG_SMART_ACCELE_PEDAL_POS_13C "ï¿½Aï¿½Nï¿½Zï¿½ï¿½ï¿½yï¿½_ï¿½ï¿½ï¿½Ê’u
+
+ï¿½iï¿½Xï¿½}ï¿½[ï¿½gï¿½yï¿½_ï¿½ï¿½ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Kï¿½pï¿½ï¿½ï¿½j";
 BA_ "GenSigStartValue" SG_ 316 ENG_SMART_ACCELE_PEDAL_POS_13C 0;
-BA_ "DescriptionE" SG_ 316 ENG_DRIVER_REQ_TRQ_13C "Indicates the driver-requested crankshaft driving torque.
+BA_ "DescriptionE" SG_ 316 ENG_DRIVER_REQ_TRQ_13C "Indicates the driver-requested crankshaft driving torque.
+
 Cruise-requested crankshaft driving torque during cruise control.";
-BA_ "DescriptionJ" SG_ 316 ENG_DRIVER_REQ_TRQ_13C "ƒhƒ‰ƒCƒo[—v‹ƒNƒ‰ƒ“ƒNƒVƒƒƒtƒg‹ì“®ƒgƒ‹ƒN‚ðŽ¦‚·
-ƒNƒ‹[ƒYƒRƒ“ƒgƒ[ƒ‹’†‚ÍƒNƒ‹[ƒY—v‹ƒNƒ‰ƒ“ƒNƒVƒƒƒtƒg‹ì“®ƒgƒ‹ƒN‚Æ‚·‚é";
-BA_ "DescriptionE" SG_ 316 ENG_ENG_TRQ_13C "Indicates the crankshaft torque.
+BA_ "DescriptionJ" SG_ 316 ENG_DRIVER_REQ_TRQ_13C "ï¿½hï¿½ï¿½ï¿½Cï¿½oï¿½[ï¿½vï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½Vï¿½ï¿½ï¿½tï¿½gï¿½ì“®ï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½Rï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ÍƒNï¿½ï¿½ï¿½[ï¿½Yï¿½vï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½Vï¿½ï¿½ï¿½tï¿½gï¿½ì“®ï¿½gï¿½ï¿½ï¿½Nï¿½Æ‚ï¿½ï¿½ï¿½";
+BA_ "DescriptionE" SG_ 316 ENG_ENG_TRQ_13C "Indicates the crankshaft torque.
+
 -32768 to 32767 Nm";
-BA_ "DescriptionJ" SG_ 316 ENG_ENG_TRQ_13C "ƒNƒ‰ƒ“ƒNƒVƒƒƒtƒgƒgƒ‹ƒN‚ðŽ¦‚·
--32768`32767Nm";
+BA_ "DescriptionJ" SG_ 316 ENG_ENG_TRQ_13C "ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½Vï¿½ï¿½ï¿½tï¿½gï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+-32768ï¿½`32767Nm";
 BA_ "GenSigStartValue" SG_ 985 VSA_CHECKSUM_3D9 0;
-BA_ "DescriptionE" SG_ 985 VSA_ALIVE_COUNTER_3D9 "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 985 VSA_ALIVE_COUNTER_3D9 "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 985 VSA_ALIVE_COUNTER_3D9 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 985 VSA_ALIVE_COUNTER_3D9 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 985 VSA_ALIVE_COUNTER_3D9 0;
-BA_ "DescriptionJ" SG_ 985 VSA_ABS_DISABLE_EDR "ABSŒÌáƒtƒ‰ƒOBEDR—pB";
+BA_ "DescriptionJ" SG_ 985 VSA_ABS_DISABLE_EDR "ABSï¿½Ìï¿½tï¿½ï¿½ï¿½Oï¿½BEDRï¿½pï¿½B";
 BA_ "GenSigStartValue" SG_ 985 VSA_ABS_DISABLE_EDR 0;
-BA_ "CommentTxJ" SG_ 985 VSA_STABILITY_CTRL1_DISABLE_EDR "ABSƒ†ƒjƒbƒg‚Ì—l‚ÉASTABILITY CONTROL1‚ð1‚Â‚à‘•”õ‚µ‚È‚¢ê‡‚ÍA'0'ŒÅ’è‚Æ‚·‚éB
-‚Ü‚½AVSAƒIƒtó‘Ô‚ÍAu‹ÖŽ~v‚É‚ÍŠÜ‚ß‚È‚¢B";
-BA_ "DescriptionJ" SG_ 985 VSA_STABILITY_CTRL1_DISABLE_EDR "EDR—p
-STABILITY CONTROL1§Œä‹ÖŽ~ƒtƒ‰ƒO";
-BA_ "ValueTableE" SG_ 985 VSA_STABILITY_CTRL1_DISABLE_EDR "0: STABILITY CONTROL1 ENABLE
+BA_ "CommentTxJ" SG_ 985 VSA_STABILITY_CTRL1_DISABLE_EDR "ABSï¿½ï¿½ï¿½jï¿½bï¿½gï¿½Ì—lï¿½ÉASTABILITY CONTROL1ï¿½ï¿½1ï¿½Â‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ê‡ï¿½ÍA'0'ï¿½Å’ï¿½Æ‚ï¿½ï¿½ï¿½B
+
+ï¿½Ü‚ï¿½ï¿½AVSAï¿½Iï¿½tï¿½ï¿½Ô‚ÍAï¿½uï¿½ÖŽ~ï¿½vï¿½É‚ÍŠÜ‚ß‚È‚ï¿½ï¿½B";
+BA_ "DescriptionJ" SG_ 985 VSA_STABILITY_CTRL1_DISABLE_EDR "EDRï¿½p
+
+STABILITY CONTROL1ï¿½ï¿½ï¿½ï¿½ÖŽ~ï¿½tï¿½ï¿½ï¿½O";
+BA_ "ValueTableE" SG_ 985 VSA_STABILITY_CTRL1_DISABLE_EDR "0: STABILITY CONTROL1 ENABLE
+
 1: STABILITY CONTROL1 DISABLE";
 BA_ "GenSigStartValue" SG_ 985 VSA_STABILITY_CTRL1_DISABLE_EDR 0;
-BA_ "CommentTxJ" SG_ 985 VSA_STABILITY_CTRL2_DISABLE_EDR "ABSƒ†ƒjƒbƒg‚âTSA‹@”\‚ðŽ‚½‚È‚¢VSAƒ†ƒjƒbƒg‚Ì—l‚ÉASTABILITY CONTROL2‚ð1‚Â‚à‘•”õ‚µ‚È‚¢ê‡‚ÍA'0'ŒÅ’è‚Æ‚·‚éB
-‚Ü‚½AVSAƒIƒtó‘Ô‚ÍAu‹ÖŽ~v‚É‚ÍŠÜ‚ß‚È‚¢B";
-BA_ "DescriptionJ" SG_ 985 VSA_STABILITY_CTRL2_DISABLE_EDR "EDR—p
-STABILITY CONTROL2§Œä‹ÖŽ~ƒtƒ‰ƒO";
-BA_ "ValueTableE" SG_ 985 VSA_STABILITY_CTRL2_DISABLE_EDR "0: STABILITY CONTROL2 ENABLE
+BA_ "CommentTxJ" SG_ 985 VSA_STABILITY_CTRL2_DISABLE_EDR "ABSï¿½ï¿½ï¿½jï¿½bï¿½gï¿½ï¿½TSAï¿½@ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½VSAï¿½ï¿½ï¿½jï¿½bï¿½gï¿½Ì—lï¿½ÉASTABILITY CONTROL2ï¿½ï¿½1ï¿½Â‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ê‡ï¿½ÍA'0'ï¿½Å’ï¿½Æ‚ï¿½ï¿½ï¿½B
+
+ï¿½Ü‚ï¿½ï¿½AVSAï¿½Iï¿½tï¿½ï¿½Ô‚ÍAï¿½uï¿½ÖŽ~ï¿½vï¿½É‚ÍŠÜ‚ß‚È‚ï¿½ï¿½B";
+BA_ "DescriptionJ" SG_ 985 VSA_STABILITY_CTRL2_DISABLE_EDR "EDRï¿½p
+
+STABILITY CONTROL2ï¿½ï¿½ï¿½ï¿½ÖŽ~ï¿½tï¿½ï¿½ï¿½O";
+BA_ "ValueTableE" SG_ 985 VSA_STABILITY_CTRL2_DISABLE_EDR "0: STABILITY CONTROL2 ENABLE
+
 1: STABILITY CONTROL2 DISABLE";
 BA_ "GenSigStartValue" SG_ 985 VSA_STABILITY_CTRL2_DISABLE_EDR 0;
-BA_ "DescriptionJ" SG_ 985 VSA_VSA_EQUIPPED_EDR "VSA‘•”õƒtƒ‰ƒOBEDR—pB";
+BA_ "DescriptionJ" SG_ 985 VSA_VSA_EQUIPPED_EDR "VSAï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½Oï¿½BEDRï¿½pï¿½B";
 BA_ "GenSigStartValue" SG_ 985 VSA_VSA_EQUIPPED_EDR 0;
-BA_ "DescriptionJ" SG_ 985 VSA_ABS_ACT_EDR "ABSì“®ƒtƒ‰ƒOBEDR—pB";
+BA_ "DescriptionJ" SG_ 985 VSA_ABS_ACT_EDR "ABSï¿½ì“®ï¿½tï¿½ï¿½ï¿½Oï¿½BEDRï¿½pï¿½B";
 BA_ "GenSigStartValue" SG_ 985 VSA_ABS_ACT_EDR 0;
-BA_ "DescriptionJ" SG_ 985 VSA_STABILITY_CTRL_ACT_EDR "STABILITY CONTROL ì“®ƒtƒ‰ƒOBEDR—pB";
+BA_ "DescriptionJ" SG_ 985 VSA_STABILITY_CTRL_ACT_EDR "STABILITY CONTROL ï¿½ì“®ï¿½tï¿½ï¿½ï¿½Oï¿½BEDRï¿½pï¿½B";
 BA_ "GenSigStartValue" SG_ 985 VSA_STABILITY_CTRL_ACT_EDR 0;
-BA_ "DescriptionJ" SG_ 985 VSA_VSA_OFF_STATUS_EDR "VSA OFF SW ‘€ì‚É‚æ‚é VSA OFF ó‘ÔBEDR—pB";
+BA_ "DescriptionJ" SG_ 985 VSA_VSA_OFF_STATUS_EDR "VSA OFF SW ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ VSA OFF ï¿½ï¿½ÔBEDRï¿½pï¿½B";
 BA_ "GenSigStartValue" SG_ 985 VSA_VSA_OFF_STATUS_EDR 0;
-BA_ "DescriptionE" SG_ 2564550641 HDS_HDC_CAN "Data frame for failure diagnosis/reprogramming
+BA_ "DescriptionE" SG_ 2564550641 HDS_HDC_CAN "Data frame for failure diagnosis/reprogramming
+
 Refer to 'Function Request for ECU Not Implementing HDC_CAN Protocol.'";
-BA_ "DescriptionJ" SG_ 2564550641 HDS_HDC_CAN "ŒÌáf’f¥ƒŠƒvƒƒOƒ‰ƒ~ƒ“ƒO—p‚Ìƒf[ƒ^¥ƒtƒŒ[ƒ€
-wHDC_CAN ƒvƒƒgƒRƒ‹”ñŽÀ‘• ECU ‚É‘Î‚·‚é‹@”\—v‹x‚ðŽQÆ";
+BA_ "DescriptionJ" SG_ 2564550641 HDS_HDC_CAN "ï¿½Ìï¿½fï¿½fï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½pï¿½Ìƒfï¿½[ï¿½^ï¿½ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½
+
+ï¿½wHDC_CAN ï¿½vï¿½ï¿½ï¿½gï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ECU ï¿½É‘Î‚ï¿½ï¿½ï¿½@ï¿½\ï¿½vï¿½ï¿½ï¿½xï¿½ï¿½ï¿½Qï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 2564550641 HDS_HDC_CAN 0;
 BA_ "GenSigStartValue" SG_ 808 ENG_CHECKSUM_328 0;
-BA_ "DescriptionE" SG_ 808 ENG_ALIVE_COUNTER_328 "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 808 ENG_ALIVE_COUNTER_328 "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 808 ENG_ALIVE_COUNTER_328 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 808 ENG_ALIVE_COUNTER_328 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 808 ENG_ALIVE_COUNTER_328 0;
 BA_ "DescriptionE" SG_ 808 ENG_STRNNEND "Engine complete combustion judgment flag";
-BA_ "DescriptionJ" SG_ 808 ENG_STRNNEND "ENGŠ®”š”»’èƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 808 ENG_STRNNEND "ENGï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O";
 BA_ "ValueTableE" SG_ 808 ENG_STRNNEND "1: Complete combustion";
 BA_ "GenSigStartValue" SG_ 808 ENG_STRNNEND 0;
 BA_ "GenSigStartValue" SG_ 804 ENG_CHECKSUM_324 0;
-BA_ "DescriptionE" SG_ 804 ENG_ALIVE_COUNTER_324 "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 804 ENG_ALIVE_COUNTER_324 "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 804 ENG_ALIVE_COUNTER_324 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 804 ENG_ALIVE_COUNTER_324 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 804 ENG_ALIVE_COUNTER_324 0;
 BA_ "ValueTableE" SG_ 804 ENG_SW_STATUS_SCS "1: SCS SW ON";
 BA_ "GenSigStartValue" SG_ 804 ENG_SW_STATUS_SCS 0;
@@ -783,27 +832,31 @@ BA_ "GenSigStartValue" SG_ 472 SS30_SYSTEM_ACT 0;
 BA_ "DescriptionJ" SG_ 472 SS30_SYSTEM_ACT "*";
 BA_ "DescriptionE" SG_ 472 SS30_SYSTEM_ACT "0";
 BA_ "GenSigStartValue" SG_ 472 SS30_CHECKSUM_1D8 0;
-BA_ "DescriptionE" SG_ 472 SS30_ALIVE_COUNTER_1D8 "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 472 SS30_ALIVE_COUNTER_1D8 "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 472 SS30_ALIVE_COUNTER_1D8 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 472 SS30_ALIVE_COUNTER_1D8 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 472 SS30_ALIVE_COUNTER_1D8 0;
-BA_ "DescriptionJ" SG_ 472 SS30_TARGET_DECELERATION "SS30—v‹Œ¸‘¬ŽwŽ¦’l";
+BA_ "DescriptionJ" SG_ 472 SS30_TARGET_DECELERATION "SS30ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½wï¿½ï¿½ï¿½l";
 BA_ "GenSigStartValue" SG_ 472 SS30_TARGET_DECELERATION -1024;
-BA_ "DescriptionJ" SG_ 472 SS30_REQ_PREBRAKE "SS30—\ˆ³—v‹";
+BA_ "DescriptionJ" SG_ 472 SS30_REQ_PREBRAKE "SS30ï¿½\ï¿½ï¿½ï¿½vï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 472 SS30_REQ_PREBRAKE 0;
-BA_ "DescriptionJ" SG_ 472 SS30_REQ_BRAKE "SS30Œ¸‘¬—v‹";
+BA_ "DescriptionJ" SG_ 472 SS30_REQ_BRAKE "SS30ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 472 SS30_REQ_BRAKE 0;
-BA_ "DescriptionJ" SG_ 472 SS30_REQ_BRAKEHOLD "SS30ƒuƒŒ[ƒL•ÛŽ—v‹";
+BA_ "DescriptionJ" SG_ 472 SS30_REQ_BRAKEHOLD "SS30ï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½ÛŽï¿½ï¿½vï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 472 SS30_REQ_BRAKEHOLD 0;
 BA_ "DescriptionE" SG_ 472 SS30_STATUS_FAIL "0";
-BA_ "DescriptionJ" SG_ 472 SS30_STATUS_FAIL "SS30ŒÌáƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 472 SS30_STATUS_FAIL "SS30ï¿½Ìï¿½tï¿½ï¿½ï¿½O";
 BA_ "GenSigStartValue" SG_ 472 SS30_STATUS_FAIL 0;
 BA_ "GenSigStartValue" SG_ 356 METER_CHECKSUM_164 0;
-BA_ "DescriptionE" SG_ 356 METER_ALIVE_COUNTER_164 "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 356 METER_ALIVE_COUNTER_164 "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 356 METER_ALIVE_COUNTER_164 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 356 METER_ALIVE_COUNTER_164 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 356 METER_ALIVE_COUNTER_164 0;
 BA_ "ValueTableE" SG_ 356 METER_SW_STATUS_PARK_BRAKE "1: Parking brake SW ON";
 BA_ "GenSigStartValue" SG_ 356 METER_SW_STATUS_PARK_BRAKE 0;
@@ -814,115 +867,155 @@ BA_ "GenSigStartValue" SG_ 356 METER_SW_STATUS_VSA_OFF 0;
 BA_ "ValueTableE" SG_ 401 CVT_CAS_ON "1: ?CAS_ON?request to VSA";
 BA_ "GenSigStartValue" SG_ 401 CVT_CAS_ON 0;
 BA_ "GenSigStartValue" SG_ 401 CVT_CHECKSUM_191 0;
-BA_ "DescriptionE" SG_ 401 CVT_ALIVE_COUNTER_191 "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 401 CVT_ALIVE_COUNTER_191 "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 401 CVT_ALIVE_COUNTER_191 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 401 CVT_ALIVE_COUNTER_191 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 401 CVT_ALIVE_COUNTER_191 0;
 BA_ "DescriptionE" SG_ 401 CVT_RATIO_TARGET "Target ratio information";
-BA_ "DescriptionJ" SG_ 401 CVT_RATIO_TARGET "–Ú•WƒŒƒVƒIî•ñ";
+BA_ "DescriptionJ" SG_ 401 CVT_RATIO_TARGET "ï¿½Ú•Wï¿½ï¿½ï¿½Vï¿½Iï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 401 CVT_RATIO_TARGET 64;
 BA_ "DescriptionE" SG_ 401 CVT_RATIO_INFO_191 "Ratio information";
-BA_ "DescriptionJ" SG_ 401 CVT_RATIO_INFO_191 "ƒŒƒVƒIî•ñ";
+BA_ "DescriptionJ" SG_ 401 CVT_RATIO_INFO_191 "ï¿½ï¿½ï¿½Vï¿½Iï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 401 CVT_RATIO_INFO_191 64;
 BA_ "ValueTableE" SG_ 401 CVT_REFUSE_VSA_CONTROL "1: ?CVT?failure that disables VSA control is present";
 BA_ "GenSigStartValue" SG_ 401 CVT_REFUSE_VSA_CONTROL 0;
-BA_ "DescriptionE" SG_ 401 CVT_GEAR_POSITION_IND_CVT "Shift position indication for S-Matic
-For S-Matic LED indication
+BA_ "DescriptionE" SG_ 401 CVT_GEAR_POSITION_IND_CVT "Shift position indication for S-Matic
+
+For S-Matic LED indication
+
 8-E: OFF";
-BA_ "DescriptionJ" SG_ 401 CVT_GEAR_POSITION_IND_CVT "S-Matic—p ƒVƒtƒg’i•\Ž¦
-S-Matic LED•\Ž¦—p
-9-E: ƒIƒt";
-BA_ "ValueTableE" SG_ 401 CVT_GEAR_POSITION_IND_CVT "0: OFF
-1: 1st
-2: 2nd
-3: 3rd
-4: 4th
-5: 5th
-6: 6th
-7: 7th
-8: 8th
+BA_ "DescriptionJ" SG_ 401 CVT_GEAR_POSITION_IND_CVT "S-Maticï¿½p ï¿½Vï¿½tï¿½gï¿½iï¿½\ï¿½ï¿½
+
+S-Matic LEDï¿½\ï¿½ï¿½ï¿½p
+
+9-E: ï¿½Iï¿½t";
+BA_ "ValueTableE" SG_ 401 CVT_GEAR_POSITION_IND_CVT "0: OFF
+
+1: 1st
+
+2: 2nd
+
+3: 3rd
+
+4: 4th
+
+5: 5th
+
+6: 6th
+
+7: 7th
+
+8: 8th
+
 F: ?L range control active";
 BA_ "GenSigStartValue" SG_ 401 CVT_GEAR_POSITION_IND_CVT 0;
 BA_ "DescriptionE" SG_ 401 CVT_SHFT_IN_PARKING "Select lever position";
-BA_ "DescriptionJ" SG_ 401 CVT_SHFT_IN_PARKING "ƒZƒŒƒNƒgƒŒƒo[ˆÊ’u";
+BA_ "DescriptionJ" SG_ 401 CVT_SHFT_IN_PARKING "ï¿½Zï¿½ï¿½ï¿½Nï¿½gï¿½ï¿½ï¿½oï¿½[ï¿½Ê’u";
 BA_ "ValueTableE" SG_ 401 CVT_SHFT_IN_PARKING "1: Parking";
 BA_ "GenSigStartValue" SG_ 401 CVT_SHFT_IN_PARKING 0;
 BA_ "DescriptionE" SG_ 401 CVT_SHFT_IN_REVERSE "Select lever position";
-BA_ "DescriptionJ" SG_ 401 CVT_SHFT_IN_REVERSE "ƒZƒŒƒNƒgƒŒƒo[ˆÊ’u";
+BA_ "DescriptionJ" SG_ 401 CVT_SHFT_IN_REVERSE "ï¿½Zï¿½ï¿½ï¿½Nï¿½gï¿½ï¿½ï¿½oï¿½[ï¿½Ê’u";
 BA_ "ValueTableE" SG_ 401 CVT_SHFT_IN_REVERSE "1: Reverse";
 BA_ "GenSigStartValue" SG_ 401 CVT_SHFT_IN_REVERSE 0;
 BA_ "DescriptionE" SG_ 401 CVT_SHFT_IN_NEUTRAL "Select lever position";
-BA_ "DescriptionJ" SG_ 401 CVT_SHFT_IN_NEUTRAL "ƒZƒŒƒNƒgƒŒƒo[ˆÊ’u";
+BA_ "DescriptionJ" SG_ 401 CVT_SHFT_IN_NEUTRAL "ï¿½Zï¿½ï¿½ï¿½Nï¿½gï¿½ï¿½ï¿½oï¿½[ï¿½Ê’u";
 BA_ "ValueTableE" SG_ 401 CVT_SHFT_IN_NEUTRAL "1: Neutral";
 BA_ "GenSigStartValue" SG_ 401 CVT_SHFT_IN_NEUTRAL 0;
 BA_ "DescriptionE" SG_ 401 CVT_SHFT_IN_D "Select lever position";
-BA_ "DescriptionJ" SG_ 401 CVT_SHFT_IN_D "ƒZƒŒƒNƒgƒŒƒo[ˆÊ’u";
+BA_ "DescriptionJ" SG_ 401 CVT_SHFT_IN_D "ï¿½Zï¿½ï¿½ï¿½Nï¿½gï¿½ï¿½ï¿½oï¿½[ï¿½Ê’u";
 BA_ "ValueTableE" SG_ 401 CVT_SHFT_IN_D "1: 'D'";
 BA_ "GenSigStartValue" SG_ 401 CVT_SHFT_IN_D 0;
-BA_ "DescriptionE" SG_ 401 CVT_SHFT_IN_S "Select lever position
-Meter 'S' lighting information
-* S lighting information under the following two specifications
-- 'S range' on the shift lever
+BA_ "DescriptionE" SG_ 401 CVT_SHFT_IN_S "Select lever position
+
+Meter 'S' lighting information
+
+* S lighting information under the following two specifications
+
+- 'S range' on the shift lever
+
  - 'Sports mode (SPO-IND)' effected by the S SW?";
-BA_ "DescriptionJ" SG_ 401 CVT_SHFT_IN_S "ƒZƒŒƒNƒgƒŒƒo[ˆÊ’u
-Ò°ÀhSh“_“”î•ñ
-¦‰º‹L2Žd—l‚É‚¨‚¯‚éS“_“”î•ñ
-E¼ÌÄÚÊÞ°hSÚÝ¼Þh
- ES SW‚É‚æ‚éh½Îß°ÂÓ°ÄÞiSPO-INDjh ";
+BA_ "DescriptionJ" SG_ 401 CVT_SHFT_IN_S "ï¿½Zï¿½ï¿½ï¿½Nï¿½gï¿½ï¿½ï¿½oï¿½[ï¿½Ê’u
+
+Ò°ï¿½ï¿½hSï¿½hï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½
+
+ï¿½ï¿½ï¿½ï¿½ï¿½L2ï¿½dï¿½lï¿½É‚ï¿½ï¿½ï¿½ï¿½ï¿½Sï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½
+
+ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½Þ°ï¿½hSï¿½Ý¼Þh
+
+ ï¿½ES SWï¿½É‚ï¿½ï¿½hï¿½ï¿½ß°ï¿½Ó°ï¿½ÞiSPO-INDï¿½jï¿½h ";
 BA_ "ValueTableE" SG_ 401 CVT_SHFT_IN_S "1: 'S'";
 BA_ "GenSigStartValue" SG_ 401 CVT_SHFT_IN_S 0;
 BA_ "DescriptionE" SG_ 401 CVT_SHFT_IN_L "Select lever position";
-BA_ "DescriptionJ" SG_ 401 CVT_SHFT_IN_L "ƒZƒŒƒNƒgƒŒƒo[ˆÊ’u";
+BA_ "DescriptionJ" SG_ 401 CVT_SHFT_IN_L "ï¿½Zï¿½ï¿½ï¿½Nï¿½gï¿½ï¿½ï¿½oï¿½[ï¿½Ê’u";
 BA_ "ValueTableE" SG_ 401 CVT_SHFT_IN_L "1: 'L'";
 BA_ "GenSigStartValue" SG_ 401 CVT_SHFT_IN_L 0;
 BA_ "GenSigStartValue" SG_ 380 ENG_CHECKSUM_17C 0;
-BA_ "DescriptionE" SG_ 380 ENG_ALIVE_COUNTER_17C "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 380 ENG_ALIVE_COUNTER_17C "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 380 ENG_ALIVE_COUNTER_17C "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 380 ENG_ALIVE_COUNTER_17C "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 380 ENG_ALIVE_COUNTER_17C 0;
-BA_ "DescriptionJ" SG_ 380 ENG_IS_PRE_PROGRESS "ƒAƒCƒhƒ‹ƒXƒgƒbƒv‚ð‚·‚é‘O‚©‚ç•œ‹A—\‚ÌŠÔ‚É—§‚Ä‚éƒtƒ‰ƒOiMETER PCUƒKƒCƒ_ƒ“ƒX•\Ž¦ŽæÁ‚µ—pj";
+BA_ "DescriptionJ" SG_ 380 ENG_IS_PRE_PROGRESS "ï¿½Aï¿½Cï¿½hï¿½ï¿½ï¿½Xï¿½gï¿½bï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ç•œï¿½Aï¿½\ï¿½ï¿½ï¿½ÌŠÔ‚É—ï¿½ï¿½Ä‚ï¿½tï¿½ï¿½ï¿½Oï¿½iMETER PCUï¿½Kï¿½Cï¿½_ï¿½ï¿½ï¿½Xï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½pï¿½j";
 BA_ "GenSigStartValue" SG_ 380 ENG_IS_PRE_PROGRESS 0;
-BA_ "DescriptionJ" SG_ 380 ENG_IS_PRE_RESTART "ƒAƒCƒhƒ‹ƒXƒgƒbƒv‚©‚ç•œ‹A‚·‚éÛ‚Ì—\ƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 380 ENG_IS_PRE_RESTART "ï¿½Aï¿½Cï¿½hï¿½ï¿½ï¿½Xï¿½gï¿½bï¿½vï¿½ï¿½ï¿½ç•œï¿½Aï¿½ï¿½ï¿½ï¿½Û‚Ì—\ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O";
 BA_ "GenSigStartValue" SG_ 380 ENG_IS_PRE_RESTART 0;
 BA_ "ValueTableE" SG_ 380 ENG_IS_PROGRESS "1: ?Idle stop control started or in progress";
 BA_ "GenSigStartValue" SG_ 380 ENG_IS_PROGRESS 0;
-BA_ "DescriptionE" SG_ 380 ENG_SW_STATUS_BRAKE_NO "The brake switch NO indicates the brake mode.
+BA_ "DescriptionE" SG_ 380 ENG_SW_STATUS_BRAKE_NO "The brake switch NO indicates the brake mode.
+
 (SW ON)";
-BA_ "DescriptionJ" SG_ 380 ENG_SW_STATUS_BRAKE_NO "ƒuƒŒ[ƒLƒXƒCƒbƒ`NO‚ªƒuƒŒ[ƒL’†ó‘Ô‚ðŽ¦‚·  
-(ƒXƒCƒbƒ` on)";
+BA_ "DescriptionJ" SG_ 380 ENG_SW_STATUS_BRAKE_NO "ï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½Xï¿½Cï¿½bï¿½`NOï¿½ï¿½ï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½ï¿½ï¿½ï¿½Ô‚ï¿½ï¿½ï¿½ï¿½ï¿½  
+
+(ï¿½Xï¿½Cï¿½bï¿½` on)";
 BA_ "GenSigStartValue" SG_ 380 ENG_SW_STATUS_BRAKE_NO 0;
 BA_ "ValueTableE" SG_ 380 ENG_CRUISE_STATUS_CRUISE_LMP "1: Cruise control lamp ON";
 BA_ "GenSigStartValue" SG_ 380 ENG_CRUISE_STATUS_CRUISE_LMP 0;
-BA_ "DescriptionE" SG_ 380 ENG_ENG_SPEED "Engine speed
+BA_ "DescriptionE" SG_ 380 ENG_ENG_SPEED "Engine speed
+
 0 to 15000 rpm";
-BA_ "DescriptionJ" SG_ 380 ENG_ENG_SPEED "ƒGƒ“ƒWƒ“‰ñ“]”
-0`15000rpm";
+BA_ "DescriptionJ" SG_ 380 ENG_ENG_SPEED "ï¿½Gï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½]ï¿½ï¿½
+
+0ï¿½`15000rpm";
 BA_ "GenSigStartValue" SG_ 380 ENG_ENG_SPEED 0;
 BA_ "GenSigStartValue" SG_ 342 STR_CHECKSUM_156 0;
-BA_ "DescriptionE" SG_ 342 STR_ALIVE_COUNTER_156 "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 342 STR_ALIVE_COUNTER_156 "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 342 STR_ALIVE_COUNTER_156 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 342 STR_ALIVE_COUNTER_156 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 342 STR_ALIVE_COUNTER_156 0;
-BA_ "DescriptionE" SG_ 342 STR_OK "OK flag: Indicates that the sensor is normal.
+BA_ "DescriptionE" SG_ 342 STR_OK "OK flag: Indicates that the sensor is normal.
+
 - 1 is output when normal.";
-BA_ "DescriptionJ" SG_ 342 STR_OK "OKƒtƒ‰ƒO: ƒZƒ“ƒT‚ª³í‚Å‚ ‚é‚±‚Æ‚ð•\‚·
-E³íŽž‚É1‚ðo—Í";
+BA_ "DescriptionJ" SG_ 342 STR_OK "OKï¿½tï¿½ï¿½ï¿½O: ï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½é‚±ï¿½Æ‚ï¿½\ï¿½ï¿½
+
+ï¿½Eï¿½ï¿½ï¿½íŽžï¿½ï¿½1ï¿½ï¿½ï¿½oï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 342 STR_OK 1;
-BA_ "DescriptionE" SG_ 342 STR_CAL "Calibration flag:?Indicates whether or not zero is set.
-- 1 is output when set.
+BA_ "DescriptionE" SG_ 342 STR_CAL "Calibration flag:?Indicates whether or not zero is set.
+
+- 1 is output when set.
+
 Becomes '1'?if zero is set after installation on the vehicle.";
-BA_ "DescriptionJ" SG_ 342 STR_CAL "ƒLƒƒƒŠƒuƒŒ[ƒVƒ‡ƒ“ƒtƒ‰ƒO: ‚O“_Ý’è‚Ì—L–³‚ð•\‚·
-EÝ’èŽž‚É1‚ðo—Í
-ŽÔçq“‹“‹ÚŒã‚É0“_Ý’è‚ðs‚¤‚Æh1h‚Æ‚È‚é";
+BA_ "DescriptionJ" SG_ 342 STR_CAL "ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½uï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O: ï¿½Oï¿½_ï¿½Ý’ï¿½Ì—Lï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½
+
+ï¿½Eï¿½Ý’èŽžï¿½ï¿½1ï¿½ï¿½ï¿½oï¿½ï¿½
+
+ï¿½ï¿½ï¿½qï¿½ï¿½ï¿½ï¿½ï¿½ÚŒï¿½ï¿½0ï¿½_ï¿½Ý’ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½Æh1ï¿½hï¿½Æ‚È‚ï¿½";
 BA_ "GenSigStartValue" SG_ 342 STR_CAL 1;
 BA_ "DescriptionE" SG_ 342 STR_ANGLE "Steering angle signal";
-BA_ "DescriptionJ" SG_ 342 STR_ANGLE "‘€‘ÇŠpM†";
-BA_ "ValueTableE" SG_ 342 STR_ANGLE "E278: -756[deg]
-0000: 0[deg]
-1D88: +756[deg]
+BA_ "DescriptionJ" SG_ 342 STR_ANGLE "ï¿½ï¿½ï¿½ÇŠpï¿½Mï¿½ï¿½";
+BA_ "ValueTableE" SG_ 342 STR_ANGLE "E278: -756[deg]
+
+0000: 0[deg]
+
+1D88: +756[deg]
+
 7FFF: Invalid";
 BA_ "GenSigStartValue" SG_ 342 STR_ANGLE 0;
 BA_ "GenSigStartValue" SG_ 304 ENG_SHFT_IN_REVERSE 1;
@@ -930,230 +1023,320 @@ BA_ "DescriptionJ" SG_ 304 ENG_SHFT_IN_REVERSE "*";
 BA_ "DescriptionE" SG_ 304 ENG_SHFT_IN_REVERSE "*";
 BA_ "ValueTableE" SG_ 304 ENG_SHFT_IN_REVERSE "*";
 BA_ "GenSigStartValue" SG_ 304 ENG_CHECKSUM_130 0;
-BA_ "DescriptionE" SG_ 304 ENG_ALIVE_COUNTER_130 "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 304 ENG_ALIVE_COUNTER_130 "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 304 ENG_ALIVE_COUNTER_130 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 304 ENG_ALIVE_COUNTER_130 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 304 ENG_ALIVE_COUNTER_130 0;
-BA_ "CommentTxJ" SG_ 304 ENG_NEUTRAL_SENSOR_FAIL "MTŽÔ—p";
+BA_ "CommentTxJ" SG_ 304 ENG_NEUTRAL_SENSOR_FAIL "MTï¿½Ô—p";
 BA_ "ValueTableE" SG_ 304 ENG_NEUTRAL_SENSOR_FAIL "1: NEUTRAL SENSOR FAIL";
 BA_ "GenSigStartValue" SG_ 304 ENG_NEUTRAL_SENSOR_FAIL 0;
-BA_ "DescriptionE" SG_ 304 ENG_RECEIVE_ERROR_1AC "Flag indicating whether or not a reception error is present
+BA_ "DescriptionE" SG_ 304 ENG_RECEIVE_ERROR_1AC "Flag indicating whether or not a reception error is present
+
 ID:?'1'?if at least one of the 1AAh alive counter refresh error, checksum error or timeout has continued for 60 msec.";
-BA_ "DescriptionJ" SG_ 304 ENG_RECEIVE_ERROR_1AC "ŽóMƒGƒ‰[‚Ì—L–³‚ðŽ¦‚·ƒtƒ‰ƒO
-ID: 1AAh‚ÌƒAƒ‰ƒCƒuƒJƒEƒ“ƒ^XVˆÙíAƒ`ƒFƒbƒNƒTƒ€ˆÙíAƒ^ƒCƒ€ƒAƒEƒg‚Ì­‚È‚­‚Æ‚àˆê‚Â‚ª60msecŠÔŒp‘±‚µ‚½ê‡'1'‚Æ‚·‚é";
+BA_ "DescriptionJ" SG_ 304 ENG_RECEIVE_ERROR_1AC "ï¿½ï¿½Mï¿½Gï¿½ï¿½ï¿½[ï¿½Ì—Lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O
+
+ID: 1AAhï¿½ÌƒAï¿½ï¿½ï¿½Cï¿½uï¿½Jï¿½Eï¿½ï¿½ï¿½^ï¿½Xï¿½Vï¿½Ùï¿½Aï¿½`ï¿½Fï¿½bï¿½Nï¿½Tï¿½ï¿½ï¿½Ùï¿½Aï¿½^ï¿½Cï¿½ï¿½ï¿½Aï¿½Eï¿½gï¿½Ìï¿½ï¿½È‚ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½Â‚ï¿½60msecï¿½ÔŒpï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‡'1'ï¿½Æ‚ï¿½ï¿½ï¿½";
 BA_ "ValueTableE" SG_ 304 ENG_RECEIVE_ERROR_1AC "1: Reception error detected";
 BA_ "GenSigStartValue" SG_ 304 ENG_RECEIVE_ERROR_1AC 0;
-BA_ "CommentTxJ" SG_ 304 ENG_SHFT_IN_NEUTRAL "MTŽÔ—p";
+BA_ "CommentTxJ" SG_ 304 ENG_SHFT_IN_NEUTRAL "MTï¿½Ô—p";
 BA_ "ValueTableE" SG_ 304 ENG_SHFT_IN_NEUTRAL "1: SHIFT LEVER IS IN NEUTRAL";
 BA_ "GenSigStartValue" SG_ 304 ENG_SHFT_IN_NEUTRAL 0;
 BA_ "DescriptionE" SG_ 304 ENG_CLUTCH_SW_CC "Clutch sw signal for Cruise control";
-BA_ "DescriptionJ" SG_ 304 ENG_CLUTCH_SW_CC "ƒNƒ‹[ƒYƒRƒ“ƒgƒ[ƒ‹—pƒNƒ‰ƒbƒ`ƒXƒCƒbƒ`M†";
-BA_ "ValueTableE" SG_ 304 ENG_CLUTCH_SW_CC "1: Clutch pedal is not depressed(SW ON)
+BA_ "DescriptionJ" SG_ 304 ENG_CLUTCH_SW_CC "ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½Rï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½pï¿½Nï¿½ï¿½ï¿½bï¿½`ï¿½Xï¿½Cï¿½bï¿½`ï¿½Mï¿½ï¿½";
+BA_ "ValueTableE" SG_ 304 ENG_CLUTCH_SW_CC "1: Clutch pedal is not depressed(SW ON)
+
 0: Clutch pedal is depressed(SW OFF)";
 BA_ "GenSigStartValue" SG_ 304 ENG_CLUTCH_SW_CC 1;
 BA_ "DescriptionE" SG_ 304 ENG_VSA_ACK1 "Response to VSA fuel control request";
-BA_ "DescriptionJ" SG_ 304 ENG_VSA_ACK1 "VSA”R—¿§Œä—v‹‚Ö‚Ì‰ž“š     ";
-BA_ "ValueTableE" SG_ 304 ENG_VSA_ACK1 "0: No fuel/ignition control (THL?control only)
-1: Ignition retard
+BA_ "DescriptionJ" SG_ 304 ENG_VSA_ACK1 "VSAï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Ö‚Ì‰ï¿½ï¿½ï¿½     ";
+BA_ "ValueTableE" SG_ 304 ENG_VSA_ACK1 "0: No fuel/ignition control (THL?control only)
+
+1: Ignition retard
+
 2: ?All cylinders in the F/C mode";
 BA_ "GenSigStartValue" SG_ 304 ENG_VSA_ACK1 0;
 BA_ "DescriptionE" SG_ 304 ENG_VSA_PERMIT_PLUS_TRQ "MSR?positive torque permission flag";
-BA_ "DescriptionJ" SG_ 304 ENG_VSA_PERMIT_PLUS_TRQ "‚l‚r‚qƒvƒ‰ƒXƒgƒ‹ƒN‹–‰Âƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 304 ENG_VSA_PERMIT_PLUS_TRQ "ï¿½lï¿½rï¿½qï¿½vï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½Âƒtï¿½ï¿½ï¿½O";
 BA_ "ValueTableE" SG_ 304 ENG_VSA_PERMIT_PLUS_TRQ "1: ?Positive torque permitted";
 BA_ "GenSigStartValue" SG_ 304 ENG_VSA_PERMIT_PLUS_TRQ 0;
 BA_ "DescriptionE" SG_ 304 ENG_VSA_INHIBIT_VSA_CONTROL "VSA control permission/inhibition information";
-BA_ "DescriptionJ" SG_ 304 ENG_VSA_INHIBIT_VSA_CONTROL "VSA§Œä‹–‰Â^‹ÖŽ~î•ñ ";
+BA_ "DescriptionJ" SG_ 304 ENG_VSA_INHIBIT_VSA_CONTROL "VSAï¿½ï¿½ï¿½ä‹–ï¿½Â^ï¿½ÖŽ~ï¿½ï¿½ï¿½ ";
 BA_ "ValueTableE" SG_ 304 ENG_VSA_INHIBIT_VSA_CONTROL "1: VSA F/C?control temporarily stopped";
 BA_ "GenSigStartValue" SG_ 304 ENG_VSA_INHIBIT_VSA_CONTROL 0;
 BA_ "DescriptionE" SG_ 304 ENG_VSA_REFUSED_VSA_CONTROL "VSA control permission/inhibition information";
-BA_ "DescriptionJ" SG_ 304 ENG_VSA_REFUSED_VSA_CONTROL "VSA§Œä‹–‰Â^‹ÖŽ~î•ñ ";
+BA_ "DescriptionJ" SG_ 304 ENG_VSA_REFUSED_VSA_CONTROL "VSAï¿½ï¿½ï¿½ä‹–ï¿½Â^ï¿½ÖŽ~ï¿½ï¿½ï¿½ ";
 BA_ "ValueTableE" SG_ 304 ENG_VSA_REFUSED_VSA_CONTROL "1: ?Failure that disables VSA control is present";
 BA_ "GenSigStartValue" SG_ 304 ENG_VSA_REFUSED_VSA_CONTROL 0;
-BA_ "DescriptionE" SG_ 304 ENG_SMART_ACCELE_PEDAL_POSITION "Acceleration pedal position (%)
+BA_ "DescriptionE" SG_ 304 ENG_SMART_ACCELE_PEDAL_POSITION "Acceleration pedal position (%)
+
 ( at the time of a Smart Pedal System Application )";
-BA_ "DescriptionJ" SG_ 304 ENG_SMART_ACCELE_PEDAL_POSITION "ƒAƒNƒZƒ‹ƒyƒ_ƒ‹ˆÊ’u
-iƒXƒ}[ƒgƒyƒ_ƒ‹ƒVƒXƒeƒ€“K—pŽžj";
+BA_ "DescriptionJ" SG_ 304 ENG_SMART_ACCELE_PEDAL_POSITION "ï¿½Aï¿½Nï¿½Zï¿½ï¿½ï¿½yï¿½_ï¿½ï¿½ï¿½Ê’u
+
+ï¿½iï¿½Xï¿½}ï¿½[ï¿½gï¿½yï¿½_ï¿½ï¿½ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Kï¿½pï¿½ï¿½ï¿½j";
 BA_ "GenSigStartValue" SG_ 304 ENG_SMART_ACCELE_PEDAL_POSITION 0;
-BA_ "DescriptionE" SG_ 304 ENG_DRIVER_REQ_TRQ_130 "Indicates the driver-requested crankshaft driving torque.
+BA_ "DescriptionE" SG_ 304 ENG_DRIVER_REQ_TRQ_130 "Indicates the driver-requested crankshaft driving torque.
+
 Cruise-requested crankshaft driving torque during cruise control.";
-BA_ "DescriptionJ" SG_ 304 ENG_DRIVER_REQ_TRQ_130 "ƒhƒ‰ƒCƒo[—v‹ƒNƒ‰ƒ“ƒNƒVƒƒƒtƒg‹ì“®ƒgƒ‹ƒN‚ðŽ¦‚·
-ƒNƒ‹[ƒYƒRƒ“ƒgƒ[ƒ‹’†‚ÍƒNƒ‹[ƒY—v‹ƒNƒ‰ƒ“ƒNƒVƒƒƒtƒg‹ì“®ƒgƒ‹ƒN‚Æ‚·‚é";
+BA_ "DescriptionJ" SG_ 304 ENG_DRIVER_REQ_TRQ_130 "ï¿½hï¿½ï¿½ï¿½Cï¿½oï¿½[ï¿½vï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½Vï¿½ï¿½ï¿½tï¿½gï¿½ì“®ï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½Rï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ÍƒNï¿½ï¿½ï¿½[ï¿½Yï¿½vï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½Vï¿½ï¿½ï¿½tï¿½gï¿½ì“®ï¿½gï¿½ï¿½ï¿½Nï¿½Æ‚ï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 304 ENG_DRIVER_REQ_TRQ_130 32767;
-BA_ "DescriptionE" SG_ 304 ENG_ENG_TRQ_130 "Indicates the crankshaft torque.
+BA_ "DescriptionE" SG_ 304 ENG_ENG_TRQ_130 "Indicates the crankshaft torque.
+
 -32768 to 32767 Nm";
-BA_ "DescriptionJ" SG_ 304 ENG_ENG_TRQ_130 "ƒNƒ‰ƒ“ƒNƒVƒƒƒtƒgƒgƒ‹ƒN‚ðŽ¦‚·
--32768`32767Nm";
+BA_ "DescriptionJ" SG_ 304 ENG_ENG_TRQ_130 "ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½Vï¿½ï¿½ï¿½tï¿½gï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+-32768ï¿½`32767Nm";
 BA_ "GenSigStartValue" SG_ 304 ENG_ENG_TRQ_130 32767;
 BA_ "GenSigStartValue" SG_ 1934 VSA_CHECKSUM_78E 0;
-BA_ "DescriptionJ" SG_ 1934 VSA_ALIVE_COUNTER_78E "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 1934 VSA_ALIVE_COUNTER_78E "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 1934 VSA_ALIVE_COUNTER_78E 0;
-BA_ "DescriptionJ" SG_ 1934 VSA_COMMAND_CODE "ƒRƒ}ƒ“ƒhƒR[ƒh
-y—v‹ƒRƒ}ƒ“ƒhz";
-BA_ "ValueTableE" SG_ 1934 VSA_COMMAND_CODE "3: Calibration
+BA_ "DescriptionJ" SG_ 1934 VSA_COMMAND_CODE "ï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½Rï¿½[ï¿½h
+
+ï¿½yï¿½vï¿½ï¿½ï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½z";
+BA_ "ValueTableE" SG_ 1934 VSA_COMMAND_CODE "3: Calibration
+
 5: Reset of the Calibration";
 BA_ "GenSigStartValue" SG_ 1934 VSA_COMMAND_CODE 0;
 BA_ "GenSigStartValue" SG_ 1030 VSA_CHECKSUM_406 0;
-BA_ "DescriptionE" SG_ 1030 VSA_ALIVE_COUNTER_406 "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 1030 VSA_ALIVE_COUNTER_406 "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 1030 VSA_ALIVE_COUNTER_406 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 1030 VSA_ALIVE_COUNTER_406 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 1030 VSA_ALIVE_COUNTER_406 0;
-BA_ "DescriptionJ" SG_ 1030 VSA_SPECIFY_CODE_SYS "DTC‘ÌŒn
-VSA‘—MM†‚ÍHMƒR[ƒh‚È‚Ì‚ÅC1hŒÅ’è’lB";
+BA_ "DescriptionJ" SG_ 1030 VSA_SPECIFY_CODE_SYS "DTCï¿½ÌŒn
+
+VSAï¿½ï¿½ï¿½Mï¿½Mï¿½ï¿½ï¿½ï¿½HMï¿½Rï¿½[ï¿½hï¿½È‚Ì‚ÅC1hï¿½Å’ï¿½lï¿½B";
 BA_ "GenSigStartValue" SG_ 1030 VSA_SPECIFY_CODE_SYS 1;
-BA_ "DescriptionJ" SG_ 1030 VSA_DTC_STORAGE "DTCŠi”[ó‘Ô";
+BA_ "DescriptionJ" SG_ 1030 VSA_DTC_STORAGE "DTCï¿½iï¿½[ï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 1030 VSA_DTC_STORAGE 0;
-BA_ "DescriptionJ" SG_ 1030 VSA_DTC_LOW "DTCƒR[ƒh‰ºˆÊ‘¤
-VSA‚Í–¢Žg—p‚Ì‚½‚ß0ŒÅ’è";
+BA_ "DescriptionJ" SG_ 1030 VSA_DTC_LOW "DTCï¿½Rï¿½[ï¿½hï¿½ï¿½ï¿½Ê‘ï¿½
+
+VSAï¿½Í–ï¿½ï¿½gï¿½pï¿½Ì‚ï¿½ï¿½ï¿½0ï¿½Å’ï¿½";
 BA_ "GenSigStartValue" SG_ 1030 VSA_DTC_LOW 0;
-BA_ "DescriptionJ" SG_ 1030 VSA_DTC_HIGH "DTCƒR[ƒhãˆÊ‘¤
-¡‰ñŠm’è‚ÌDTC‚Ì‚Ý
-•¡”‚Ìê‡A300msecƒTƒCƒNƒ‹‚Æ‚·‚é";
+BA_ "DescriptionJ" SG_ 1030 VSA_DTC_HIGH "DTCï¿½Rï¿½[ï¿½hï¿½ï¿½Ê‘ï¿½
+
+ï¿½ï¿½ï¿½ï¿½mï¿½ï¿½ï¿½DTCï¿½Ì‚ï¿½
+
+ï¿½ï¿½ï¿½ï¿½ï¿½Ìê‡ï¿½A300msecï¿½Tï¿½Cï¿½Nï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 1030 VSA_DTC_HIGH 0;
 BA_ "DescriptionE" SG_ 597 VSA_ABS_CHECKSUM_255 "CAN checksum for ESL?(255h)";
-BA_ "DescriptionJ" SG_ 597 VSA_ABS_CHECKSUM_255 "ESL—pCANƒ`ƒFƒbƒNƒTƒ€i255hj";
+BA_ "DescriptionJ" SG_ 597 VSA_ABS_CHECKSUM_255 "ESLï¿½pCANï¿½`ï¿½Fï¿½bï¿½Nï¿½Tï¿½ï¿½ï¿½i255hï¿½j";
 BA_ "GenSigStartValue" SG_ 597 VSA_ABS_CHECKSUM_255 0;
 BA_ "DescriptionE" SG_ 597 VSA_ABS_ALIVE_COUNTER_255 "CAN alive counter for ESL";
-BA_ "DescriptionJ" SG_ 597 VSA_ABS_ALIVE_COUNTER_255 "ESL—pCANƒAƒ‰ƒCƒuƒJƒEƒ“ƒ^";
+BA_ "DescriptionJ" SG_ 597 VSA_ABS_ALIVE_COUNTER_255 "ESLï¿½pCANï¿½Aï¿½ï¿½ï¿½Cï¿½uï¿½Jï¿½Eï¿½ï¿½ï¿½^";
 BA_ "GenSigStartValue" SG_ 597 VSA_ABS_ALIVE_COUNTER_255 0;
-BA_ "DescriptionE" SG_ 597 VSA_ABS_SPEED_FIXED_NUMBER2 "Fixed checksum value (ESL)
+BA_ "DescriptionE" SG_ 597 VSA_ABS_SPEED_FIXED_NUMBER2 "Fixed checksum value (ESL)
+
 A fixed value of 0x55 is sent (also in the initial state).";
-BA_ "DescriptionJ" SG_ 597 VSA_ABS_SPEED_FIXED_NUMBER2 "ƒ`ƒFƒbƒNƒTƒ€—pŒÅ’è’liESL—pj
-ŒÅ’è’l0x55‚ð‘—Mi²Æ¼¬ÙŽžŠÜ‚Þj";
+BA_ "DescriptionJ" SG_ 597 VSA_ABS_SPEED_FIXED_NUMBER2 "ï¿½`ï¿½Fï¿½bï¿½Nï¿½Tï¿½ï¿½ï¿½pï¿½Å’ï¿½lï¿½iESLï¿½pï¿½j
+
+ï¿½Å’ï¿½l0x55ï¿½ð‘—Mï¿½iï¿½Æ¼ï¿½ÙŽï¿½ï¿½Ü‚Þj";
 BA_ "GenSigStartValue" SG_ 597 VSA_ABS_SPEED_FIXED_NUMBER2 85;
-BA_ "DescriptionE" SG_ 597 VSA_ABS_SPEED_FIXED_NUMBER1 "Fixed checksum value (ESL)
+BA_ "DescriptionE" SG_ 597 VSA_ABS_SPEED_FIXED_NUMBER1 "Fixed checksum value (ESL)
+
 A fixed value of 0x55 is sent (also in the initial state).";
-BA_ "DescriptionJ" SG_ 597 VSA_ABS_SPEED_FIXED_NUMBER1 "ƒ`ƒFƒbƒNƒTƒ€—pŒÅ’è’liESL—pj
-ŒÅ’è’l0x55‚ð‘—Mi²Æ¼¬ÙŽžŠÜ‚Þj";
+BA_ "DescriptionJ" SG_ 597 VSA_ABS_SPEED_FIXED_NUMBER1 "ï¿½`ï¿½Fï¿½bï¿½Nï¿½Tï¿½ï¿½ï¿½pï¿½Å’ï¿½lï¿½iESLï¿½pï¿½j
+
+ï¿½Å’ï¿½l0x55ï¿½ð‘—Mï¿½iï¿½Æ¼ï¿½ÙŽï¿½ï¿½Ü‚Þj";
 BA_ "GenSigStartValue" SG_ 597 VSA_ABS_SPEED_FIXED_NUMBER1 85;
-BA_ "DescriptionE" SG_ 597 VSA_ABS_RR_WHEEL_SPEED_255 "Right rear wheel speed  If failure occurs value is converted directly to speed. 
-FFh shall be sent if the measured value has overflowed due to an open failure.
+BA_ "DescriptionE" SG_ 597 VSA_ABS_RR_WHEEL_SPEED_255 "Right rear wheel speed  If failure occurs value is converted directly to speed. 
+
+FFh shall be sent if the measured value has overflowed due to an open failure.
+
 If Noise causes high vehicle speed shall be sent but, upper limit is clipped at 250 km/h.";
-BA_ "DescriptionJ" SG_ 597 VSA_ABS_RR_WHEEL_SPEED_255 "‰EŒã—ÖŽÔ‘¬
-¾Ý»°ŒÌáŽž‚àŒv‘ª’l‚ð‚»‚Ì‚Ü‚ÜŽÔ‘¬•ÏŠ·‚ÌŽ–B
-’füŒÌá‚É‚ÄŒv‘ªµ°ÊÞ°ÌÛ°Žž‚ÍFFh
-É²½Þ‚É‚æ‚é‚ŽÔ‘¬Œv‘ªŽž‚Í‚»‚ÌŽÔ‘¬‚ð‘—M‚ÌŽ–i’A‚µãŒÀ250km/hj";
+BA_ "DescriptionJ" SG_ 597 VSA_ABS_RR_WHEEL_SPEED_255 "ï¿½Eï¿½ï¿½ÖŽÔ‘ï¿½
+
+ï¿½Ý»ï¿½ï¿½ÌáŽžï¿½ï¿½ï¿½vï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Ü‚ÜŽÔ‘ï¿½ï¿½ÏŠï¿½ï¿½ÌŽï¿½ï¿½B
+
+ï¿½fï¿½ï¿½ï¿½Ìï¿½É‚ÄŒvï¿½ï¿½ï¿½ï¿½ï¿½Þ°ï¿½Û°ï¿½ï¿½ï¿½ï¿½FFh
+
+É²ï¿½Þ‚É‚ï¿½é‚ï¿½Ô‘ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ÌŽÔ‘ï¿½ï¿½ð‘—Mï¿½ÌŽï¿½ï¿½iï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½250km/hï¿½j";
 BA_ "GenSigStartValue" SG_ 597 VSA_ABS_RR_WHEEL_SPEED_255 250;
-BA_ "DescriptionE" SG_ 597 VSA_ABS_RL_WHEEL_SPEED_255 "Left rear wheel speed  If failure occurs value is converted directly to speed. 
-FFh shall be sent if the measured value has overflowed due to an open failure.
+BA_ "DescriptionE" SG_ 597 VSA_ABS_RL_WHEEL_SPEED_255 "Left rear wheel speed  If failure occurs value is converted directly to speed. 
+
+FFh shall be sent if the measured value has overflowed due to an open failure.
+
 If Noise causes high vehicle speed shall be sent but, upper limit is clipped at 250 km/h.";
-BA_ "DescriptionJ" SG_ 597 VSA_ABS_RL_WHEEL_SPEED_255 "¶Œã—ÖŽÔ‘¬
-¾Ý»°ŒÌáŽž‚àŒv‘ª’l‚ð‚»‚Ì‚Ü‚ÜŽÔ‘¬•ÏŠ·‚ÌŽ–B
-’füŒÌá‚É‚ÄŒv‘ªµ°ÊÞ°ÌÛ°Žž‚ÍFFh
-É²½Þ‚É‚æ‚é‚ŽÔ‘¬Œv‘ªŽž‚Í‚»‚ÌŽÔ‘¬‚ð‘—M‚ÌŽ–i’A‚µãŒÀ250km/hj";
+BA_ "DescriptionJ" SG_ 597 VSA_ABS_RL_WHEEL_SPEED_255 "ï¿½ï¿½ï¿½ï¿½ÖŽÔ‘ï¿½
+
+ï¿½Ý»ï¿½ï¿½ÌáŽžï¿½ï¿½ï¿½vï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Ü‚ÜŽÔ‘ï¿½ï¿½ÏŠï¿½ï¿½ÌŽï¿½ï¿½B
+
+ï¿½fï¿½ï¿½ï¿½Ìï¿½É‚ÄŒvï¿½ï¿½ï¿½ï¿½ï¿½Þ°ï¿½Û°ï¿½ï¿½ï¿½ï¿½FFh
+
+É²ï¿½Þ‚É‚ï¿½é‚ï¿½Ô‘ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ÌŽÔ‘ï¿½ï¿½ð‘—Mï¿½ÌŽï¿½ï¿½iï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½250km/hï¿½j";
 BA_ "GenSigStartValue" SG_ 597 VSA_ABS_RL_WHEEL_SPEED_255 250;
-BA_ "DescriptionE" SG_ 597 VSA_ABS_FR_WHEEL_SPEED_255 "Right front wheel speed If failure occurs value is converted directly to speed. 
-FFh shall be sent if the measured value has overflowed due to an open failure.
+BA_ "DescriptionE" SG_ 597 VSA_ABS_FR_WHEEL_SPEED_255 "Right front wheel speed If failure occurs value is converted directly to speed. 
+
+FFh shall be sent if the measured value has overflowed due to an open failure.
+
 If Noise causes high vehicle speed shall be sent but, upper limit is clipped at 250 km/h.";
-BA_ "DescriptionJ" SG_ 597 VSA_ABS_FR_WHEEL_SPEED_255 "‰E‘O—ÖŽÔ‘¬
-¾Ý»°ŒÌáŽž‚àŒv‘ª’l‚ð‚»‚Ì‚Ü‚ÜŽÔ‘¬•ÏŠ·‚ÌŽ–B
-’füŒÌá‚É‚ÄŒv‘ªµ°ÊÞ°ÌÛ°Žž‚ÍFFh
-É²½Þ‚É‚æ‚é‚ŽÔ‘¬Œv‘ªŽž‚Í‚»‚ÌŽÔ‘¬‚ð‘—M‚ÌŽ–i’A‚µãŒÀ250km/hj";
+BA_ "DescriptionJ" SG_ 597 VSA_ABS_FR_WHEEL_SPEED_255 "ï¿½Eï¿½Oï¿½ÖŽÔ‘ï¿½
+
+ï¿½Ý»ï¿½ï¿½ÌáŽžï¿½ï¿½ï¿½vï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Ü‚ÜŽÔ‘ï¿½ï¿½ÏŠï¿½ï¿½ÌŽï¿½ï¿½B
+
+ï¿½fï¿½ï¿½ï¿½Ìï¿½É‚ÄŒvï¿½ï¿½ï¿½ï¿½ï¿½Þ°ï¿½Û°ï¿½ï¿½ï¿½ï¿½FFh
+
+É²ï¿½Þ‚É‚ï¿½é‚ï¿½Ô‘ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ÌŽÔ‘ï¿½ï¿½ð‘—Mï¿½ÌŽï¿½ï¿½iï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½250km/hï¿½j";
 BA_ "GenSigStartValue" SG_ 597 VSA_ABS_FR_WHEEL_SPEED_255 250;
-BA_ "DescriptionE" SG_ 597 VSA_ABS_FL_WHEEL_SPEED_255 "Left front wheel speed If failure occurs value is converted directly to speed. 
-FFh shall be sent if the measured value has overflowed due to an open failure.
-If Noise causes high vehicle speed shall be sent but, upper limit is clipped at 250 km/h.
+BA_ "DescriptionE" SG_ 597 VSA_ABS_FL_WHEEL_SPEED_255 "Left front wheel speed If failure occurs value is converted directly to speed. 
+
+FFh shall be sent if the measured value has overflowed due to an open failure.
+
+If Noise causes high vehicle speed shall be sent but, upper limit is clipped at 250 km/h.
+
 ";
-BA_ "DescriptionJ" SG_ 597 VSA_ABS_FL_WHEEL_SPEED_255 "¶‘O—ÖŽÔ‘¬
-¾Ý»°ŒÌáŽž‚àŒv‘ª’l‚ð‚»‚Ì‚Ü‚ÜŽÔ‘¬•ÏŠ·‚ÌŽ–B
-’füŒÌá‚É‚ÄŒv‘ªµ°ÊÞ°ÌÛ°Žž‚ÍFFh
-É²½Þ‚É‚æ‚é‚ŽÔ‘¬Œv‘ªŽž‚Í‚»‚ÌŽÔ‘¬‚ð‘—M‚ÌŽ–i’A‚µãŒÀ250km/hj";
+BA_ "DescriptionJ" SG_ 597 VSA_ABS_FL_WHEEL_SPEED_255 "ï¿½ï¿½ï¿½Oï¿½ÖŽÔ‘ï¿½
+
+ï¿½Ý»ï¿½ï¿½ÌáŽžï¿½ï¿½ï¿½vï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Ü‚ÜŽÔ‘ï¿½ï¿½ÏŠï¿½ï¿½ÌŽï¿½ï¿½B
+
+ï¿½fï¿½ï¿½ï¿½Ìï¿½É‚ÄŒvï¿½ï¿½ï¿½ï¿½ï¿½Þ°ï¿½Û°ï¿½ï¿½ï¿½ï¿½FFh
+
+É²ï¿½Þ‚É‚ï¿½é‚ï¿½Ô‘ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ÌŽÔ‘ï¿½ï¿½ð‘—Mï¿½ÌŽï¿½ï¿½iï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½250km/hï¿½j";
 BA_ "GenSigStartValue" SG_ 597 VSA_ABS_FL_WHEEL_SPEED_255 250;
 BA_ "GenSigStartValue" SG_ 490 VSA_CHECKSUM_1EA 0;
-BA_ "DescriptionE" SG_ 490 VSA_ALIVE_COUNTER_1EA "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 490 VSA_ALIVE_COUNTER_1EA "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 490 VSA_ALIVE_COUNTER_1EA "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 490 VSA_ALIVE_COUNTER_1EA "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 490 VSA_ALIVE_COUNTER_1EA 0;
 BA_ "DescriptionE" SG_ 490 VSA_MAEPS_REVERSE_F "VSA status signal 1";
-BA_ "DescriptionJ" SG_ 490 VSA_MAEPS_REVERSE_F "VSAó‘ÔM†1";
+BA_ "DescriptionJ" SG_ 490 VSA_MAEPS_REVERSE_F "VSAï¿½ï¿½ÔMï¿½ï¿½1";
 BA_ "ValueTableE" SG_ 490 VSA_MAEPS_REVERSE_F "1: Reverse";
 BA_ "GenSigStartValue" SG_ 490 VSA_MAEPS_REVERSE_F 0;
 BA_ "DescriptionE" SG_ 490 VSA_SYSTEM_F "VSA status signal 3";
-BA_ "DescriptionJ" SG_ 490 VSA_SYSTEM_F "VSAó‘ÔM†3";
+BA_ "DescriptionJ" SG_ 490 VSA_SYSTEM_F "VSAï¿½ï¿½ÔMï¿½ï¿½3";
 BA_ "ValueTableE" SG_ 490 VSA_SYSTEM_F "1: VSA system failure";
 BA_ "GenSigStartValue" SG_ 490 VSA_SYSTEM_F 0;
 BA_ "DescriptionE" SG_ 490 VSA_MAEPS_MYU_VALUE "m ratio signal";
-BA_ "DescriptionJ" SG_ 490 VSA_MAEPS_MYU_VALUE "ƒÊÚ¼µM†";
+BA_ "DescriptionJ" SG_ 490 VSA_MAEPS_MYU_VALUE "ï¿½ï¿½Ú¼ï¿½ï¿½Mï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 490 VSA_MAEPS_MYU_VALUE 0;
 BA_ "DescriptionE" SG_ 490 VSA_MAEPS_GX_VALUE "Estimate vehicle front/rear G signal";
-BA_ "DescriptionJ" SG_ 490 VSA_MAEPS_GX_VALUE "„’èŽÔ‘Ì‘OŒãGM†";
+BA_ "DescriptionJ" SG_ 490 VSA_MAEPS_GX_VALUE "ï¿½ï¿½ï¿½ï¿½Ô‘Ì‘Oï¿½ï¿½Gï¿½Mï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 490 VSA_MAEPS_GX_VALUE 0;
 BA_ "DescriptionE" SG_ 490 VSA_MAEPS_US_VALUE "Yaw rate deviation signal";
-BA_ "DescriptionJ" SG_ 490 VSA_MAEPS_US_VALUE "Ö°Ú°Ä•Î·M†";
+BA_ "DescriptionJ" SG_ 490 VSA_MAEPS_US_VALUE "Ö°Ú°Ä•Îï¿½ï¿½Mï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 490 VSA_MAEPS_US_VALUE 0;
 BA_ "GenSigStartValue" SG_ 487 VSA_CHECKSUM_1E7 0;
 BA_ "GenSigStartValue" SG_ 487 VSA_ALIVE_COUNTER_1E7 0;
-BA_ "DescriptionJ" SG_ 487 VSA_ALIVE_COUNTER_1E7 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 487 VSA_ALIVE_COUNTER_1E7 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 487 VSA_HSA_STATUS_ACT_1E7 0;
-BA_ "DescriptionJ" SG_ 487 VSA_HSA_STATUS_ACT_1E7 "HSA‚ªì“®‚µ‚Ä‚¢‚éó‘Ô‚ðŽ¦‚·";
+BA_ "DescriptionJ" SG_ 487 VSA_HSA_STATUS_ACT_1E7 "HSAï¿½ï¿½ï¿½ì“®ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Ô‚ï¿½ï¿½ï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 487 VSA_CALIPPER_PRESSURE_FR 102;
-BA_ "DescriptionJ" SG_ 487 VSA_CALIPPER_PRESSURE_FR "FR—ÖƒLƒƒƒŠƒp[‰tˆ³
-(¾Ý»A/D¶’l)
-ƒZƒ“ƒTo—Í”ÍˆÍ
-0`19623.24kPa
-0066h=0kPa(0.5V)
-0399h=19623.24kPa(4.5V)
-Diago—Í‚ª‚ ‚é‚Ì‚Å’ˆÓ";
+BA_ "DescriptionJ" SG_ 487 VSA_CALIPPER_PRESSURE_FR "FRï¿½ÖƒLï¿½ï¿½ï¿½ï¿½ï¿½pï¿½[ï¿½tï¿½ï¿½
+
+(ï¿½Ý»A/Dï¿½ï¿½ï¿½l)
+
+ï¿½Zï¿½ï¿½ï¿½Tï¿½oï¿½Í”Íˆï¿½
+
+0ï¿½`19623.24kPa
+
+0066h=0kPa(0.5V)
+
+0399h=19623.24kPa(4.5V)
+
+Diagï¿½oï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Å’ï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 487 VSA_INHBIT_CALIPPER_PRESSURE_FR 0;
-BA_ "DescriptionJ" SG_ 487 VSA_INHBIT_CALIPPER_PRESSURE_FR "ƒLƒƒƒŠƒp‰tˆ³ƒZƒ“ƒTFRˆêŽž‹ÖŽ~ƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 487 VSA_INHBIT_CALIPPER_PRESSURE_FR "ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½pï¿½tï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½TFRï¿½êŽžï¿½ÖŽ~ï¿½tï¿½ï¿½ï¿½O";
 BA_ "GenSigStartValue" SG_ 487 VSA_FAIL_CALIPPER_PRESSURE_FR 0;
-BA_ "DescriptionJ" SG_ 487 VSA_FAIL_CALIPPER_PRESSURE_FR "ƒLƒƒƒŠƒp‰tˆ³ƒZƒ“ƒTFRˆÙíƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 487 VSA_FAIL_CALIPPER_PRESSURE_FR "ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½pï¿½tï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½TFRï¿½Ùï¿½tï¿½ï¿½ï¿½O";
 BA_ "GenSigStartValue" SG_ 487 VSA_INHBIT_CALIPPER_PRESSURE_FL 0;
-BA_ "DescriptionJ" SG_ 487 VSA_INHBIT_CALIPPER_PRESSURE_FL "ƒLƒƒƒŠƒp‰tˆ³ƒZƒ“ƒTFLˆêŽž‹ÖŽ~ƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 487 VSA_INHBIT_CALIPPER_PRESSURE_FL "ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½pï¿½tï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½TFLï¿½êŽžï¿½ÖŽ~ï¿½tï¿½ï¿½ï¿½O";
 BA_ "GenSigStartValue" SG_ 487 VSA_FAIL_CALIPPER_PRESSURE_FL 0;
-BA_ "DescriptionJ" SG_ 487 VSA_FAIL_CALIPPER_PRESSURE_FL "ƒLƒƒƒŠƒp‰tˆ³ƒZƒ“ƒTFLˆÙíƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 487 VSA_FAIL_CALIPPER_PRESSURE_FL "ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½pï¿½tï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½TFLï¿½Ùï¿½tï¿½ï¿½ï¿½O";
 BA_ "GenSigStartValue" SG_ 487 VSA_CALIPPER_PRESSURE_FL 102;
-BA_ "DescriptionJ" SG_ 487 VSA_CALIPPER_PRESSURE_FL "FL—ÖƒLƒƒƒŠƒp[‰tˆ³
-(¾Ý»A/D¶’l)
-ƒZƒ“ƒTo—Í”ÍˆÍ
-0`19623.24kPa
-0066h=0kPa(0.5V)
-0399h=19623.24kPa(4.5V)
-Diago—Í‚ª‚ ‚é‚Ì‚Å’ˆÓ";
+BA_ "DescriptionJ" SG_ 487 VSA_CALIPPER_PRESSURE_FL "FLï¿½ÖƒLï¿½ï¿½ï¿½ï¿½ï¿½pï¿½[ï¿½tï¿½ï¿½
+
+(ï¿½Ý»A/Dï¿½ï¿½ï¿½l)
+
+ï¿½Zï¿½ï¿½ï¿½Tï¿½oï¿½Í”Íˆï¿½
+
+0ï¿½`19623.24kPa
+
+0066h=0kPa(0.5V)
+
+0399h=19623.24kPa(4.5V)
+
+Diagï¿½oï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Å’ï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 464 VSA_ABS_CHECKSUM_1D0 0;
-BA_ "DescriptionE" SG_ 464 VSA_ABS_RR_WHEEL_SPEED "Right rear wheel speed
-0~300 km/h
-CAN outputs failed value even when sensor failure occurs. 
+BA_ "DescriptionE" SG_ 464 VSA_ABS_RR_WHEEL_SPEED "Right rear wheel speed
+
+0~300 km/h
+
+CAN outputs failed value even when sensor failure occurs. 
+
 When Open 0000h shall be sent in overflow condition. If noise causes high vehicle speed the measured vehicle speed shall be sent but, upper limit is 300 km/h.";
-BA_ "DescriptionJ" SG_ 464 VSA_ABS_RR_WHEEL_SPEED "‰EŒã—ÖŽÔ‘¬
-0`300km/hB
-ƒZƒ“ƒT°ŒÌáŽž‚àŒv‘ª’l‚ð‚»‚Ì‚Ü‚ÜŽÔ‘¬•ÏŠ·‚ÌŽ–B
-(’füŒÌá‚É‚ÄŒv‘ªµ°ÊÞ°ÌÛ°Žž‚Í0000hAÉ²½Þ‚É‚æ‚é‚ŽÔ‘¬Œv‘ªŽž‚Í‚»‚ÌŽÔ‘¬‚ð‘—M‚ÌŽ–B’A‚µãŒÀ300km/h)";
+BA_ "DescriptionJ" SG_ 464 VSA_ABS_RR_WHEEL_SPEED "ï¿½Eï¿½ï¿½ÖŽÔ‘ï¿½
+
+0ï¿½`300km/hï¿½B
+
+ï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ÌáŽžï¿½ï¿½ï¿½vï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Ü‚ÜŽÔ‘ï¿½ï¿½ÏŠï¿½ï¿½ÌŽï¿½ï¿½B
+
+(ï¿½fï¿½ï¿½ï¿½Ìï¿½É‚ÄŒvï¿½ï¿½ï¿½ï¿½ï¿½Þ°ï¿½Û°ï¿½ï¿½ï¿½ï¿½0000hï¿½AÉ²ï¿½Þ‚É‚ï¿½é‚ï¿½Ô‘ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ÌŽÔ‘ï¿½ï¿½ð‘—Mï¿½ÌŽï¿½ï¿½Bï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½300km/h)";
 BA_ "GenSigStartValue" SG_ 464 VSA_ABS_RR_WHEEL_SPEED 0;
-BA_ "DescriptionE" SG_ 464 VSA_ABS_RL_WHEEL_SPEED "Left rear wheel speed
-0~300 km/h
-CAN outputs failed value even when sensor failure occurs. 
+BA_ "DescriptionE" SG_ 464 VSA_ABS_RL_WHEEL_SPEED "Left rear wheel speed
+
+0~300 km/h
+
+CAN outputs failed value even when sensor failure occurs. 
+
 When Open 0000h shall be sent in overflow condition. If noise causes high vehicle speed the measured vehicle speed shall be sent but, upper limit is 300 km/h.";
-BA_ "DescriptionJ" SG_ 464 VSA_ABS_RL_WHEEL_SPEED "¶Œã—ÖŽÔ‘¬
-0`300km/hB
-ƒZƒ“ƒT°ŒÌáŽž‚àŒv‘ª’l‚ð‚»‚Ì‚Ü‚ÜŽÔ‘¬•ÏŠ·‚ÌŽ–B
-(’füŒÌá‚É‚ÄŒv‘ªµ°ÊÞ°ÌÛ°Žž‚Í0000hAÉ²½Þ‚É‚æ‚é‚ŽÔ‘¬Œv‘ªŽž‚Í‚»‚ÌŽÔ‘¬‚ð‘—M‚ÌŽ–B’A‚µãŒÀ300km/h)";
+BA_ "DescriptionJ" SG_ 464 VSA_ABS_RL_WHEEL_SPEED "ï¿½ï¿½ï¿½ï¿½ÖŽÔ‘ï¿½
+
+0ï¿½`300km/hï¿½B
+
+ï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ÌáŽžï¿½ï¿½ï¿½vï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Ü‚ÜŽÔ‘ï¿½ï¿½ÏŠï¿½ï¿½ÌŽï¿½ï¿½B
+
+(ï¿½fï¿½ï¿½ï¿½Ìï¿½É‚ÄŒvï¿½ï¿½ï¿½ï¿½ï¿½Þ°ï¿½Û°ï¿½ï¿½ï¿½ï¿½0000hï¿½AÉ²ï¿½Þ‚É‚ï¿½é‚ï¿½Ô‘ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ÌŽÔ‘ï¿½ï¿½ð‘—Mï¿½ÌŽï¿½ï¿½Bï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½300km/h)";
 BA_ "GenSigStartValue" SG_ 464 VSA_ABS_RL_WHEEL_SPEED 0;
-BA_ "DescriptionE" SG_ 464 VSA_ABS_FR_WHEEL_SPEED "Right front wheel speed
-0~300 km/h
-CAN outputs failed value even when sensor failure occurs. 
+BA_ "DescriptionE" SG_ 464 VSA_ABS_FR_WHEEL_SPEED "Right front wheel speed
+
+0~300 km/h
+
+CAN outputs failed value even when sensor failure occurs. 
+
 When Open 0000h shall be sent in overflow condition. If noise causes high vehicle speed the measured vehicle speed shall be sent but, upper limit is 300 km/h";
-BA_ "DescriptionJ" SG_ 464 VSA_ABS_FR_WHEEL_SPEED "‰E‘O—ÖŽÔ‘¬
-0`300km/hB
-ƒZƒ“ƒT°ŒÌáŽž‚àŒv‘ª’l‚ð‚»‚Ì‚Ü‚ÜŽÔ‘¬•ÏŠ·‚ÌŽ–B
-(’füŒÌá‚É‚ÄŒv‘ªµ°ÊÞ°ÌÛ°Žž‚Í0000hAÉ²½Þ‚É‚æ‚é‚ŽÔ‘¬Œv‘ªŽž‚Í‚»‚ÌŽÔ‘¬‚ð‘—M‚ÌŽ–B’A‚µãŒÀ300km/h)";
+BA_ "DescriptionJ" SG_ 464 VSA_ABS_FR_WHEEL_SPEED "ï¿½Eï¿½Oï¿½ÖŽÔ‘ï¿½
+
+0ï¿½`300km/hï¿½B
+
+ï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ÌáŽžï¿½ï¿½ï¿½vï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Ü‚ÜŽÔ‘ï¿½ï¿½ÏŠï¿½ï¿½ÌŽï¿½ï¿½B
+
+(ï¿½fï¿½ï¿½ï¿½Ìï¿½É‚ÄŒvï¿½ï¿½ï¿½ï¿½ï¿½Þ°ï¿½Û°ï¿½ï¿½ï¿½ï¿½0000hï¿½AÉ²ï¿½Þ‚É‚ï¿½é‚ï¿½Ô‘ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ÌŽÔ‘ï¿½ï¿½ð‘—Mï¿½ÌŽï¿½ï¿½Bï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½300km/h)";
 BA_ "GenSigStartValue" SG_ 464 VSA_ABS_FR_WHEEL_SPEED 0;
-BA_ "DescriptionE" SG_ 464 VSA_ABS_FL_WHEEL_SPEED "Left front wheel speed 
-0~300 km/h
-CAN outputs failed value even when sensor failure occurs. 
+BA_ "DescriptionE" SG_ 464 VSA_ABS_FL_WHEEL_SPEED "Left front wheel speed 
+
+0~300 km/h
+
+CAN outputs failed value even when sensor failure occurs. 
+
 When Open 0000h shall be sent in overflow condition. If noise causes high vehicle speed the measured vehicle speed shall be sent but, upper limit is 300 km/h";
-BA_ "DescriptionJ" SG_ 464 VSA_ABS_FL_WHEEL_SPEED "¶‘O—ÖŽÔ‘¬
-0`300km/hB
-ƒZƒ“ƒT°ŒÌáŽž‚àŒv‘ª’l‚ð‚»‚Ì‚Ü‚Ü
-ŽÔ‘¬•ÏŠ·‚ÌŽ–B
-(’füŒÌá‚É‚ÄŒv‘ªµ°ÊÞ°ÌÛ°
-Žž‚Í0000hAÉ²½Þ‚É‚æ‚é
-‚ŽÔ‘¬Œv‘ªŽž‚Í‚»‚ÌŽÔ‘¬‚ð
-‘—M‚ÌŽ–B’A‚µãŒÀ300km/h)";
+BA_ "DescriptionJ" SG_ 464 VSA_ABS_FL_WHEEL_SPEED "ï¿½ï¿½ï¿½Oï¿½ÖŽÔ‘ï¿½
+
+0ï¿½`300km/hï¿½B
+
+ï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ÌáŽžï¿½ï¿½ï¿½vï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Ü‚ï¿½
+
+ï¿½Ô‘ï¿½ï¿½ÏŠï¿½ï¿½ÌŽï¿½ï¿½B
+
+(ï¿½fï¿½ï¿½ï¿½Ìï¿½É‚ÄŒvï¿½ï¿½ï¿½ï¿½ï¿½Þ°ï¿½Û°
+
+ï¿½ï¿½ï¿½ï¿½0000hï¿½AÉ²ï¿½Þ‚É‚ï¿½ï¿½
+
+ï¿½ï¿½ï¿½Ô‘ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ÌŽÔ‘ï¿½ï¿½ï¿½
+
+ï¿½ï¿½ï¿½Mï¿½ÌŽï¿½ï¿½Bï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½300km/h)";
 BA_ "GenSigStartValue" SG_ 464 VSA_ABS_FL_WHEEL_SPEED 0;
 BA_ "GenSigStartValue" SG_ 432 VSA_ACC_REFUSE_ACC_BRAKE 0;
 BA_ "GenSigStartValue" SG_ 432 VSA_ACC_INHIBIT_ACC_BRAKE 0;
@@ -1163,30 +1346,41 @@ BA_ "GenSigStartValue" SG_ 432 VSA_INHBIT_LAT_G_SENSOR 0;
 BA_ "GenSigStartValue" SG_ 432 VSA_FAIL_LAT_G_SENSOR 0;
 BA_ "GenSigStartValue" SG_ 432 VSA_ACT_BRAKERELAY 0;
 BA_ "GenSigStartValue" SG_ 432 VSA_CHECKSUM_1B0 0;
-BA_ "DescriptionE" SG_ 432 VSA_ALIVE_COUNTER_1B0 "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 432 VSA_ALIVE_COUNTER_1B0 "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 432 VSA_ALIVE_COUNTER_1B0 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 432 VSA_ALIVE_COUNTER_1B0 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 432 VSA_ALIVE_COUNTER_1B0 0;
-BA_ "DescriptionE" SG_ 432 VSA_REQ_CVT_TCS "CVT?control request
+BA_ "DescriptionE" SG_ 432 VSA_REQ_CVT_TCS "CVT?control request
+
 CVT?coordination control request signal";
-BA_ "DescriptionJ" SG_ 432 VSA_REQ_CVT_TCS "CVT§Œä—v‹
-CVT‹¦’²—p§Œä—v‹M†";
+BA_ "DescriptionJ" SG_ 432 VSA_REQ_CVT_TCS "CVTï¿½ï¿½ï¿½ï¿½vï¿½ï¿½
+
+CVTï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Mï¿½ï¿½";
 BA_ "ValueTableE" SG_ 432 VSA_REQ_CVT_TCS "1: ?TCS operation permitted";
 BA_ "GenSigStartValue" SG_ 432 VSA_REQ_CVT_TCS 0;
-BA_ "DescriptionE" SG_ 432 VSA_REQ_CVT_PRS "CVT?control request
+BA_ "DescriptionE" SG_ 432 VSA_REQ_CVT_PRS "CVT?control request
+
 CVT?coordination control request signal";
-BA_ "DescriptionJ" SG_ 432 VSA_REQ_CVT_PRS "CVT§Œä—v‹
-CVT‹¦’²—p§Œä—v‹M†";
+BA_ "DescriptionJ" SG_ 432 VSA_REQ_CVT_PRS "CVTï¿½ï¿½ï¿½ï¿½vï¿½ï¿½
+
+CVTï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Mï¿½ï¿½";
 BA_ "ValueTableE" SG_ 432 VSA_REQ_CVT_PRS "1: ?Pressurizing";
 BA_ "GenSigStartValue" SG_ 432 VSA_REQ_CVT_PRS 0;
-BA_ "DescriptionE" SG_ 432 VSA_CONTROL_MODE_CVT "CVT?coordination control mode
+BA_ "DescriptionE" SG_ 432 VSA_CONTROL_MODE_CVT "CVT?coordination control mode
+
 Dedicated CVT?coordination control mode";
-BA_ "DescriptionJ" SG_ 432 VSA_CONTROL_MODE_CVT "CVT‹¦’²—p§Œäƒ‚[ƒh
-CVT‹¦’²—pê—p§Œäƒ‚[ƒh";
-BA_ "ValueTableE" SG_ 432 VSA_CONTROL_MODE_CVT "0: VSA control ready
-1: ?TCS active
-2: Reserved
+BA_ "DescriptionJ" SG_ 432 VSA_CONTROL_MODE_CVT "CVTï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½äƒ‚ï¿½[ï¿½h
+
+CVTï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½pï¿½ï¿½ï¿½äƒ‚ï¿½[ï¿½h";
+BA_ "ValueTableE" SG_ 432 VSA_CONTROL_MODE_CVT "0: VSA control ready
+
+1: ?TCS active
+
+2: Reserved
+
 3: Reserved";
 BA_ "GenSigStartValue" SG_ 432 VSA_CONTROL_MODE_CVT 0;
 BA_ "ValueTableE" SG_ 432 VSA_ABS_STATUS_FR_ABS_EBD_ACT "1: ?FR?wheel ABS, EBD active";
@@ -1209,78 +1403,104 @@ BA_ "ValueTableE" SG_ 432 VSA_ABS_FAIL_RR_VW_SENSOR "1: ?Wheel speed sensor; RR?
 BA_ "GenSigStartValue" SG_ 432 VSA_ABS_FAIL_RR_VW_SENSOR 0;
 BA_ "ValueTableE" SG_ 432 VSA_ABS_FAIL_RL_VW_SENSOR "1: ?Wheel speed sensor; RL?wheel error";
 BA_ "GenSigStartValue" SG_ 432 VSA_ABS_FAIL_RL_VW_SENSOR 0;
-BA_ "DescriptionJ" SG_ 432 VSA_ABS_INHBIT_VW_SENSOR "ŽÔ—Ö‘¬ƒZƒ“ƒTˆêŽž‹ÖŽ~ƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 432 VSA_ABS_INHBIT_VW_SENSOR "ï¿½Ô—Ö‘ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½êŽžï¿½ÖŽ~ï¿½tï¿½ï¿½ï¿½O";
 BA_ "GenSigStartValue" SG_ 432 VSA_ABS_INHBIT_VW_SENSOR 0;
 BA_ "GenSigStartValue" SG_ 432 VSA_STEERING_ANGLE 0;
-BA_ "DescriptionE" SG_ 432 VSA_ACC_INHIBIT_CVRS_BRAKE "ACC brake control inhibition information
+BA_ "DescriptionE" SG_ 432 VSA_ACC_INHIBIT_CVRS_BRAKE "ACC brake control inhibition information
+
 The default value is sent if there is no ACC.";
-BA_ "DescriptionJ" SG_ 432 VSA_ACC_INHIBIT_CVRS_BRAKE "ACCƒuƒŒ[ƒL§Œä‹ÖŽ~î•ñ
-ACC‚È‚µ‚Ìê‡‚É‚ÍƒfƒtƒHƒ‹ƒg’l‚ð‘—M‚·‚éD";
+BA_ "DescriptionJ" SG_ 432 VSA_ACC_INHIBIT_CVRS_BRAKE "ACCï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½ï¿½ï¿½ï¿½ÖŽ~ï¿½ï¿½ï¿½
+
+ACCï¿½È‚ï¿½ï¿½Ìê‡ï¿½É‚Íƒfï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½lï¿½ð‘—Mï¿½ï¿½ï¿½ï¿½D";
 BA_ "ValueTableE" SG_ 432 VSA_ACC_INHIBIT_CVRS_BRAKE "1: Temporarily inhibit CVRS brake";
 BA_ "GenSigStartValue" SG_ 432 VSA_ACC_INHIBIT_CVRS_BRAKE 1;
 BA_ "GenSigStartValue" SG_ 432 VSA_INHBIT_STEERING_SENSOR 0;
-BA_ "DescriptionJ" SG_ 432 VSA_INHBIT_STEERING_SENSOR "‘ÇŠpƒZƒ“ƒTˆêŽž‹ÖŽ~ƒtƒ‰ƒO";
-BA_ "DescriptionE" SG_ 432 VSA_ACC_REFUSE_CVRS_BRAKE "ACC brake control inhibition information
+BA_ "DescriptionJ" SG_ 432 VSA_INHBIT_STEERING_SENSOR "ï¿½ÇŠpï¿½Zï¿½ï¿½ï¿½Tï¿½êŽžï¿½ÖŽ~ï¿½tï¿½ï¿½ï¿½O";
+BA_ "DescriptionE" SG_ 432 VSA_ACC_REFUSE_CVRS_BRAKE "ACC brake control inhibition information
+
 The default value is sent if there is no ACC.";
-BA_ "DescriptionJ" SG_ 432 VSA_ACC_REFUSE_CVRS_BRAKE "ACCƒuƒŒ[ƒL§Œä‹ÖŽ~î•ñ
-ACC‚È‚µ‚Ìê‡‚É‚ÍƒfƒtƒHƒ‹ƒg’l‚ð‘—M‚·‚éD";
+BA_ "DescriptionJ" SG_ 432 VSA_ACC_REFUSE_CVRS_BRAKE "ACCï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½ï¿½ï¿½ï¿½ÖŽ~ï¿½ï¿½ï¿½
+
+ACCï¿½È‚ï¿½ï¿½Ìê‡ï¿½É‚Íƒfï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½lï¿½ð‘—Mï¿½ï¿½ï¿½ï¿½D";
 BA_ "ValueTableE" SG_ 432 VSA_ACC_REFUSE_CVRS_BRAKE "1: ?Failure that disables CVRS brake occurred";
 BA_ "GenSigStartValue" SG_ 432 VSA_ACC_REFUSE_CVRS_BRAKE 1;
-BA_ "DescriptionE" SG_ 432 VSA_VW_PULSE_CAPTURED "Wheel speed pulse generation flag
+BA_ "DescriptionE" SG_ 432 VSA_VW_PULSE_CAPTURED "Wheel speed pulse generation flag
+
 The flag is set to '1' if a wheel speed pulse has generated at least once between the last transmission and this transmission.";
-BA_ "DescriptionJ" SG_ 432 VSA_VW_PULSE_CAPTURED "ŽÔ—Ö‘¬Êß½Ù”­¶ƒtƒ‰ƒO
-‘O‰ñ‚Ì‘—M‚©‚ç¡‰ñ‚Ì‘—M‚ÌŠÔ‚ÅC1‰ñ‚Å‚àŽÔ—Ö‘¬ƒpƒ‹ƒX‚ª”­¶‚µ‚½‚çCƒtƒ‰ƒO‚ð1‚É¾¯Ä";
+BA_ "DescriptionJ" SG_ 432 VSA_VW_PULSE_CAPTURED "ï¿½Ô—Ö‘ï¿½ï¿½ß½Ù”ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O
+
+ï¿½Oï¿½ï¿½Ì‘ï¿½ï¿½Mï¿½ï¿½ï¿½ç¡ï¿½ï¿½Ì‘ï¿½ï¿½Mï¿½ÌŠÔ‚ÅC1ï¿½ï¿½Å‚ï¿½ï¿½Ô—Ö‘ï¿½ï¿½pï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½tï¿½ï¿½ï¿½Oï¿½ï¿½1ï¿½É¾ï¿½ï¿½";
 BA_ "ValueTableE" SG_ 432 VSA_VW_PULSE_CAPTURED "1: Wheel speed pulse available";
 BA_ "GenSigStartValue" SG_ 432 VSA_VW_PULSE_CAPTURED 0;
 BA_ "DescriptionE" SG_ 432 VSA_INHBIT_YAW_RATE_SENSOR "When a side collision is detected, '1' is sent with each message which is output 10 times continuously.";
-BA_ "DescriptionJ" SG_ 432 VSA_INHBIT_YAW_RATE_SENSOR "ƒˆ[ƒŒ[ƒgƒZƒ“ƒTˆêŽž‹ÖŽ~ƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 432 VSA_INHBIT_YAW_RATE_SENSOR "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½[ï¿½gï¿½Zï¿½ï¿½ï¿½Tï¿½êŽžï¿½ÖŽ~ï¿½tï¿½ï¿½ï¿½O";
 BA_ "GenSigStartValue" SG_ 432 VSA_INHBIT_YAW_RATE_SENSOR 0;
 BA_ "GenSigStartValue" SG_ 432 VSA_FAIL_BRAKERELAY 0;
 BA_ "GenSigStartValue" SG_ 432 VSA_SS30_BRAKE_ACT 0;
 BA_ "DescriptionE" SG_ 428 VSA_IS_SHIFT_INHIBIT_REQUEST "When a side collision is detected, '1' is sent with each message which is output 10 times continuously.";
-BA_ "DescriptionJ" SG_ 428 VSA_IS_SHIFT_INHIBIT_REQUEST "ƒAƒCƒhƒ‹ƒXƒgƒbƒv‚Ö‚ÌˆÚs‚ð‹ÖŽ~‚·‚éê‡g1h‚ª‘—o‚³‚ê‚éB";
+BA_ "DescriptionJ" SG_ 428 VSA_IS_SHIFT_INHIBIT_REQUEST "ï¿½Aï¿½Cï¿½hï¿½ï¿½ï¿½Xï¿½gï¿½bï¿½vï¿½Ö‚ÌˆÚsï¿½ï¿½ï¿½ÖŽ~ï¿½ï¿½ï¿½ï¿½ê‡ï¿½g1ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½ï¿½B";
 BA_ "GenSigStartValue" SG_ 428 VSA_IS_SHIFT_INHIBIT_REQUEST 0;
-BA_ "DescriptionE" SG_ 428 VSA_SHIFT_REQ_1AC "VSA shift control request
+BA_ "DescriptionE" SG_ 428 VSA_SHIFT_REQ_1AC "VSA shift control request
+
 ID:?Valid only when the data of 1AAh 2.1-2.0 VSA_TRQ_CONTROL_MODE is '2.'";
-BA_ "DescriptionJ" SG_ 428 VSA_SHIFT_REQ_1AC "VSAƒVƒtƒg§Œä—v‹
-ID: 1AAh 2.1-2.0 VSA_TRQ_CONTROL_MODE ‚Ìƒf[ƒ^‚ª '2' ‚ÌŽž‚Ì‚Ý—LŒø‚Æ‚·‚éB";
-BA_ "ValueTableE" SG_ 428 VSA_SHIFT_REQ_1AC "0: No shift control request from VSA?(EAT?original control)
-1: ?Request shift hold
-2: Request upshift
+BA_ "DescriptionJ" SG_ 428 VSA_SHIFT_REQ_1AC "VSAï¿½Vï¿½tï¿½gï¿½ï¿½ï¿½ï¿½vï¿½ï¿½
+
+ID: 1AAh 2.1-2.0 VSA_TRQ_CONTROL_MODE ï¿½Ìƒfï¿½[ï¿½^ï¿½ï¿½ '2' ï¿½ÌŽï¿½ï¿½Ì‚Ý—Lï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½B";
+BA_ "ValueTableE" SG_ 428 VSA_SHIFT_REQ_1AC "0: No shift control request from VSA?(EAT?original control)
+
+1: ?Request shift hold
+
+2: Request upshift
+
 3: Request downshift";
 BA_ "GenSigStartValue" SG_ 428 VSA_SHIFT_REQ_1AC 0;
-BA_ "DescriptionE" SG_ 428 VSA_ALIVE_COUNTER_1AC "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 428 VSA_ALIVE_COUNTER_1AC "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 428 VSA_ALIVE_COUNTER_1AC "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 428 VSA_ALIVE_COUNTER_1AC "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 428 VSA_ALIVE_COUNTER_1AC 0;
 BA_ "GenSigStartValue" SG_ 428 VSA_CHECKSUM_1AC 0;
-BA_ "DescriptionE" SG_ 428 VSA_REQ_TRQ_1AC "Indicates the crankshaft torque.
--32768 to 32767 Nm
+BA_ "DescriptionE" SG_ 428 VSA_REQ_TRQ_1AC "Indicates the crankshaft torque.
+
+-32768 to 32767 Nm
+
 Indicates the crankshaft torque. ";
-BA_ "DescriptionJ" SG_ 428 VSA_REQ_TRQ_1AC "ƒNƒ‰ƒ“ƒNƒVƒƒƒtƒgƒgƒ‹ƒN‚ðŽ¦‚·
--32768`32767Nm
-ƒNƒ‰ƒ“ƒNƒVƒƒƒtƒgƒgƒ‹ƒN‚ðŽ¦‚·";
+BA_ "DescriptionJ" SG_ 428 VSA_REQ_TRQ_1AC "ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½Vï¿½ï¿½ï¿½tï¿½gï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+-32768ï¿½`32767Nm
+
+ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½Vï¿½ï¿½ï¿½tï¿½gï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 428 VSA_REQ_TRQ_1AC 32767;
 BA_ "DescriptionE" SG_ 428 VSA_REQ_MSR_PLUS_TRQ "MSR?positive torque request flag";
-BA_ "DescriptionJ" SG_ 428 VSA_REQ_MSR_PLUS_TRQ "‚l‚r‚qƒvƒ‰ƒXƒgƒ‹ƒN—v‹ƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 428 VSA_REQ_MSR_PLUS_TRQ "ï¿½lï¿½rï¿½qï¿½vï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½vï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O";
 BA_ "ValueTableE" SG_ 428 VSA_REQ_MSR_PLUS_TRQ "1: ?Positive torque requested";
 BA_ "GenSigStartValue" SG_ 428 VSA_REQ_MSR_PLUS_TRQ 0;
-BA_ "DescriptionE" SG_ 428 VSA_TRQ_CONTROL_MODE "Control mode
+BA_ "DescriptionE" SG_ 428 VSA_TRQ_CONTROL_MODE "Control mode
+
 If the data has remained '3'?for 70 msec, the VSA is judged faulty and no request will be accepted from the VSA?until a reset is performed via IG?operation.";
-BA_ "DescriptionJ" SG_ 428 VSA_TRQ_CONTROL_MODE "§Œäƒ‚[ƒh
-ƒf[ƒ^‚ª '3' ‚ª70msecŒp‘±‚µ‚½ê‡AVSAŒÌá‚Æ”»’f‚µˆÈŒãIG‘€ì‚É‚æ‚éØ¾¯Ä‚Ü‚ÅVSA‚©‚ç‚Ì—v‹‚ðŽó‚¯•t‚¯‚È‚¢Ž–‚Æ‚·‚éB";
-BA_ "ValueTableE" SG_ 428 VSA_TRQ_CONTROL_MODE "0: VSA/TCS control inactive (normal)
-1: Request MSR?control
-2: Request acceleration control (This value is set when engine control is required)
+BA_ "DescriptionJ" SG_ 428 VSA_TRQ_CONTROL_MODE "ï¿½ï¿½ï¿½äƒ‚ï¿½[ï¿½h
+
+ï¿½fï¿½[ï¿½^ï¿½ï¿½ '3' ï¿½ï¿½70msecï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‡ï¿½AVSAï¿½Ìï¿½Æ”ï¿½ï¿½fï¿½ï¿½ï¿½ÈŒï¿½IGï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½Ø¾ï¿½Ä‚Ü‚ï¿½VSAï¿½ï¿½ï¿½ï¿½Ì—vï¿½ï¿½ï¿½ï¿½ï¿½ó‚¯•tï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½B";
+BA_ "ValueTableE" SG_ 428 VSA_TRQ_CONTROL_MODE "0: VSA/TCS control inactive (normal)
+
+1: Request MSR?control
+
+2: Request acceleration control (This value is set when engine control is required)
+
 3: Inhibit VSA/TCS (VSA?failure)";
 BA_ "GenSigStartValue" SG_ 428 VSA_TRQ_CONTROL_MODE 0;
-BA_ "DescriptionE" SG_ 428 VSA_TRQ_DOWN_REQ_FUEL_CUT "Fuel control request signal
+BA_ "DescriptionE" SG_ 428 VSA_TRQ_DOWN_REQ_FUEL_CUT "Fuel control request signal
+
 ID:?Valid only when the data of 1AAh 2.1-2.0 VSA_TRQ_CONTROL_MODE is '2.'";
-BA_ "DescriptionJ" SG_ 428 VSA_TRQ_DOWN_REQ_FUEL_CUT "”R—¿§Œä—v‹M†
-ID: 1AAh 2.1-2.0 VSA_TRQ_CONTROL_MODE ‚Ìƒf[ƒ^‚ª '2' ‚ÌŽž‚Ì‚Ý—LŒø‚Æ‚·‚éB";
-BA_ "ValueTableE" SG_ 428 VSA_TRQ_DOWN_REQ_FUEL_CUT "0: No fuel/ignition control (THL?control only)
-1: Ignition retard
+BA_ "DescriptionJ" SG_ 428 VSA_TRQ_DOWN_REQ_FUEL_CUT "ï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Mï¿½ï¿½
+
+ID: 1AAh 2.1-2.0 VSA_TRQ_CONTROL_MODE ï¿½Ìƒfï¿½[ï¿½^ï¿½ï¿½ '2' ï¿½ÌŽï¿½ï¿½Ì‚Ý—Lï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½B";
+BA_ "ValueTableE" SG_ 428 VSA_TRQ_DOWN_REQ_FUEL_CUT "0: No fuel/ignition control (THL?control only)
+
+1: Ignition retard
+
 2: ?All cylinders F/C + Ignition?retard";
 BA_ "GenSigStartValue" SG_ 428 VSA_TRQ_DOWN_REQ_FUEL_CUT 0;
 BA_ "GenSigStartValue" SG_ 420 VSA_ACC_BRAKE_ACT 0;
@@ -1293,10 +1513,12 @@ BA_ "ValueTableE" SG_ 420 VSA_ANSWER_DWS_INIT_REQ "1: ABS control active";
 BA_ "ValueTableE" SG_ 420 VSA_L_MODE_ABS_EBD "1: ABS, EBD L-MODE";
 BA_ "GenSigStartValue" SG_ 420 VSA_L_MODE_ABS_EBD 0;
 BA_ "GenSigStartValue" SG_ 420 VSA_CHECKSUM_1A4 0;
-BA_ "DescriptionE" SG_ 420 VSA_ALIVE_COUNTER_1A4 "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionE" SG_ 420 VSA_ALIVE_COUNTER_1A4 "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
-BA_ "DescriptionJ" SG_ 420 VSA_ALIVE_COUNTER_1A4 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 420 VSA_ALIVE_COUNTER_1A4 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 420 VSA_ALIVE_COUNTER_1A4 0;
 BA_ "ValueTableE" SG_ 420 VSA_ABS_CTRL "1: ABS control active";
 BA_ "GenSigStartValue" SG_ 420 VSA_ABS_CTRL 0;
@@ -1304,26 +1526,29 @@ BA_ "ValueTableE" SG_ 420 VSA_VSA_CTRL "1: VSA control active";
 BA_ "GenSigStartValue" SG_ 420 VSA_VSA_CTRL 0;
 BA_ "ValueTableE" SG_ 420 VSA_WARN_STATUS_HSA "1: HSA warning is illuminated";
 BA_ "GenSigStartValue" SG_ 420 VSA_WARN_STATUS_HSA 0;
-BA_ "DescriptionJ" SG_ 420 VSA_HSA_STATUS_ACT "HSA‚ªì“®‚µ‚Ä‚¢‚éó‘Ô‚ðŽ¦‚·";
+BA_ "DescriptionJ" SG_ 420 VSA_HSA_STATUS_ACT "HSAï¿½ï¿½ï¿½ì“®ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Ô‚ï¿½ï¿½ï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 420 VSA_HSA_STATUS_ACT 0;
 BA_ "DescriptionE" SG_ 420 VSA_ESS_ACT4 "When a head-on collision is detected, '1' is sent with each message which is output 10 times continuously.";
-BA_ "DescriptionJ" SG_ 420 VSA_ESS_ACT4 "ABSÌÙ»²¸ØÝ¸Þ‚É‚æ‚éESSì“®Œp‘±Ì×¸Þ";
-BA_ "ValueTableE" SG_ 420 VSA_ESS_ACT4 "0: The continuation of an operation of ESS by ABS full cycle is forbidden.
+BA_ "DescriptionJ" SG_ 420 VSA_ESS_ACT4 "ABSï¿½Ù»ï¿½ï¿½ï¿½Ý¸Þ‚É‚ï¿½ï¿½ESSï¿½ì“®ï¿½pï¿½ï¿½ï¿½×¸ï¿½";
+BA_ "ValueTableE" SG_ 420 VSA_ESS_ACT4 "0: The continuation of an operation of ESS by ABS full cycle is forbidden.
+
 1: The continuation of an operation of ESS by ABS full cycle is permitted.";
 BA_ "GenSigStartValue" SG_ 420 VSA_ESS_ACT4 0;
-BA_ "DescriptionJ" SG_ 420 VSA_ESS_ACT3 "ABSÌÙ»²¸ØÝ¸Þ‚É‚æ‚éESSì“®ŠJŽnÌ×¸Þ";
-BA_ "ValueTableE" SG_ 420 VSA_ESS_ACT3 "0: The operation start of ESS by  ABS full cycle is forbidden.
+BA_ "DescriptionJ" SG_ 420 VSA_ESS_ACT3 "ABSï¿½Ù»ï¿½ï¿½ï¿½Ý¸Þ‚É‚ï¿½ï¿½ESSï¿½ì“®ï¿½Jï¿½nï¿½×¸ï¿½";
+BA_ "ValueTableE" SG_ 420 VSA_ESS_ACT3 "0: The operation start of ESS by  ABS full cycle is forbidden.
+
 1: The operation start of ESS by  ABS full cycle is permitted.";
 BA_ "GenSigStartValue" SG_ 420 VSA_ESS_ACT3 0;
 BA_ "DescriptionE" SG_ 420 VSA_REWRITE_START "VSA ECU reprogramming start flag";
-BA_ "DescriptionJ" SG_ 420 VSA_REWRITE_START "VSA ECU‘Š·ŠJŽnƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 420 VSA_REWRITE_START "VSA ECUï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½nï¿½tï¿½ï¿½ï¿½O";
 BA_ "ValueTableE" SG_ 420 VSA_REWRITE_START "1: Start VSA reprogramming at dealer";
 BA_ "GenSigStartValue" SG_ 420 VSA_REWRITE_START 0;
-BA_ "ValueTableE" SG_ 420 VSA_BUZZER_STATUS "0: Buzzer OFF
+BA_ "ValueTableE" SG_ 420 VSA_BUZZER_STATUS "0: Buzzer OFF
+
 1: Buzzer ON";
 BA_ "GenSigStartValue" SG_ 420 VSA_BUZZER_STATUS 0;
 BA_ "DescriptionE" SG_ 420 VSA_MID_REQUEST_VSA "VSA MID enlarged warning output flag ";
-BA_ "DescriptionJ" SG_ 420 VSA_MID_REQUEST_VSA "VSA MIDŠg‘åƒ[ƒjƒ“ƒO•\Ž¦‹–‰Âƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 420 VSA_MID_REQUEST_VSA "VSA MIDï¿½gï¿½åƒï¿½[ï¿½jï¿½ï¿½ï¿½Oï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½Âƒtï¿½ï¿½ï¿½O";
 BA_ "ValueTableE" SG_ 420 VSA_MID_REQUEST_VSA "1: Display VSA MID enlarged warning";
 BA_ "GenSigStartValue" SG_ 420 VSA_MID_REQUEST_VSA 0;
 BA_ "ValueTableE" SG_ 420 VSA_LAMP_STATUS_VSA_OFF "1: VSA OFF lamp ON";
@@ -1335,7 +1560,7 @@ BA_ "GenSigStartValue" SG_ 420 VSA_WARN_STATUS_ABS 1;
 BA_ "ValueTableE" SG_ 420 VSA_WARN_STATUS_BRAKE "1: Brake warning lamp ON";
 BA_ "GenSigStartValue" SG_ 420 VSA_WARN_STATUS_BRAKE 1;
 BA_ "DescriptionE" SG_ 420 VSA_VSA_TCS_ACT "If the TSA?becomes active and the brake lamp turns ON, the bit must be turned 1.";
-BA_ "DescriptionJ" SG_ 420 VSA_VSA_TCS_ACT "TSA‚ªì“®‚µÌÞÚ°·×ÝÌß“_“”‚ð‚·‚éê‡‚ÍËÞ¯Ä‚ð1‚É‚·‚é‚±‚Æ";
+BA_ "DescriptionJ" SG_ 420 VSA_VSA_TCS_ACT "TSAï¿½ï¿½ï¿½ì“®ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½ï¿½ß“_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‡ï¿½ï¿½ï¿½Þ¯Ä‚ï¿½1ï¿½É‚ï¿½ï¿½é‚±ï¿½ï¿½";
 BA_ "ValueTableE" SG_ 420 VSA_VSA_TCS_ACT "1: ?VSA, TCS active";
 BA_ "GenSigStartValue" SG_ 420 VSA_VSA_TCS_ACT 0;
 BA_ "ValueTableE" SG_ 420 VSA_ABS_EBD_ACT "1: ?ABS, EBD active";
@@ -1350,220 +1575,234 @@ BA_ "ValueTableE" SG_ 420 VSA_CAS_ACT "1:  CAS active";
 BA_ "GenSigStartValue" SG_ 420 VSA_CAS_ACT 0;
 BA_ "ValueTableE" SG_ 420 VSA_BA_ACT "1: BA active ";
 BA_ "GenSigStartValue" SG_ 420 VSA_BA_ACT 0;
-BA_ "DescriptionJ" SG_ 420 VSA_MASTER_CYLINDER_PRESSURE "ƒ}ƒXƒ^[ƒVƒŠƒ“ƒ_[‰tˆ³
-o—ÍŒÅ’è“™‚Ìˆ—‚ª‚ ‚éˆ×AM†o—ÍÚ×‚ðŠm”FŒãŽg—p‚ÌŽ–
-¦NK21VƒVƒXƒeƒ€‚Ìê‡ALSB“™‚É•ÏX‚ª‚ ‚éˆ×’ˆÓ‚·‚é‚±‚Æ";
-BA_ "ValueTableE" SG_ 420 VSA_MASTER_CYLINDER_PRESSURE "0066: 0kPa
+BA_ "DescriptionJ" SG_ 420 VSA_MASTER_CYLINDER_PRESSURE "ï¿½}ï¿½Xï¿½^ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½[ï¿½tï¿½ï¿½
+
+ï¿½oï¿½ÍŒÅ’è“™ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×Aï¿½Mï¿½ï¿½ï¿½oï¿½ÍÚ×‚ï¿½ï¿½mï¿½Fï¿½ï¿½gï¿½pï¿½ÌŽï¿½
+
+ï¿½ï¿½NK21Vï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Ìê‡ï¿½ALSBï¿½ï¿½ï¿½É•ÏXï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×’ï¿½ï¿½Ó‚ï¿½ï¿½é‚±ï¿½ï¿½";
+BA_ "ValueTableE" SG_ 420 VSA_MASTER_CYLINDER_PRESSURE "0066: 0kPa
+
 0399: 19623.24kPa";
 BA_ "GenSigStartValue" SG_ 420 VSA_MASTER_CYLINDER_PRESSURE 4095;
-BA_ "DescriptionJ" SG_ 420 VSA_FAIL_MC_PRESSURE_SENSOR "ƒ}ƒXƒ^ƒVƒŠƒ“ƒ_‰tˆ³ƒZƒ“ƒTˆÙíƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 420 VSA_FAIL_MC_PRESSURE_SENSOR "ï¿½}ï¿½Xï¿½^ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½tï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½Ùï¿½tï¿½ï¿½ï¿½O";
 BA_ "GenSigStartValue" SG_ 420 VSA_FAIL_MC_PRESSURE_SENSOR 0;
-BA_ "DescriptionJ" SG_ 420 VSA_INHBIT_MC_PRESSURE_SENSOR "ƒ}ƒXƒ^ƒVƒŠƒ“ƒ_‰tˆ³ƒZƒ“ƒTˆêŽž‹ÖŽ~ƒtƒ‰ƒO";
+BA_ "DescriptionJ" SG_ 420 VSA_INHBIT_MC_PRESSURE_SENSOR "ï¿½}ï¿½Xï¿½^ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½tï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½êŽžï¿½ÖŽ~ï¿½tï¿½ï¿½ï¿½O";
 BA_ "GenSigStartValue" SG_ 420 VSA_INHBIT_MC_PRESSURE_SENSOR 0;
-BA_ "DescriptionJ" SG_ 420 VSA_ESS_ACT2 "Œ¸‘¬“x‚É‚æ‚éESSì“®Œp‘±Ì×¸Þ";
-BA_ "ValueTableE" SG_ 420 VSA_ESS_ACT2 "0: The continuation of an operation of ESS by deceleration is forbidden.
+BA_ "DescriptionJ" SG_ 420 VSA_ESS_ACT2 "ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½É‚ï¿½ï¿½ESSï¿½ì“®ï¿½pï¿½ï¿½ï¿½×¸ï¿½";
+BA_ "ValueTableE" SG_ 420 VSA_ESS_ACT2 "0: The continuation of an operation of ESS by deceleration is forbidden.
+
 1: The continuation of an operation of ESS by deceleration is permitted.";
 BA_ "GenSigStartValue" SG_ 420 VSA_ESS_ACT2 0;
-BA_ "DescriptionJ" SG_ 420 VSA_ESS_ACT1 "Œ¸‘¬“x‚É‚æ‚éESSì“®ŠJŽnÌ×¸Þ";
-BA_ "ValueTableE" SG_ 420 VSA_ESS_ACT1 "0: The operation start of ESS by deceleration is forbidden.
+BA_ "DescriptionJ" SG_ 420 VSA_ESS_ACT1 "ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½É‚ï¿½ï¿½ESSï¿½ì“®ï¿½Jï¿½nï¿½×¸ï¿½";
+BA_ "ValueTableE" SG_ 420 VSA_ESS_ACT1 "0: The operation start of ESS by deceleration is forbidden.
+
 1: The operation start of ESS by deceleration is permitted.";
 BA_ "GenSigStartValue" SG_ 420 VSA_ESS_ACT1 0;
 BA_ "GenSigStartValue" SG_ 411 VSA_CHECKSUM_19B 0;
 BA_ "GenSigStartValue" SG_ 411 VSA_ALIVE_COUNTER_19B 0;
-BA_ "DescriptionJ" SG_ 411 VSA_ALIVE_COUNTER_19B "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
+BA_ "DescriptionJ" SG_ 411 VSA_ALIVE_COUNTER_19B "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
 BA_ "GenSigStartValue" SG_ 411 VSA_ABS_RR_WHEEL_PULSE_COUNTER 0;
-BA_ "DescriptionJ" SG_ 411 VSA_ABS_RR_WHEEL_PULSE_COUNTER "‰EŒãŽÔ—Ö‘¬ƒpƒ‹ƒXƒJƒEƒ“ƒ^";
+BA_ "DescriptionJ" SG_ 411 VSA_ABS_RR_WHEEL_PULSE_COUNTER "ï¿½Eï¿½ï¿½Ô—Ö‘ï¿½ï¿½pï¿½ï¿½ï¿½Xï¿½Jï¿½Eï¿½ï¿½ï¿½^";
 BA_ "GenSigStartValue" SG_ 411 VSA_ABS_RL_WHEEL_PULSE_COUNTER 0;
-BA_ "DescriptionJ" SG_ 411 VSA_ABS_RL_WHEEL_PULSE_COUNTER "¶ŒãŽÔ—Ö‘¬ƒpƒ‹ƒXƒJƒEƒ“ƒ^";
+BA_ "DescriptionJ" SG_ 411 VSA_ABS_RL_WHEEL_PULSE_COUNTER "ï¿½ï¿½ï¿½ï¿½Ô—Ö‘ï¿½ï¿½pï¿½ï¿½ï¿½Xï¿½Jï¿½Eï¿½ï¿½ï¿½^";
 BA_ "GenSigStartValue" SG_ 411 VSA_ABS_FR_WHEEL_PULSE_COUNTER 0;
-BA_ "DescriptionJ" SG_ 411 VSA_ABS_FR_WHEEL_PULSE_COUNTER "‰E‘OŽÔ—Ö‘¬ƒpƒ‹ƒXƒJƒEƒ“ƒ^";
+BA_ "DescriptionJ" SG_ 411 VSA_ABS_FR_WHEEL_PULSE_COUNTER "ï¿½Eï¿½Oï¿½Ô—Ö‘ï¿½ï¿½pï¿½ï¿½ï¿½Xï¿½Jï¿½Eï¿½ï¿½ï¿½^";
 BA_ "GenSigStartValue" SG_ 411 VSA_ABS_FL_WHEEL_PULSE_COUNTER 0;
-BA_ "DescriptionJ" SG_ 411 VSA_ABS_FL_WHEEL_PULSE_COUNTER "¶‘OŽÔ—Ö‘¬ƒpƒ‹ƒXƒJƒEƒ“ƒ^";
+BA_ "DescriptionJ" SG_ 411 VSA_ABS_FL_WHEEL_PULSE_COUNTER "ï¿½ï¿½ï¿½Oï¿½Ô—Ö‘ï¿½ï¿½pï¿½ï¿½ï¿½Xï¿½Jï¿½Eï¿½ï¿½ï¿½^";
 BA_ "GenSigStartValue" SG_ 145 VSA_CHECKSUM_091 0;
 BA_ "GenSigStartValue" SG_ 145 VSA_ALIVE_COUNTER_091 0;
-BA_ "DescriptionJ" SG_ 145 VSA_ALIVE_COUNTER_091 "1ƒpƒPƒbƒgXV–ˆ‚É1ƒCƒ“ƒNƒŠƒƒ“ƒg
-(0`3‚ÌƒŠƒ“ƒOƒJƒEƒ“ƒ^)";
-BA_ "DescriptionE" SG_ 145 VSA_ALIVE_COUNTER_091 "Incremented by 1 every time a packet is refreshed.
+BA_ "DescriptionJ" SG_ 145 VSA_ALIVE_COUNTER_091 "1ï¿½pï¿½Pï¿½bï¿½gï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½1ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½g
+
+(0ï¿½`3ï¿½Ìƒï¿½ï¿½ï¿½ï¿½Oï¿½Jï¿½Eï¿½ï¿½ï¿½^)";
+BA_ "DescriptionE" SG_ 145 VSA_ALIVE_COUNTER_091 "Incremented by 1 every time a packet is refreshed.
+
 (0 to 3 ring counters)";
 BA_ "DescriptionE" SG_ 145 VSA_SENSOR_START_UP "During start-up process";
-BA_ "DescriptionJ" SG_ 145 VSA_SENSOR_START_UP "‹N“®’†";
+BA_ "DescriptionJ" SG_ 145 VSA_SENSOR_START_UP "ï¿½Nï¿½ï¿½ï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_SENSOR_START_UP 1;
 BA_ "DescriptionE" SG_ 145 VSA_SENSOR_ERR_MC "Abnormal CPU";
-BA_ "DescriptionJ" SG_ 145 VSA_SENSOR_ERR_MC "ƒ}ƒCƒRƒ“ˆÙí";
+BA_ "DescriptionJ" SG_ 145 VSA_SENSOR_ERR_MC "ï¿½}ï¿½Cï¿½Rï¿½ï¿½ï¿½Ùï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_SENSOR_ERR_MC 0;
 BA_ "DescriptionE" SG_ 145 VSA_SENSOR_STATE_IG "Abnormal supply voltage";
-BA_ "DescriptionJ" SG_ 145 VSA_SENSOR_STATE_IG "‹Ÿ‹‹“dˆ³(IG)ˆÙí";
+BA_ "DescriptionJ" SG_ 145 VSA_SENSOR_STATE_IG "ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½ï¿½(IG)ï¿½Ùï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_SENSOR_STATE_IG 0;
-BA_ "DescriptionJ" SG_ 145 VSA_P_ERR_LON_G "LON_GŒÌá";
+BA_ "DescriptionJ" SG_ 145 VSA_P_ERR_LON_G "LON_Gï¿½Ìï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_P_ERR_LON_G 0;
-BA_ "DescriptionJ" SG_ 145 VSA_P_ERR_LAT_G "LAT_GŒÌá";
+BA_ "DescriptionJ" SG_ 145 VSA_P_ERR_LAT_G "LAT_Gï¿½Ìï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_P_ERR_LAT_G 0;
-BA_ "DescriptionJ" SG_ 145 VSA_P_ERR_DEGC "DegCŒÌá";
+BA_ "DescriptionJ" SG_ 145 VSA_P_ERR_DEGC "DegCï¿½Ìï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_P_ERR_DEGC 0;
 BA_ "DescriptionE" SG_ 145 VSA_P_ERR_YAW1 "YAW 1 failure";
-BA_ "DescriptionJ" SG_ 145 VSA_P_ERR_YAW1 "YAW1ŒÌá";
+BA_ "DescriptionJ" SG_ 145 VSA_P_ERR_YAW1 "YAW1ï¿½Ìï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_P_ERR_YAW1 0;
-BA_ "DescriptionJ" SG_ 145 VSA_T_ERR_LON_G "LON_GˆêŽžˆÙí";
+BA_ "DescriptionJ" SG_ 145 VSA_T_ERR_LON_G "LON_Gï¿½êŽžï¿½Ùï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_T_ERR_LON_G 0;
-BA_ "DescriptionJ" SG_ 145 VSA_T_ERR_LAT_G "LAT_GˆêŽžˆÙí";
+BA_ "DescriptionJ" SG_ 145 VSA_T_ERR_LAT_G "LAT_Gï¿½êŽžï¿½Ùï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_T_ERR_LAT_G 0;
-BA_ "DescriptionJ" SG_ 145 VSA_T_ERR_DEGC "DegCˆêŽžˆÙí";
+BA_ "DescriptionJ" SG_ 145 VSA_T_ERR_DEGC "DegCï¿½êŽžï¿½Ùï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_T_ERR_DEGC 0;
 BA_ "DescriptionE" SG_ 145 VSA_T_ERR_YAW1 "Temporarily abnormal YAW1";
-BA_ "DescriptionJ" SG_ 145 VSA_T_ERR_YAW1 "YAW1ˆêŽžˆÙí";
+BA_ "DescriptionJ" SG_ 145 VSA_T_ERR_YAW1 "YAW1ï¿½êŽžï¿½Ùï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_T_ERR_YAW1 0;
-BA_ "DescriptionJ" SG_ 145 VSA_LON_G "LON_Gƒf[ƒ^
-¦o—Í’è‹`‚Í•Ê•\‚É‚æ‚é
-¦•ÛØ”ÍˆÍ‚ÍSPEC‚ðŽQÆ";
+BA_ "DescriptionJ" SG_ 145 VSA_LON_G "LON_Gï¿½fï¿½[ï¿½^
+
+ï¿½ï¿½ï¿½oï¿½Í’ï¿½`ï¿½Í•Ê•\ï¿½É‚ï¿½ï¿½
+
+ï¿½ï¿½ï¿½ÛØ”ÍˆÍ‚ï¿½SPECï¿½ï¿½ï¿½Qï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_LON_G 512;
-BA_ "DescriptionJ" SG_ 145 VSA_LAT_G "LAT_Gƒf[ƒ^
-¦o—Í’è‹`‚Í•Ê•\‚É‚æ‚é
-¦•ÛØ”ÍˆÍ‚ÍSPEC‚ðŽQÆ";
+BA_ "DescriptionJ" SG_ 145 VSA_LAT_G "LAT_Gï¿½fï¿½[ï¿½^
+
+ï¿½ï¿½ï¿½oï¿½Í’ï¿½`ï¿½Í•Ê•\ï¿½É‚ï¿½ï¿½
+
+ï¿½ï¿½ï¿½ÛØ”ÍˆÍ‚ï¿½SPECï¿½ï¿½ï¿½Qï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_LAT_G 512;
-BA_ "DescriptionJ" SG_ 145 VSA_DEGC "YAW1‰·“xƒf[ƒ^
-¦o—Í’è‹`‚Í•Ê•\‚É‚æ‚é
-¦•ÛØ”ÍˆÍ‚ÍSPEC‚ðŽQÆ";
+BA_ "DescriptionJ" SG_ 145 VSA_DEGC "YAW1ï¿½ï¿½ï¿½xï¿½fï¿½[ï¿½^
+
+ï¿½ï¿½ï¿½oï¿½Í’ï¿½`ï¿½Í•Ê•\ï¿½É‚ï¿½ï¿½
+
+ï¿½ï¿½ï¿½ÛØ”ÍˆÍ‚ï¿½SPECï¿½ï¿½ï¿½Qï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_DEGC 103;
-BA_ "DescriptionE" SG_ 145 VSA_YAW_1 "YAW1 data
-* Refer to the attachment for the definition of the output.
+BA_ "DescriptionE" SG_ 145 VSA_YAW_1 "YAW1 data
+
+* Refer to the attachment for the definition of the output.
+
 * Refer to SPEC for the guarantee range.";
-BA_ "DescriptionJ" SG_ 145 VSA_YAW_1 "YAW1ƒf[ƒ^
-¦o—Í’è‹`‚Í•Ê•\‚É‚æ‚é
-¦•ÛØ”ÍˆÍ‚ÍSPEC‚ðŽQÆ";
+BA_ "DescriptionJ" SG_ 145 VSA_YAW_1 "YAW1ï¿½fï¿½[ï¿½^
+
+ï¿½ï¿½ï¿½oï¿½Í’ï¿½`ï¿½Í•Ê•\ï¿½É‚ï¿½ï¿½
+
+ï¿½ï¿½ï¿½ÛØ”ÍˆÍ‚ï¿½SPECï¿½ï¿½ï¿½Qï¿½ï¿½";
 BA_ "GenSigStartValue" SG_ 145 VSA_YAW_1 512;
-VAL_ 422 METER_SW_STATUS_VSA_OFF_1A6 1 "VSA-ƒIƒt ƒXƒCƒbƒ` ƒIƒ“  " ;
-VAL_ 422 METER_SW_STATUS_PARK_BRAKE_1A6 1 "ƒp[ƒLƒ“ƒOƒuƒŒ[ƒL ƒXƒCƒbƒ` ƒIƒ“" ;
-VAL_ 422 METER_SW_STATUS_BRAKE_FLUID_1A6 1 "ƒuƒŒ[ƒLƒtƒ‹[ƒh ƒŒƒxƒ‹ ƒXƒCƒbƒ` ƒIƒ“" ;
+VAL_ 422 METER_SW_STATUS_VSA_OFF_1A6 1 "VSA-ï¿½Iï¿½t ï¿½Xï¿½Cï¿½bï¿½` ï¿½Iï¿½ï¿½  " ;
+VAL_ 422 METER_SW_STATUS_PARK_BRAKE_1A6 1 "ï¿½pï¿½[ï¿½Lï¿½ï¿½ï¿½Oï¿½uï¿½ï¿½ï¿½[ï¿½L ï¿½Xï¿½Cï¿½bï¿½` ï¿½Iï¿½ï¿½" ;
+VAL_ 422 METER_SW_STATUS_BRAKE_FLUID_1A6 1 "ï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½tï¿½ï¿½ï¿½[ï¿½h ï¿½ï¿½ï¿½xï¿½ï¿½ ï¿½Xï¿½Cï¿½bï¿½` ï¿½Iï¿½ï¿½" ;
 VAL_ 1424 VSA_DTC_STORAGE_STATUS 1 "DTC Stored(History or Current)" 0 "DTC Not Stored" ;
-VAL_ 426 VSA_SHIFT_REQ_1AA 3 "ƒVƒtƒgDOWN—v‹" 2 "ƒVƒtƒgUP—v‹" 1 "ƒVƒtƒgƒz[ƒ‹ƒh—v‹" 0 "VSA‚©‚ç‚ÌƒVƒtƒg§Œä—v‹–³‚µ(EATƒIƒŠƒWƒiƒ‹§Œä)" ;
-VAL_ 426 VSA_TRQ_DOWN_REQ_FUEL_CUT_1AA 2 "‘S‹C“›F/C{“_‰ÎƒŠƒ^[ƒh" 1 "“_‰ÎƒŠƒ^[ƒh" 0 "”R—¿/“_‰Î§Œä–³‚µ(THL§Œä‚Ì‚Ý)" ;
-VAL_ 426 VSA_REQ_MSR_PLUS_TRQ_1AA 1 "ƒvƒ‰ƒXƒgƒ‹ƒN—v‹’†" ;
-VAL_ 426 VSA_TRQ_CONTROL_MODE_1AA 3 "VSA/TCS‹ÖŽ~iVSAŒÌáj" 2 "‰Á‘¬§Œä—v‹(ƒGƒ“ƒWƒ“§Œä‚ª•K—v‚Èê‡‚É‚±‚Ì’l‚ðSET‚·‚é)" 1 "MSR§Œä—v‹" 0 "VSA/TCS”ñ§Œä’†(ƒm[ƒ}ƒ‹)" ;
-VAL_ 316 ENG_CLUTCH_SW_CC_13C 0 "ƒNƒ‰ƒbƒ`ƒyƒ_ƒ‹‚ª“¥‚Ü‚ê‚Ä‚¢‚éŽžiSW‚ªOFFj" 1 "ƒNƒ‰ƒbƒ`ƒyƒ_ƒ‹‚ª“¥‚Ü‚ê‚Ä‚¢‚È‚¢ŽžiSW‚ªONj" ;
-VAL_ 316 ENG_VSA_ACK1_13C 2 "‘S‹C“›F/C" 1 "“_‰ÎƒŠƒ^[ƒh" 0 "”R—¿/“_‰Î§Œä–³‚µ(THL§Œä‚Ì‚Ý)" ;
-VAL_ 316 ENG_VSA_PERMIT_PLUS_TRQ_13C 1 "ƒvƒ‰ƒXƒgƒ‹ƒN‹–‰Â’†" ;
-VAL_ 316 ENG_RECEIVE_ERROR_1AA 1 "ŽóMƒGƒ‰[‚ ‚è" ;
-VAL_ 316 ENG_VSA_INHIBIT_VSA_CONTROL_13C 1 "ˆêŽž“I‚ÈVSA F/C§Œä’âŽ~" ;
-VAL_ 316 ENG_VSA_REFUSED_VSA_CONTROL_13C 1 "VSA§Œä‚ð‹‘â‚·‚éŒÌá”­¶’†" ;
-VAL_ 985 VSA_ABS_DISABLE_EDR 1 "ABSŒÌá’†" ;
-VAL_ 985 VSA_STABILITY_CTRL1_DISABLE_EDR 1 "STABILITY CONTROL1§Œä‚Ì‚¤‚¿A­‚È‚­‚Æ‚à‚P‚Â‹ÖŽ~‚µ‚Ä‚¢‚é‚Æ‚«" 0 "STABILITY CONTROL1§Œä‚Ì‚¤‚¿A‚·‚×‚Ä‹ÖŽ~‚µ‚Ä‚¢‚È‚¢‚Æ‚«" ;
-VAL_ 985 VSA_STABILITY_CTRL2_DISABLE_EDR 1 "STABILITY CONTROL2§Œä‚Ì‚¤‚¿A­‚È‚­‚Æ‚à‚P‚Â‹ÖŽ~‚µ‚Ä‚¢‚é‚Æ‚«" 0 "STABILITY CONTROL2§Œä‚Ì‚¤‚¿A‚·‚×‚Ä‹ÖŽ~‚µ‚Ä‚¢‚È‚¢‚Æ‚«" ;
-VAL_ 985 VSA_VSA_EQUIPPED_EDR 1 "VSA‘•”õ‚ ‚è" 0 "VSA‘•”õ‚È‚µ(ABS‘•”õ)" ;
-VAL_ 985 VSA_ABS_ACT_EDR 1 "ABSì“®’†" ;
-VAL_ 985 VSA_STABILITY_CTRL_ACT_EDR 1 "STABILITY CONTROLì“®’†" ;
-VAL_ 985 VSA_VSA_OFF_STATUS_EDR 1 "VSA OFF ’†" ;
-VAL_ 808 ENG_STRNNEND 1 "Š®”šó‘Ô" ;
-VAL_ 804 ENG_SW_STATUS_SCS 1 "SCSƒXƒCƒbƒ`ƒIƒ“" ;
-VAL_ 472 SS30_REQ_PREBRAKE 1 "—\ˆ³—v‹" ;
-VAL_ 472 SS30_REQ_BRAKE 1 "Œ¸‘¬—v‹" ;
-VAL_ 472 SS30_REQ_BRAKEHOLD 1 "ƒuƒŒ[ƒL•ÛŽ—v‹" ;
-VAL_ 472 SS30_STATUS_FAIL 1 "SS30ŒÌá" ;
-VAL_ 356 METER_SW_STATUS_PARK_BRAKE 1 "ƒp[ƒLƒ“ƒOƒuƒŒ[ƒL ƒXƒCƒbƒ` ƒIƒ“" ;
-VAL_ 356 METER_SW_STATUS_BRAKE_FLUID 1 "ƒuƒŒ[ƒLƒtƒ‹[ƒh ƒŒƒxƒ‹ ƒXƒCƒbƒ` ƒIƒ“" ;
-VAL_ 356 METER_SW_STATUS_VSA_OFF 1 "VSA-ƒIƒt ƒXƒCƒbƒ` ƒIƒ“  " ;
-VAL_ 401 CVT_CAS_ON 1 "VSA‚Ö‚ÌCAS_ON—v‹" ;
-VAL_ 401 CVT_REFUSE_VSA_CONTROL 1 "VSA§Œä‚ð‹‘â‚·‚éCVTŒÌá”­¶’†" ;
-VAL_ 401 CVT_GEAR_POSITION_IND_CVT 15 "LƒŒƒ“ƒW§Œä’†" 8 "8th" 7 "7th" 6 "6th" 5 "5th" 4 "4th" 3 "3rd" 2 "2nd" 1 "1st" 0 "ƒIƒt" ;
-VAL_ 401 CVT_SHFT_IN_PARKING 1 "ƒp[ƒLƒ“ƒO" ;
-VAL_ 401 CVT_SHFT_IN_REVERSE 1 "ƒŠƒo[ƒX" ;
-VAL_ 401 CVT_SHFT_IN_NEUTRAL 1 "ƒjƒ…[ƒgƒ‰ƒ‹" ;
+VAL_ 426 VSA_SHIFT_REQ_1AA 3 "ï¿½Vï¿½tï¿½gDOWNï¿½vï¿½ï¿½" 2 "ï¿½Vï¿½tï¿½gUPï¿½vï¿½ï¿½" 1 "ï¿½Vï¿½tï¿½gï¿½zï¿½[ï¿½ï¿½ï¿½hï¿½vï¿½ï¿½" 0 "VSAï¿½ï¿½ï¿½ï¿½ÌƒVï¿½tï¿½gï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(EATï¿½Iï¿½ï¿½ï¿½Wï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)" ;
+VAL_ 426 VSA_TRQ_DOWN_REQ_FUEL_CUT_1AA 2 "ï¿½Sï¿½Cï¿½ï¿½F/Cï¿½{ï¿½_ï¿½Îƒï¿½ï¿½^ï¿½[ï¿½h" 1 "ï¿½_ï¿½Îƒï¿½ï¿½^ï¿½[ï¿½h" 0 "ï¿½Rï¿½ï¿½/ï¿½_ï¿½Îï¿½ï¿½ä–³ï¿½ï¿½(THLï¿½ï¿½ï¿½ï¿½Ì‚ï¿½)" ;
+VAL_ 426 VSA_REQ_MSR_PLUS_TRQ_1AA 1 "ï¿½vï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½vï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 426 VSA_TRQ_CONTROL_MODE_1AA 3 "VSA/TCSï¿½ÖŽ~ï¿½iVSAï¿½Ìï¿½j" 2 "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½(ï¿½Gï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½ä‚ªï¿½Kï¿½vï¿½Èê‡ï¿½É‚ï¿½ï¿½Ì’lï¿½ï¿½SETï¿½ï¿½ï¿½ï¿½)" 1 "MSRï¿½ï¿½ï¿½ï¿½vï¿½ï¿½" 0 "VSA/TCSï¿½ñ§Œä’†(ï¿½mï¿½[ï¿½}ï¿½ï¿½)" ;
+VAL_ 316 ENG_CLUTCH_SW_CC_13C 0 "ï¿½Nï¿½ï¿½ï¿½bï¿½`ï¿½yï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½Ä‚ï¿½ï¿½éŽžï¿½iSWï¿½ï¿½OFFï¿½j" 1 "ï¿½Nï¿½ï¿½ï¿½bï¿½`ï¿½yï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½iSWï¿½ï¿½ONï¿½j" ;
+VAL_ 316 ENG_VSA_ACK1_13C 2 "ï¿½Sï¿½Cï¿½ï¿½F/C" 1 "ï¿½_ï¿½Îƒï¿½ï¿½^ï¿½[ï¿½h" 0 "ï¿½Rï¿½ï¿½/ï¿½_ï¿½Îï¿½ï¿½ä–³ï¿½ï¿½(THLï¿½ï¿½ï¿½ï¿½Ì‚ï¿½)" ;
+VAL_ 316 ENG_VSA_PERMIT_PLUS_TRQ_13C 1 "ï¿½vï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½Â’ï¿½" ;
+VAL_ 316 ENG_RECEIVE_ERROR_1AA 1 "ï¿½ï¿½Mï¿½Gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 316 ENG_VSA_INHIBIT_VSA_CONTROL_13C 1 "ï¿½êŽžï¿½Iï¿½ï¿½VSA F/Cï¿½ï¿½ï¿½ï¿½ï¿½~" ;
+VAL_ 316 ENG_VSA_REFUSED_VSA_CONTROL_13C 1 "VSAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â‚·ï¿½ï¿½Ìá”­ï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 985 VSA_ABS_DISABLE_EDR 1 "ABSï¿½Ìá’†" ;
+VAL_ 985 VSA_STABILITY_CTRL1_DISABLE_EDR 1 "STABILITY CONTROL1ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½È‚ï¿½ï¿½Æ‚ï¿½ï¿½Pï¿½Â‹ÖŽ~ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Æ‚ï¿½" 0 "STABILITY CONTROL1ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½×‚Ä‹ÖŽ~ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½Æ‚ï¿½" ;
+VAL_ 985 VSA_STABILITY_CTRL2_DISABLE_EDR 1 "STABILITY CONTROL2ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½È‚ï¿½ï¿½Æ‚ï¿½ï¿½Pï¿½Â‹ÖŽ~ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Æ‚ï¿½" 0 "STABILITY CONTROL2ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½×‚Ä‹ÖŽ~ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½Æ‚ï¿½" ;
+VAL_ 985 VSA_VSA_EQUIPPED_EDR 1 "VSAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" 0 "VSAï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½(ABSï¿½ï¿½ï¿½ï¿½)" ;
+VAL_ 985 VSA_ABS_ACT_EDR 1 "ABSï¿½ì“®ï¿½ï¿½" ;
+VAL_ 985 VSA_STABILITY_CTRL_ACT_EDR 1 "STABILITY CONTROLï¿½ì“®ï¿½ï¿½" ;
+VAL_ 985 VSA_VSA_OFF_STATUS_EDR 1 "VSA OFF ï¿½ï¿½" ;
+VAL_ 808 ENG_STRNNEND 1 "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 804 ENG_SW_STATUS_SCS 1 "SCSï¿½Xï¿½Cï¿½bï¿½`ï¿½Iï¿½ï¿½" ;
+VAL_ 472 SS30_REQ_PREBRAKE 1 "ï¿½\ï¿½ï¿½ï¿½vï¿½ï¿½" ;
+VAL_ 472 SS30_REQ_BRAKE 1 "ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½" ;
+VAL_ 472 SS30_REQ_BRAKEHOLD 1 "ï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½ÛŽï¿½ï¿½vï¿½ï¿½" ;
+VAL_ 472 SS30_STATUS_FAIL 1 "SS30ï¿½Ìï¿½" ;
+VAL_ 356 METER_SW_STATUS_PARK_BRAKE 1 "ï¿½pï¿½[ï¿½Lï¿½ï¿½ï¿½Oï¿½uï¿½ï¿½ï¿½[ï¿½L ï¿½Xï¿½Cï¿½bï¿½` ï¿½Iï¿½ï¿½" ;
+VAL_ 356 METER_SW_STATUS_BRAKE_FLUID 1 "ï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½tï¿½ï¿½ï¿½[ï¿½h ï¿½ï¿½ï¿½xï¿½ï¿½ ï¿½Xï¿½Cï¿½bï¿½` ï¿½Iï¿½ï¿½" ;
+VAL_ 356 METER_SW_STATUS_VSA_OFF 1 "VSA-ï¿½Iï¿½t ï¿½Xï¿½Cï¿½bï¿½` ï¿½Iï¿½ï¿½  " ;
+VAL_ 401 CVT_CAS_ON 1 "VSAï¿½Ö‚ï¿½CAS_ONï¿½vï¿½ï¿½" ;
+VAL_ 401 CVT_REFUSE_VSA_CONTROL 1 "VSAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â‚·ï¿½ï¿½CVTï¿½Ìá”­ï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 401 CVT_GEAR_POSITION_IND_CVT 15 "Lï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ä’†" 8 "8th" 7 "7th" 6 "6th" 5 "5th" 4 "4th" 3 "3rd" 2 "2nd" 1 "1st" 0 "ï¿½Iï¿½t" ;
+VAL_ 401 CVT_SHFT_IN_PARKING 1 "ï¿½pï¿½[ï¿½Lï¿½ï¿½ï¿½O" ;
+VAL_ 401 CVT_SHFT_IN_REVERSE 1 "ï¿½ï¿½ï¿½oï¿½[ï¿½X" ;
+VAL_ 401 CVT_SHFT_IN_NEUTRAL 1 "ï¿½jï¿½ï¿½ï¿½[ï¿½gï¿½ï¿½ï¿½ï¿½" ;
 VAL_ 401 CVT_SHFT_IN_D 1 "'D'" ;
 VAL_ 401 CVT_SHFT_IN_S 1 "'S'" ;
 VAL_ 401 CVT_SHFT_IN_L 1 "'L'" ;
-VAL_ 380 ENG_IS_PRE_PROGRESS 1 "ƒAƒCƒhƒ‹ƒXƒgƒbƒvŽÀŽ{—\‚©‚çƒAƒCƒhƒ‹ƒXƒgƒbƒv•œ‹A—\‚Ü‚Å‚ðŽ¦‚·" ;
-VAL_ 380 ENG_IS_PRE_RESTART 1 "ƒAƒCƒhƒ‹ƒXƒgƒbƒv•œ‹A—\‚ðŽ¦‚·" ;
-VAL_ 380 ENG_IS_PROGRESS 1 "ƒAƒCƒhƒ‹ƒXƒgƒbƒv§ŒäŠJŽn‚¨‚æ‚Ñis’†‚ðŽ¦‚·" ;
-VAL_ 380 ENG_CRUISE_STATUS_CRUISE_LMP 1 "ƒNƒ‹[ƒY§Œäƒ‰ƒ“ƒv“_“”" ;
-VAL_ 342 STR_ANGLE 32767 "ŒÌáŽžiInvalidj" 7560 "+756[deg]" 0 "0[deg]" 57976 "-756[deg]" ;
+VAL_ 380 ENG_IS_PRE_PROGRESS 1 "ï¿½Aï¿½Cï¿½hï¿½ï¿½ï¿½Xï¿½gï¿½bï¿½vï¿½ï¿½ï¿½{ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Cï¿½hï¿½ï¿½ï¿½Xï¿½gï¿½bï¿½vï¿½ï¿½ï¿½Aï¿½\ï¿½ï¿½ï¿½Ü‚Å‚ï¿½ï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 380 ENG_IS_PRE_RESTART 1 "ï¿½Aï¿½Cï¿½hï¿½ï¿½ï¿½Xï¿½gï¿½bï¿½vï¿½ï¿½ï¿½Aï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 380 ENG_IS_PROGRESS 1 "ï¿½Aï¿½Cï¿½hï¿½ï¿½ï¿½Xï¿½gï¿½bï¿½vï¿½ï¿½ï¿½ï¿½Jï¿½nï¿½ï¿½ï¿½ï¿½Ñiï¿½sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 380 ENG_CRUISE_STATUS_CRUISE_LMP 1 "ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½äƒ‰ï¿½ï¿½ï¿½vï¿½_ï¿½ï¿½" ;
+VAL_ 342 STR_ANGLE 32767 "ï¿½ÌáŽžï¿½iInvalidï¿½j" 7560 "+756[deg]" 0 "0[deg]" 57976 "-756[deg]" ;
 VAL_ 304 ENG_NEUTRAL_SENSOR_FAIL 1 "NEUTRAL SENSOR FAIL" ;
-VAL_ 304 ENG_RECEIVE_ERROR_1AC 1 "ŽóMƒGƒ‰[‚ ‚è" ;
-VAL_ 304 ENG_SHFT_IN_NEUTRAL 1 "ƒVƒtƒgƒŒƒo[‚ªNEUTRAL‚ÌˆÊ’u‚É‚ ‚é‚Æ‚«" ;
-VAL_ 304 ENG_CLUTCH_SW_CC 0 "ƒNƒ‰ƒbƒ`ƒyƒ_ƒ‹‚ª“¥‚Ü‚ê‚Ä‚¢‚éŽžiSW‚ªOFFj" 1 "ƒNƒ‰ƒbƒ`ƒyƒ_ƒ‹‚ª“¥‚Ü‚ê‚Ä‚¢‚È‚¢ŽžiSW‚ªONj" ;
-VAL_ 304 ENG_VSA_ACK1 2 "‘S‹C“›F/C" 1 "“_‰ÎƒŠƒ^[ƒh" 0 "”R—¿/“_‰Î§Œä–³‚µ(THL§Œä‚Ì‚Ý)" ;
-VAL_ 304 ENG_VSA_PERMIT_PLUS_TRQ 1 "ƒvƒ‰ƒXƒgƒ‹ƒN‹–‰Â’†" ;
-VAL_ 304 ENG_VSA_INHIBIT_VSA_CONTROL 1 "ˆêŽž“I‚ÈVSA F/C§Œä’âŽ~" ;
-VAL_ 304 ENG_VSA_REFUSED_VSA_CONTROL 1 "VSA§Œä‚ð‹‘â‚·‚éŒÌá”­¶’†" ;
+VAL_ 304 ENG_RECEIVE_ERROR_1AC 1 "ï¿½ï¿½Mï¿½Gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 304 ENG_SHFT_IN_NEUTRAL 1 "ï¿½Vï¿½tï¿½gï¿½ï¿½ï¿½oï¿½[ï¿½ï¿½NEUTRALï¿½ÌˆÊ’uï¿½É‚ï¿½ï¿½ï¿½Æ‚ï¿½" ;
+VAL_ 304 ENG_CLUTCH_SW_CC 0 "ï¿½Nï¿½ï¿½ï¿½bï¿½`ï¿½yï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½Ä‚ï¿½ï¿½éŽžï¿½iSWï¿½ï¿½OFFï¿½j" 1 "ï¿½Nï¿½ï¿½ï¿½bï¿½`ï¿½yï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½iSWï¿½ï¿½ONï¿½j" ;
+VAL_ 304 ENG_VSA_ACK1 2 "ï¿½Sï¿½Cï¿½ï¿½F/C" 1 "ï¿½_ï¿½Îƒï¿½ï¿½^ï¿½[ï¿½h" 0 "ï¿½Rï¿½ï¿½/ï¿½_ï¿½Îï¿½ï¿½ä–³ï¿½ï¿½(THLï¿½ï¿½ï¿½ï¿½Ì‚ï¿½)" ;
+VAL_ 304 ENG_VSA_PERMIT_PLUS_TRQ 1 "ï¿½vï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½Â’ï¿½" ;
+VAL_ 304 ENG_VSA_INHIBIT_VSA_CONTROL 1 "ï¿½êŽžï¿½Iï¿½ï¿½VSA F/Cï¿½ï¿½ï¿½ï¿½ï¿½~" ;
+VAL_ 304 ENG_VSA_REFUSED_VSA_CONTROL 1 "VSAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â‚·ï¿½ï¿½Ìá”­ï¿½ï¿½ï¿½ï¿½" ;
 VAL_ 1934 VSA_COMMAND_CODE 5 "Reset of the Calibration" 3 "Calibration" ;
-VAL_ 1030 VSA_SPECIFY_CODE_SYS 1 "HMƒR[ƒh" 0 "SAEƒR[ƒh" ;
-VAL_ 1030 VSA_DTC_STORAGE 1 "Ši”[" 0 "–¢Ši”[" ;
-VAL_ 490 VSA_MAEPS_REVERSE_F 1 "ØÊÞ°½ó‘Ô" ;
-VAL_ 490 VSA_SYSTEM_F 1 "VSA¼½ÃÑŒÌá" ;
-VAL_ 487 VSA_HSA_STATUS_ACT_1E7 1 "ì“®’†" 0 "”ñì“®’†" ;
-VAL_ 487 VSA_INHBIT_CALIPPER_PRESSURE_FR 1 "ƒLƒƒƒŠƒpˆ³ƒZƒ“ƒTFR³í–¢Šm’è" ;
-VAL_ 487 VSA_FAIL_CALIPPER_PRESSURE_FR 1 "ƒLƒƒƒŠƒpˆ³ƒZƒ“ƒTFRˆÙí" ;
-VAL_ 487 VSA_INHBIT_CALIPPER_PRESSURE_FL 1 "ƒLƒƒƒŠƒpˆ³ƒZƒ“ƒTFL³í–¢Šm’è" ;
-VAL_ 487 VSA_FAIL_CALIPPER_PRESSURE_FL 1 "ƒLƒƒƒŠƒpˆ³ƒZƒ“ƒTFLˆÙí" ;
+VAL_ 1030 VSA_SPECIFY_CODE_SYS 1 "HMï¿½Rï¿½[ï¿½h" 0 "SAEï¿½Rï¿½[ï¿½h" ;
+VAL_ 1030 VSA_DTC_STORAGE 1 "ï¿½iï¿½[" 0 "ï¿½ï¿½ï¿½iï¿½[" ;
+VAL_ 490 VSA_MAEPS_REVERSE_F 1 "ï¿½ï¿½Þ°ï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 490 VSA_SYSTEM_F 1 "VSAï¿½ï¿½ï¿½ÑŒÌï¿½" ;
+VAL_ 487 VSA_HSA_STATUS_ACT_1E7 1 "ï¿½ì“®ï¿½ï¿½" 0 "ï¿½ï¿½ì“®ï¿½ï¿½" ;
+VAL_ 487 VSA_INHBIT_CALIPPER_PRESSURE_FR 1 "ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½TFRï¿½ï¿½ï¿½í–¢ï¿½mï¿½ï¿½" ;
+VAL_ 487 VSA_FAIL_CALIPPER_PRESSURE_FR 1 "ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½TFRï¿½Ùï¿½" ;
+VAL_ 487 VSA_INHBIT_CALIPPER_PRESSURE_FL 1 "ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½TFLï¿½ï¿½ï¿½í–¢ï¿½mï¿½ï¿½" ;
+VAL_ 487 VSA_FAIL_CALIPPER_PRESSURE_FL 1 "ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½TFLï¿½Ùï¿½" ;
 VAL_ 432 VSA_INHIBIT_BRAKERELAY 1 "Brakelamprelay temporary disable" ;
 VAL_ 432 VSA_INHBIT_LAT_G_SENSOR 1 "LatG sen normalisnotyetconfirm" ;
 VAL_ 432 VSA_FAIL_LAT_G_SENSOR 1 "Lateral G sensor failed" ;
 VAL_ 432 VSA_ACT_BRAKERELAY 1 "VSA unit activates the BLA" ;
-VAL_ 432 VSA_REQ_CVT_TCS 1 "TCSì“®‹–‰Âó‘Ô" ;
-VAL_ 432 VSA_REQ_CVT_PRS 1 "‰Áˆ³’†" ;
-VAL_ 432 VSA_CONTROL_MODE_CVT 3 "—\”õ" 2 "—\”õ" 1 "TCSì“®’†" 0 "VSA§Œä‰Â”\ó‘Ô" ;
-VAL_ 432 VSA_ABS_STATUS_FR_ABS_EBD_ACT 1 "FR—ÖABSAEBDì“®’†" ;
-VAL_ 432 VSA_ABS_STATUS_FL_ABS_EBD_ACT 1 "FL—ÖABSAEBDì“®’†" ;
-VAL_ 432 VSA_ABS_STATUS_RR_ABS_EBD_ACT 1 "RR—ÖABSAEBDì“®’†" ;
-VAL_ 432 VSA_ABS_STATUS_RL_ABS_EBD_ACT 1 "RL—ÖABSAEBDì“®’†" ;
-VAL_ 432 VSA_FAIL_STEERING_SENSOR 1 "‘ÇŠpƒZƒ“ƒTˆÙí" ;
-VAL_ 432 VSA_FAIL_YAW_RATE_SENSOR 1 "ƒˆ[ƒŒƒCƒgƒZƒ“ƒTˆÙí" ;
-VAL_ 432 VSA_FAIL_MC_PRESSURE_SENSOR_1B0 1 "M/Cˆ³ƒZƒ“ƒTˆÙí" ;
-VAL_ 432 VSA_ABS_FAIL_FR_VW_SENSOR 1 "ŽÔ—Ö‘¬ƒZƒ“ƒTFR—ÖˆÙí" ;
-VAL_ 432 VSA_ABS_FAIL_FL_VW_SENSOR 1 "ŽÔ—Ö‘¬ƒZƒ“ƒTFL—ÖˆÙí" ;
-VAL_ 432 VSA_ABS_FAIL_RR_VW_SENSOR 1 "ŽÔ—Ö‘¬ƒZƒ“ƒTRR—ÖˆÙí" ;
-VAL_ 432 VSA_ABS_FAIL_RL_VW_SENSOR 1 "ŽÔ—Ö‘¬ƒZƒ“ƒTRL—ÖˆÙí" ;
-VAL_ 432 VSA_ABS_INHBIT_VW_SENSOR 1 "ŽÔ—Ö‘¬ƒZƒ“ƒT³í–¢Šm’è" ;
-VAL_ 432 VSA_ACC_INHIBIT_CVRS_BRAKE 1 "CVRSƒuƒŒ[ƒLˆêŽž‹ÖŽ~" ;
-VAL_ 432 VSA_INHBIT_STEERING_SENSOR 1 "‘ÇŠpƒZƒ“ƒT³í–¢Šm’è" ;
-VAL_ 432 VSA_ACC_REFUSE_CVRS_BRAKE 1 "CVRSƒuƒŒ[ƒL‚ð‹‘â‚·‚éŒÌá‚ª”­¶" ;
-VAL_ 432 VSA_VW_PULSE_CAPTURED 1 "ŽÔ—Ö‘¬ƒpƒ‹ƒX‚ ‚è" ;
-VAL_ 432 VSA_INHBIT_YAW_RATE_SENSOR 1 "ƒˆ[ƒŒ[ƒgƒZƒ“ƒT³í–¢Šm’è" 0 "ƒˆ[ƒŒ[ƒgƒZƒ“ƒT³íŠm’è" ;
-VAL_ 432 VSA_FAIL_BRAKERELAY 1 "BRAKEƒŠƒŒ[@ŒÌá" ;
-VAL_ 432 VSA_SS30_BRAKE_ACT 1 "SS30ƒuƒŒ[ƒLì“®’†" ;
-VAL_ 428 VSA_IS_SHIFT_INHIBIT_REQUEST 1 "ƒAƒCƒhƒ‹ƒXƒgƒbƒvˆÚs‹ÖŽ~—v‹’†" 0 "’ÊíŽž" ;
-VAL_ 428 VSA_SHIFT_REQ_1AC 3 "ƒVƒtƒgDOWN—v‹" 2 "ƒVƒtƒgUP—v‹" 1 "ƒVƒtƒgƒz[ƒ‹ƒh—v‹" 0 "VSA‚©‚ç‚ÌƒVƒtƒg§Œä—v‹–³‚µ(EATƒIƒŠƒWƒiƒ‹§Œä)" ;
-VAL_ 428 VSA_REQ_MSR_PLUS_TRQ 1 "ƒvƒ‰ƒXƒgƒ‹ƒN—v‹’†" ;
-VAL_ 428 VSA_TRQ_CONTROL_MODE 3 "VSA/TCS‹ÖŽ~iVSAŒÌáj" 2 "‰Á‘¬§Œä—v‹(ƒGƒ“ƒWƒ“§Œä‚ª•K—v‚Èê‡‚É‚±‚Ì’l‚ðSET‚·‚é)" 1 "MSR§Œä—v‹" 0 "VSA/TCS”ñ§Œä’†(ƒm[ƒ}ƒ‹)" ;
-VAL_ 428 VSA_TRQ_DOWN_REQ_FUEL_CUT 2 "‘S‹C“›F/C{“_‰ÎƒŠƒ^[ƒh" 1 "“_‰ÎƒŠƒ^[ƒh" 0 "”R—¿/“_‰Î§Œä–³‚µ(THL§Œä‚Ì‚Ý)" ;
-VAL_ 420 VSA_L_MODE_ABS_EBD 1 "ABS,EBD L-MODE’†" ;
-VAL_ 420 VSA_ABS_CTRL 1 "ABS§Œä’†" ;
-VAL_ 420 VSA_VSA_CTRL 1 "VSA§Œä’†" ;
+VAL_ 432 VSA_REQ_CVT_TCS 1 "TCSï¿½ì“®ï¿½ï¿½ï¿½Âï¿½ï¿½" ;
+VAL_ 432 VSA_REQ_CVT_PRS 1 "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 432 VSA_CONTROL_MODE_CVT 3 "ï¿½\ï¿½ï¿½" 2 "ï¿½\ï¿½ï¿½" 1 "TCSï¿½ì“®ï¿½ï¿½" 0 "VSAï¿½ï¿½ï¿½ï¿½Â”\ï¿½ï¿½ï¿½" ;
+VAL_ 432 VSA_ABS_STATUS_FR_ABS_EBD_ACT 1 "FRï¿½ï¿½ABSï¿½AEBDï¿½ì“®ï¿½ï¿½" ;
+VAL_ 432 VSA_ABS_STATUS_FL_ABS_EBD_ACT 1 "FLï¿½ï¿½ABSï¿½AEBDï¿½ì“®ï¿½ï¿½" ;
+VAL_ 432 VSA_ABS_STATUS_RR_ABS_EBD_ACT 1 "RRï¿½ï¿½ABSï¿½AEBDï¿½ì“®ï¿½ï¿½" ;
+VAL_ 432 VSA_ABS_STATUS_RL_ABS_EBD_ACT 1 "RLï¿½ï¿½ABSï¿½AEBDï¿½ì“®ï¿½ï¿½" ;
+VAL_ 432 VSA_FAIL_STEERING_SENSOR 1 "ï¿½ÇŠpï¿½Zï¿½ï¿½ï¿½Tï¿½Ùï¿½" ;
+VAL_ 432 VSA_FAIL_YAW_RATE_SENSOR 1 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Cï¿½gï¿½Zï¿½ï¿½ï¿½Tï¿½Ùï¿½" ;
+VAL_ 432 VSA_FAIL_MC_PRESSURE_SENSOR_1B0 1 "M/Cï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½Ùï¿½" ;
+VAL_ 432 VSA_ABS_FAIL_FR_VW_SENSOR 1 "ï¿½Ô—Ö‘ï¿½ï¿½Zï¿½ï¿½ï¿½TFRï¿½ÖˆÙï¿½" ;
+VAL_ 432 VSA_ABS_FAIL_FL_VW_SENSOR 1 "ï¿½Ô—Ö‘ï¿½ï¿½Zï¿½ï¿½ï¿½TFLï¿½ÖˆÙï¿½" ;
+VAL_ 432 VSA_ABS_FAIL_RR_VW_SENSOR 1 "ï¿½Ô—Ö‘ï¿½ï¿½Zï¿½ï¿½ï¿½TRRï¿½ÖˆÙï¿½" ;
+VAL_ 432 VSA_ABS_FAIL_RL_VW_SENSOR 1 "ï¿½Ô—Ö‘ï¿½ï¿½Zï¿½ï¿½ï¿½TRLï¿½ÖˆÙï¿½" ;
+VAL_ 432 VSA_ABS_INHBIT_VW_SENSOR 1 "ï¿½Ô—Ö‘ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½í–¢ï¿½mï¿½ï¿½" ;
+VAL_ 432 VSA_ACC_INHIBIT_CVRS_BRAKE 1 "CVRSï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½êŽžï¿½ÖŽ~" ;
+VAL_ 432 VSA_INHBIT_STEERING_SENSOR 1 "ï¿½ÇŠpï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½í–¢ï¿½mï¿½ï¿½" ;
+VAL_ 432 VSA_ACC_REFUSE_CVRS_BRAKE 1 "CVRSï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½â‚·ï¿½ï¿½Ìá‚ªï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 432 VSA_VW_PULSE_CAPTURED 1 "ï¿½Ô—Ö‘ï¿½ï¿½pï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 432 VSA_INHBIT_YAW_RATE_SENSOR 1 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½[ï¿½gï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½í–¢ï¿½mï¿½ï¿½" 0 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½[ï¿½gï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½ï¿½mï¿½ï¿½" ;
+VAL_ 432 VSA_FAIL_BRAKERELAY 1 "BRAKEï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½@ï¿½Ìï¿½" ;
+VAL_ 432 VSA_SS30_BRAKE_ACT 1 "SS30ï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½ì“®ï¿½ï¿½" ;
+VAL_ 428 VSA_IS_SHIFT_INHIBIT_REQUEST 1 "ï¿½Aï¿½Cï¿½hï¿½ï¿½ï¿½Xï¿½gï¿½bï¿½vï¿½Úsï¿½ÖŽ~ï¿½vï¿½ï¿½ï¿½ï¿½" 0 "ï¿½ÊíŽž" ;
+VAL_ 428 VSA_SHIFT_REQ_1AC 3 "ï¿½Vï¿½tï¿½gDOWNï¿½vï¿½ï¿½" 2 "ï¿½Vï¿½tï¿½gUPï¿½vï¿½ï¿½" 1 "ï¿½Vï¿½tï¿½gï¿½zï¿½[ï¿½ï¿½ï¿½hï¿½vï¿½ï¿½" 0 "VSAï¿½ï¿½ï¿½ï¿½ÌƒVï¿½tï¿½gï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(EATï¿½Iï¿½ï¿½ï¿½Wï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)" ;
+VAL_ 428 VSA_REQ_MSR_PLUS_TRQ 1 "ï¿½vï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½vï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 428 VSA_TRQ_CONTROL_MODE 3 "VSA/TCSï¿½ÖŽ~ï¿½iVSAï¿½Ìï¿½j" 2 "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½(ï¿½Gï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½ä‚ªï¿½Kï¿½vï¿½Èê‡ï¿½É‚ï¿½ï¿½Ì’lï¿½ï¿½SETï¿½ï¿½ï¿½ï¿½)" 1 "MSRï¿½ï¿½ï¿½ï¿½vï¿½ï¿½" 0 "VSA/TCSï¿½ñ§Œä’†(ï¿½mï¿½[ï¿½}ï¿½ï¿½)" ;
+VAL_ 428 VSA_TRQ_DOWN_REQ_FUEL_CUT 2 "ï¿½Sï¿½Cï¿½ï¿½F/Cï¿½{ï¿½_ï¿½Îƒï¿½ï¿½^ï¿½[ï¿½h" 1 "ï¿½_ï¿½Îƒï¿½ï¿½^ï¿½[ï¿½h" 0 "ï¿½Rï¿½ï¿½/ï¿½_ï¿½Îï¿½ï¿½ä–³ï¿½ï¿½(THLï¿½ï¿½ï¿½ï¿½Ì‚ï¿½)" ;
+VAL_ 420 VSA_L_MODE_ABS_EBD 1 "ABS,EBD L-MODEï¿½ï¿½" ;
+VAL_ 420 VSA_ABS_CTRL 1 "ABSï¿½ï¿½ï¿½ä’†" ;
+VAL_ 420 VSA_VSA_CTRL 1 "VSAï¿½ï¿½ï¿½ä’†" ;
 VAL_ 420 VSA_WARN_STATUS_HSA 1 "HSA warning is illuminated" ;
-VAL_ 420 VSA_HSA_STATUS_ACT 1 "ì“®’†" 0 "”ñì“®’†" ;
-VAL_ 420 VSA_ESS_ACT4 1 "ABSÌÙ»²¸ØÝ¸Þ‚É‚æ‚éESSì“®Œp‘±‹–‰Â" 0 "ABSÌÙ»²¸ØÝ¸Þ‚É‚æ‚éESSì“®Œp‘±‹ÖŽ~" ;
-VAL_ 420 VSA_ESS_ACT3 1 "ABSÌÙ»²¸ØÝ¸Þ‚É‚æ‚éESSì“®ŠJŽn‹–‰Â" 0 "ABSÌÙ»²¸ØÝ¸Þ‚É‚æ‚éESSì“®ŠJŽn‹ÖŽ~" ;
-VAL_ 420 VSA_REWRITE_START 1 "VSAŽsê‘Š·ŠJŽn" ;
-VAL_ 420 VSA_BUZZER_STATUS 1 "ƒuƒU[ƒIƒ“" 0 "ƒuƒU[ƒIƒt" ;
-VAL_ 420 VSA_MID_REQUEST_VSA 1 "VSA MIDŠg‘åƒ[ƒjƒ“ƒO•\Ž¦‹–‰Â" ;
-VAL_ 420 VSA_LAMP_STATUS_VSA_OFF 1 "VSA@OFF×ÝÌß“_“”" ;
-VAL_ 420 VSA_WARN_STATUS_VSA 1 "VSA ƒEƒH[ƒjƒ“ƒOƒ‰ƒ“ƒv“_“”" ;
-VAL_ 420 VSA_WARN_STATUS_ABS 1 "ABS ƒEƒH[ƒjƒ“ƒOƒ‰ƒ“ƒv“_“”" ;
-VAL_ 420 VSA_WARN_STATUS_BRAKE 1 "BRAKE ƒEƒH[ƒjƒ“ƒOƒ‰ƒ“ƒv“_“”" ;
-VAL_ 420 VSA_VSA_TCS_ACT 1 "VSA,TCSì“®’†" ;
-VAL_ 420 VSA_ABS_EBD_ACT 1 "ABS,EBDì“®’†" ;
-VAL_ 420 VSA_VSA_TCS_MIL 1 "VSA,TCSŒÌá’†" ;
-VAL_ 420 VSA_ABS_EBD_MIL 1 "ABS,EBDŒÌá’†" ;
-VAL_ 420 VSA_CASEN 1 "CASì“®‹–‰Â" ;
-VAL_ 420 VSA_CAS_ACT 1 "CASì“®’†" ;
-VAL_ 420 VSA_BA_ACT 1 "BAì“®’†" ;
+VAL_ 420 VSA_HSA_STATUS_ACT 1 "ï¿½ì“®ï¿½ï¿½" 0 "ï¿½ï¿½ì“®ï¿½ï¿½" ;
+VAL_ 420 VSA_ESS_ACT4 1 "ABSï¿½Ù»ï¿½ï¿½ï¿½Ý¸Þ‚É‚ï¿½ï¿½ESSï¿½ì“®ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" 0 "ABSï¿½Ù»ï¿½ï¿½ï¿½Ý¸Þ‚É‚ï¿½ï¿½ESSï¿½ì“®ï¿½pï¿½ï¿½ï¿½ÖŽ~" ;
+VAL_ 420 VSA_ESS_ACT3 1 "ABSï¿½Ù»ï¿½ï¿½ï¿½Ý¸Þ‚É‚ï¿½ï¿½ESSï¿½ì“®ï¿½Jï¿½nï¿½ï¿½ï¿½ï¿½" 0 "ABSï¿½Ù»ï¿½ï¿½ï¿½Ý¸Þ‚É‚ï¿½ï¿½ESSï¿½ì“®ï¿½Jï¿½nï¿½ÖŽ~" ;
+VAL_ 420 VSA_REWRITE_START 1 "VSAï¿½sï¿½ê‘ï¿½ï¿½ï¿½Jï¿½n" ;
+VAL_ 420 VSA_BUZZER_STATUS 1 "ï¿½uï¿½Uï¿½[ï¿½Iï¿½ï¿½" 0 "ï¿½uï¿½Uï¿½[ï¿½Iï¿½t" ;
+VAL_ 420 VSA_MID_REQUEST_VSA 1 "VSA MIDï¿½gï¿½åƒï¿½[ï¿½jï¿½ï¿½ï¿½Oï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 420 VSA_LAMP_STATUS_VSA_OFF 1 "VSAï¿½@OFFï¿½ï¿½ï¿½ß“_ï¿½ï¿½" ;
+VAL_ 420 VSA_WARN_STATUS_VSA 1 "VSA ï¿½Eï¿½Hï¿½[ï¿½jï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½vï¿½_ï¿½ï¿½" ;
+VAL_ 420 VSA_WARN_STATUS_ABS 1 "ABS ï¿½Eï¿½Hï¿½[ï¿½jï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½vï¿½_ï¿½ï¿½" ;
+VAL_ 420 VSA_WARN_STATUS_BRAKE 1 "BRAKE ï¿½Eï¿½Hï¿½[ï¿½jï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½vï¿½_ï¿½ï¿½" ;
+VAL_ 420 VSA_VSA_TCS_ACT 1 "VSA,TCSï¿½ì“®ï¿½ï¿½" ;
+VAL_ 420 VSA_ABS_EBD_ACT 1 "ABS,EBDï¿½ì“®ï¿½ï¿½" ;
+VAL_ 420 VSA_VSA_TCS_MIL 1 "VSA,TCSï¿½Ìá’†" ;
+VAL_ 420 VSA_ABS_EBD_MIL 1 "ABS,EBDï¿½Ìá’†" ;
+VAL_ 420 VSA_CASEN 1 "CASï¿½ì“®ï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 420 VSA_CAS_ACT 1 "CASï¿½ì“®ï¿½ï¿½" ;
+VAL_ 420 VSA_BA_ACT 1 "BAï¿½ì“®ï¿½ï¿½" ;
 VAL_ 420 VSA_MASTER_CYLINDER_PRESSURE 921 "19623.24kPa" 102 "0kPa" ;
-VAL_ 420 VSA_FAIL_MC_PRESSURE_SENSOR 1 "ƒ}ƒXƒ^ˆ³ƒZƒ“ƒTˆÙí" ;
-VAL_ 420 VSA_INHBIT_MC_PRESSURE_SENSOR 1 "ƒ}ƒXƒ^ˆ³ƒZƒ“ƒT³í–¢Šm’è" ;
-VAL_ 420 VSA_ESS_ACT2 1 "Œ¸‘¬“x‚É‚æ‚éESSì“®Œp‘±‹–‰Â" 0 "Œ¸‘¬“x‚É‚æ‚éESSì“®Œp‘±‹ÖŽ~" ;
-VAL_ 420 VSA_ESS_ACT1 1 "Œ¸‘¬“x‚É‚æ‚éESSì“®ŠJŽn‹–‰Â" 0 "Œ¸‘¬“x‚É‚æ‚éESSì“®ŠJŽn‹ÖŽ~" ;
-VAL_ 145 VSA_SENSOR_START_UP 1 "‹N“®’†(ƒZƒ“ƒTo—Í‚ª•ÛØ‚Å‚«‚È‚¢Žž)" ;
-VAL_ 145 VSA_SENSOR_ERR_MC 1 "ƒ}ƒCƒRƒ“‹y‚Ñ‚»‚ê‚ÉŠÖ‚í‚éf’f‚ªŒÌá”»’è‚µ‚½Žž" ;
-VAL_ 145 VSA_SENSOR_STATE_IG 1 "‹Ÿ‹‹“dˆ³(IG)‚ªƒZƒ“ƒT‚Ì‹@”\/«”\‚ðŽç‚ê‚È‚¢Žž" ;
-VAL_ 145 VSA_P_ERR_LON_G 1 "‘OŒãG‰Á‘¬“x‚ðŒÌá”»’è‚µ‚½Žž" ;
-VAL_ 145 VSA_P_ERR_LAT_G 1 "‰¡G‰Á‘¬“x‚ðŒÌá”»’è‚µ‚½Žž" ;
-VAL_ 145 VSA_P_ERR_DEGC 1 "ƒˆ[ƒŒ[ƒg1‰·“xƒf[ƒ^‚ðŒÌá”»’è‚µ‚½Žž" ;
-VAL_ 145 VSA_P_ERR_YAW1 1 "ƒˆ[ƒŒ[ƒg1‚ðŒÌá”»’è‚µ‚½Žž" ;
-VAL_ 145 VSA_T_ERR_LON_G 1 "‘OŒãG‰Á‘¬“x‚ª•ÛØ‚Å‚«‚È‚¢Žž" ;
-VAL_ 145 VSA_T_ERR_LAT_G 1 "‰¡G‰Á‘¬“x‚ª•ÛØ‚Å‚«‚È‚¢Žž" ;
-VAL_ 145 VSA_T_ERR_DEGC 1 "ƒˆ[ƒŒ[ƒg1‰·“xƒf[ƒ^‚ª•ÛØ‚Å‚«‚È‚¢Žž" ;
-VAL_ 145 VSA_T_ERR_YAW1 1 "ƒˆ[ƒŒ[ƒg1‚ª•ÛØ‚Å‚«‚È‚¢Žž" ;
-VAL_ 145 VSA_LON_G 1023 "24.5 [m/s2]" 512 "0 [m/s2]" 0 "-24.5 [m/s2]" ;
-VAL_ 145 VSA_LAT_G 1023 "24.5 [m/s2]" 512 "0 [m/s2]" 0 "-24.5 [m/s2]" ;
-VAL_ 145 VSA_DEGC 255 "+152 [Ž]" 128 "+25 [Ž]" 0 "-103 [Ž]" ;
-VAL_ 145 VSA_YAW_1 1023 "125.0 [‹/s]" 512 "0 [‹/s]" 0 "-125.0 [‹/s]" ;
+VAL_ 420 VSA_FAIL_MC_PRESSURE_SENSOR 1 "ï¿½}ï¿½Xï¿½^ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½Ùï¿½" ;
+VAL_ 420 VSA_INHBIT_MC_PRESSURE_SENSOR 1 "ï¿½}ï¿½Xï¿½^ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½í–¢ï¿½mï¿½ï¿½" ;
+VAL_ 420 VSA_ESS_ACT2 1 "ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½É‚ï¿½ï¿½ESSï¿½ì“®ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" 0 "ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½É‚ï¿½ï¿½ESSï¿½ì“®ï¿½pï¿½ï¿½ï¿½ÖŽ~" ;
+VAL_ 420 VSA_ESS_ACT1 1 "ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½É‚ï¿½ï¿½ESSï¿½ì“®ï¿½Jï¿½nï¿½ï¿½ï¿½ï¿½" 0 "ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½É‚ï¿½ï¿½ESSï¿½ì“®ï¿½Jï¿½nï¿½ÖŽ~" ;
+VAL_ 145 VSA_SENSOR_START_UP 1 "ï¿½Nï¿½ï¿½ï¿½ï¿½(ï¿½Zï¿½ï¿½ï¿½Tï¿½oï¿½Í‚ï¿½ï¿½ÛØ‚Å‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½)" ;
+VAL_ 145 VSA_SENSOR_ERR_MC 1 "ï¿½}ï¿½Cï¿½Rï¿½ï¿½ï¿½yï¿½Ñ‚ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½fï¿½fï¿½ï¿½ï¿½Ìá”»ï¿½è‚µï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 145 VSA_SENSOR_STATE_IG 1 "ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½ï¿½(IG)ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½Ì‹@ï¿½\/ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½" ;
+VAL_ 145 VSA_P_ERR_LON_G 1 "ï¿½Oï¿½ï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½Ìá”»ï¿½è‚µï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 145 VSA_P_ERR_LAT_G 1 "ï¿½ï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½Ìá”»ï¿½è‚µï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 145 VSA_P_ERR_DEGC 1 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½[ï¿½g1ï¿½ï¿½ï¿½xï¿½fï¿½[ï¿½^ï¿½ï¿½ï¿½Ìá”»ï¿½è‚µï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 145 VSA_P_ERR_YAW1 1 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½[ï¿½g1ï¿½ï¿½ï¿½Ìá”»ï¿½è‚µï¿½ï¿½ï¿½ï¿½" ;
+VAL_ 145 VSA_T_ERR_LON_G 1 "ï¿½Oï¿½ï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ÛØ‚Å‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½" ;
+VAL_ 145 VSA_T_ERR_LAT_G 1 "ï¿½ï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ÛØ‚Å‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½" ;
+VAL_ 145 VSA_T_ERR_DEGC 1 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½[ï¿½g1ï¿½ï¿½ï¿½xï¿½fï¿½[ï¿½^ï¿½ï¿½ï¿½ÛØ‚Å‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½" ;
+VAL_ 145 VSA_T_ERR_YAW1 1 "ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½[ï¿½g1ï¿½ï¿½ï¿½ÛØ‚Å‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½" ;
 

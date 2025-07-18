@@ -1,0 +1,13 @@
+--- Driving Event Log Started ---
+[1.100s] ECO: High Torque Request Jerk (JT: 1.04)
+[1.100s] ECO: High Pedal Position Jerk (JP: 1.59)
+[1.100s] ECO Sub-Scores: Accel Smoothness=97.75, RPM Efficiency=97.39, Idling=90.00
+[2.100s] ECO: High Torque Request Jerk (JT: 1.01)
+[2.100s] ECO: High Pedal Position Jerk (JP: 1.58)
+[2.100s] ECO Sub-Scores: Accel Smoothness=97.76, RPM Efficiency=97.40, Idling=90.00
+[3.100s] ECO: High Torque Request Jerk (JT: 1.01)
+[3.100s] ECO: High Pedal Position Jerk (JP: 1.47)
+[3.100s] ECO Sub-Scores: Accel Smoothness=97.90, RPM Efficiency=97.41, Idling=90.00
+[4.100s] ECO: High Torque Request Jerk (JT: 1.01)
+[4.100s] ECO: High Pedal Position Jerk (JP: 1.49)
+[4.100s] ECO Sub-Scores: Accel Smoothness=97.86, RPM Efficiency=97.42, Idling=90.00
