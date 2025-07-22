@@ -136,7 +136,15 @@ class DrivingScoreEvaluator:
         return sum(values) / len(values)
 
     def _send_event(self, safety_score, eco_score, feedback):
-        return
+        """Sends event data to the FastAPI backend."""
+        import requests
+        import json
+        url = "http://127.0.0.1:8000/event"
+        try:
+            payload = {"safety_score": safety_score, "eco_score": eco_score, "reminder": feedback}
+            requests.post(url, json=payload)
+        except requests.exceptions.ConnectionError:
+            print("Dashboard is not running. Could not send update.")
 
     def process_can_data(self, new_can_data_packet):
         current_timestamp = new_can_data_packet.timestamp
@@ -156,8 +164,14 @@ class DrivingScoreEvaluator:
         if (current_timestamp - self.last_safety_score_calc_time >= self.config['SAFETY_CALC_INTERVAL_SEC']):
             safety_score = self._calculate_safety_score(current_timestamp)
             self.last_safety_score_calc_time = current_timestamp
-        self.safety_score = safety_score
-        self.eco_score = eco_score
+        if eco_score is not None:
+            self.eco_score = eco_score
+        if safety_score is not None:
+            self.safety_score = safety_score
+        if eco_score is not None and eco_score != self.eco_score:
+            self._send_event(self.safety_score, self.eco_score, "")
+            self._send_event(safety_score, eco_score, "Scores updated")
+        self._log_message(f"Safety={safety_score}, Eco={eco_score}")
         return eco_score, safety_score
 
     def _update_window_buffers(self, packet, current_timestamp):
