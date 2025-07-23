@@ -12,7 +12,8 @@ sudo ip link set up vcan0
 - Run webserver
 
 ```bash
-python webserver/main.py
+cd webserver
+python main.py
 ```
 
 - Run detector
