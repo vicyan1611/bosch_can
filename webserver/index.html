@@ -347,6 +347,10 @@
       <span id="connection-status">Connecting...</span>
     </div>
 
+    <button onclick="getAdvice()">Show Trip Advice</button>
+    <div id="advice" style="margin-top:20px; white-space:pre-wrap;"></div>
+
+
     <div class="dashboard-container">
       <h1 class="dashboard-title">Smart Driving Dashboard</h1>
 
@@ -374,6 +378,18 @@
       const ecoScoreDiv = document.getElementById("eco_score");
       const reminderDiv = document.getElementById("reminder");
       const statusDiv = document.getElementById("connection-status");
+
+      async function getAdvice() {
+        const response = await fetch("/get_advice", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+        });
+
+        const data = await response.json();
+        document.getElementById("advice").textContent = data.advice;
+        // speak(data.advice);  // Optional: speak the advice aloud
+      }
+
 
       // Function to speak text using the browser's built-in TTS
       function speak(text) {
