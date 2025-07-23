@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Driving Dashboard</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Roboto", sans-serif;
+        background: linear-gradient(
+          135deg,
+          #0c0c0c 0%,
+          #1a1a2e 50%,
+          #16213e 100%
+        );
+        color: #ffffff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at 30% 70%,
+            rgba(59, 130, 246, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(16, 185, 129, 0.1) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .status-indicator {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #10b981;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      .dashboard-container {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 32px;
+        padding: 40px;
+        max-width: 600px;
+        width: 100%;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        position: relative;
+      }
+
+      .dashboard-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+        background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .scores-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+
+      .score-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 30px 20px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .score-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #3b82f6, #10b981);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .score-card:hover::before {
+        opacity: 1;
+      }
+
+      .score-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.3);
+      }
+
+      .score-label {
+        font-size: 1rem;
+        color: #9ca3af;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+
+      .score-value {
+        font-size: 4rem;
+        font-weight: 800;
+        line-height: 1;
+        background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .score-unit {
+        font-size: 1.5rem;
+        color: #6b7280;
+        margin-left: 5px;
+      }
+
+      .safety-score {
+        background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .eco-score {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .reminder-container {
+        background: rgba(59, 130, 246, 0.1);
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        border-radius: 16px;
+        padding: 25px;
+        margin-top: 30px;
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .reminder-icon {
+        position: absolute;
+        left: 20px;
+        font-size: 1.5rem;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .reminder-text {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #ffffff;
+        text-align: center;
+        line-height: 1.4;
+        margin-left: 40px;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .dashboard-container {
+          padding: 25px;
+          margin: 10px;
+          border-radius: 24px;
+        }
+
+        .dashboard-title {
+          font-size: 2rem;
+          margin-bottom: 30px;
+        }
+
+        .scores-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          margin-bottom: 30px;
+        }
+
+        .score-card {
+          padding: 25px 15px;
+        }
+
+        .score-value {
+          font-size: 3rem;
+        }
+
+        .score-unit {
+          font-size: 1.2rem;
+        }
+
+        .reminder-container {
+          padding: 20px;
+          margin-top: 25px;
+        }
+
+        .reminder-text {
+          font-size: 1rem;
+          margin-left: 35px;
+        }
+
+        .reminder-icon {
+          left: 15px;
+          font-size: 1.2rem;
+        }
+
+        .status-indicator {
+          top: 15px;
+          right: 15px;
+          padding: 6px 12px;
+          font-size: 0.8rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 15px;
+        }
+
+        .dashboard-container {
+          padding: 20px;
+        }
+
+        .dashboard-title {
+          font-size: 1.8rem;
+        }
+
+        .score-value {
+          font-size: 2.5rem;
+        }
+
+        .reminder-text {
+          font-size: 0.95rem;
+        }
+      }
+
+      /* Animation for score updates */
+      .score-update {
+        animation: scoreUpdate 0.5s ease;
+      }
+
+      @keyframes scoreUpdate {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* Loading state */
+      .loading {
+        opacity: 0.6;
+        animation: loading 1.5s infinite;
+      }
+
+      @keyframes loading {
+        0%,
+        100% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="status-indicator">
+      <div class="status-dot"></div>
+      <span id="connection-status">Connecting...</span>
+    </div>
+
+    <div class="dashboard-container">
+      <h1 class="dashboard-title">Smart Driving Dashboard</h1>
+
+      <div class="scores-grid">
+        <div class="score-card">
+          <div class="score-label">Safety Score</div>
+          <div class="score-value safety-score" id="safety_score">100</div>
+        </div>
+
+        <div class="score-card">
+          <div class="score-label">Eco Score</div>
+          <div class="score-value eco-score" id="eco_score">100</div>
+        </div>
+      </div>
+
+      <div class="reminder-container">
+        <div class="reminder-icon">🚗</div>
+        <div class="reminder-text" id="reminder">All systems ready!</div>
+      </div>
+    </div>
+
+    <script>
+      // Get elements
+      const safetyScoreDiv = document.getElementById("safety_score");
+      const ecoScoreDiv = document.getElementById("eco_score");
+      const reminderDiv = document.getElementById("reminder");
+      const statusDiv = document.getElementById("connection-status");
+
+      // Function to speak text using the browser's built-in TTS
+      function speak(text) {
+        // Stop any previous speech
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = "en-US";
+        utterance.rate = 0.9; // Slightly slower for better clarity
+        utterance.pitch = 1.0;
+        window.speechSynthesis.speak(utterance);
+      }
+
+      // Function to animate score updates
+      function animateScoreUpdate(element) {
+        element.classList.add("score-update");
+        setTimeout(() => {
+          element.classList.remove("score-update");
+        }, 500);
+      }
+
+      // Function to update reminder with appropriate emoji
+      function updateReminder(text) {
+        const reminderIcon = document.querySelector(".reminder-icon");
+
+        // Choose emoji based on reminder content
+        if (
+          text.toLowerCase().includes("brake") ||
+          text.toLowerCase().includes("slow")
+        ) {
+          reminderIcon.textContent = "🚨";
+        } else if (
+          text.toLowerCase().includes("speed") ||
+          text.toLowerCase().includes("fast")
+        ) {
+          reminderIcon.textContent = "⚠️";
+        } else if (
+          text.toLowerCase().includes("distance") ||
+          text.toLowerCase().includes("close")
+        ) {
+          reminderIcon.textContent = "📏";
+        } else if (
+          text.toLowerCase().includes("good") ||
+          text.toLowerCase().includes("excellent")
+        ) {
+          reminderIcon.textContent = "✅";
+        } else if (
+          text.toLowerCase().includes("connected") ||
+          text.toLowerCase().includes("ready")
+        ) {
+          reminderIcon.textContent = "🔗";
+        } else if (
+          text.toLowerCase().includes("lost") ||
+          text.toLowerCase().includes("error")
+        ) {
+          reminderIcon.textContent = "❌";
+        } else {
+          reminderIcon.textContent = "🚗";
+        }
+
+        reminderDiv.textContent = text;
+      }
+
+      // Establish WebSocket connection with the FastAPI backend
+      const ws = new WebSocket(`ws://${window.location.host}/ws`);
+
+      ws.onmessage = function (event) {
+        console.log("Data received from server:", event.data);
+        const data = JSON.parse(event.data);
+
+        // 1. Update the scores on the UI with animation
+        if (data.safety_score !== undefined) {
+          safetyScoreDiv.textContent = Math.round(data.safety_score);
+          animateScoreUpdate(safetyScoreDiv);
+        }
+
+        if (data.eco_score !== undefined) {
+          ecoScoreDiv.textContent = Math.round(data.eco_score);
+          animateScoreUpdate(ecoScoreDiv);
+        }
+
+        // 2. Update the reminder text on the UI
+        if (data.reminder) {
+          updateReminder(data.reminder);
+
+          // 3. Use the browser's TTS to speak the reminder
+          speak(data.reminder);
+        }
+      };
+
+      ws.onopen = function (event) {
+        console.log("WebSocket connection established");
+        statusDiv.textContent = "Connected";
+        updateReminder("Connected to driving monitor.");
+
+        // Remove loading animation
+        safetyScoreDiv.classList.remove("loading");
+        ecoScoreDiv.classList.remove("loading");
+      };
+
+      ws.onclose = function (event) {
+        console.log("WebSocket connection closed");
+        statusDiv.textContent = "Disconnected";
+        updateReminder("Connection lost. Please refresh.");
+        safetyScoreDiv.textContent = "---";
+        ecoScoreDiv.textContent = "---";
+
+        // Add loading animation
+        safetyScoreDiv.classList.add("loading");
+        ecoScoreDiv.classList.add("loading");
+      };
+
+      ws.onerror = function (event) {
+        console.error("WebSocket error:", event);
+        statusDiv.textContent = "Error";
+        updateReminder("Connection error. Please check the server.");
+      };
+
+      // Add initial loading state
+      safetyScoreDiv.classList.add("loading");
+      ecoScoreDiv.classList.add("loading");
+
+      // Prevent zoom on mobile double-tap
+      let lastTouchEnd = 0;
+      document.addEventListener(
+        "touchend",
+        function (event) {
+          const now = new Date().getTime();
+          if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+          }
+          lastTouchEnd = now;
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

@@ -182,10 +182,6 @@ def create_vsa_255_message(
     encoded_payload = message_def.encode(data_to_encode)
     return can.Message(arbitration_id=message_def.frame_id, data=encoded_payload)
 
-# Trong file ecu_simulator.py
-
-# ... (các hàm khác giữ nguyên) ...
-
 def create_vsa_1a4_message(
     db: cantools.db.Database,
     alive_counter: int,

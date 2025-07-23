@@ -12,8 +12,8 @@ class DrivingScoreEvaluator:
             'EVENT_CHECK_HISTORY_SEC': 1, # For rate-of-change/duration checks
 
             # Calculation Intervals (seconds)
-            'ECO_CALC_INTERVAL_SEC': 1.0,
-            'SAFETY_CALC_INTERVAL_SEC': 0.2,
+            'ECO_CALC_INTERVAL_SEC': 2.0,
+            'SAFETY_CALC_INTERVAL_SEC': 0.5,
 
             # Eco-Friendly Thresholds & Weights
             'MIN_SPEED_FOR_RPM_RATIO_CALC': 5.0, # km/h
@@ -21,6 +21,7 @@ class DrivingScoreEvaluator:
             'MIN_DRIVING_SPEED_FOR_IDLE': 0.1, # km/h
             'MIN_IDLE_RPM_THRESHOLD': 300, # rpm
             'AGGRESSIVE_ACCEL_DECEL_THRESHOLD_KMPHPS': 5.0, # km/h/s
+            'GEAR_CHANGE_THRESHOLD': 3,
 
             'k1_accel_jt': 0.01,  'k2_accel_jp': 0.05,  'k3_accel_vs': 0.001, 'k4_accel_eagg': 0.5,
             'w1_accel': 0.25, 'w2_accel': 0.25, 'w3_accel': 0.25, 'w4_accel': 0.25,
@@ -31,7 +32,7 @@ class DrivingScoreEvaluator:
             'k7_idle_time': 0.1, 'k8_idle_is': 0.1,
             'w7_idle': 0.9, 'w8_idle': 0.1,
 
-            'W_accel_overall': 0.4, 'W_rpm_overall': 0.3, 'W_idle_overall': 0.3, # Overall weights
+            'W_accel_overall': 0.4, 'W_rpm_overall': 0.2, 'W_idle_overall': 0.3, 'W_gear_overall': 0.1,
 
             # Safety Thresholds & Weights
             'G_ACCEL_THRESHOLD_STATIC': 3.9, # m/s^2 (approx 0.4G)
@@ -136,7 +137,15 @@ class DrivingScoreEvaluator:
         return sum(values) / len(values)
 
     def _send_event(self, safety_score, eco_score, feedback):
-        return
+        """Sends event data to the FastAPI backend."""
+        import requests
+        import json
+        url = "http://127.0.0.1:8000/event"
+        try:
+            payload = {"safety_score": safety_score, "eco_score": eco_score, "reminder": feedback}
+            requests.post(url, json=payload)
+        except requests.exceptions.ConnectionError:
+            print("Dashboard is not running. Could not send update.")
 
     def process_can_data(self, new_can_data_packet):
         current_timestamp = new_can_data_packet.timestamp
@@ -156,8 +165,14 @@ class DrivingScoreEvaluator:
         if (current_timestamp - self.last_safety_score_calc_time >= self.config['SAFETY_CALC_INTERVAL_SEC']):
             safety_score = self._calculate_safety_score(current_timestamp)
             self.last_safety_score_calc_time = current_timestamp
-        self.safety_score = safety_score
-        self.eco_score = eco_score
+
+        if eco_score is not None:
+            self.eco_score = eco_score
+        if safety_score is not None:
+            self.safety_score = safety_score
+            
+        self._send_event(self.safety_score, self.eco_score, "")
+        self._log_message(f"Time: {current_timestamp:.1f}s | Eco Score: {eco_score:.2f} | Safety Score: {safety_score:.2f}")
         return eco_score, safety_score
 
     def _update_window_buffers(self, packet, current_timestamp):
@@ -170,7 +185,6 @@ class DrivingScoreEvaluator:
         self.eco_buffers['is_progress'].add((current_timestamp, packet.ENG_IS_PROGRESS))
 
         self.safety_buffers['lon_g'].add((current_timestamp, packet.VSA_LON_G))
-        print("VSA_LON_G", type(packet.VSA_LON_G))
         self.safety_buffers['lat_g'].add((current_timestamp, packet.VSA_LAT_G))
         self.safety_buffers['yaw'].add((current_timestamp, packet.VSA_YAW_1))
         self.safety_buffers['steering_angle'].add((current_timestamp, packet.STR_ANGLE))
@@ -199,12 +213,14 @@ class DrivingScoreEvaluator:
         s_accel = self._calculate_accel_smoothness_score(trq_req_data, pedal_pos_data, speed_data, current_timestamp)
         s_rpm = self._calculate_rpm_efficiency_score(rpm_data, speed_data, gear_data, current_timestamp)
         s_idle = self._calculate_idling_score(speed_data, rpm_data, is_progress_data, current_timestamp)
+        s_gear = self._calcualte_gear_selection_score(gear_data, current_timestamp)
 
         score_eco = (self.config['W_accel_overall'] * s_accel +
                      self.config['W_rpm_overall'] * s_rpm +
-                     self.config['W_idle_overall'] * s_idle)
+                     self.config['W_idle_overall'] * s_idle +
+                     self.config['W_gear_overall'] * s_gear)
         
-        self._log_message(f"ECO Sub-Scores: Accel Smoothness={s_accel:.2f}, RPM Efficiency={s_rpm:.2f}, Idling={s_idle:.2f}", current_timestamp)
+        self._log_message(f"ECO Sub-Scores: Accel Smoothness={s_accel:.2f}, RPM Efficiency={s_rpm:.2f}, Idling={s_idle:.2f}, Gear Change={s_gear:.2f}", current_timestamp)
         return score_eco
 
     def _calculate_accel_smoothness_score(self, trq_req_data, pedal_pos_data, speed_data, current_timestamp):
@@ -331,6 +347,31 @@ class DrivingScoreEvaluator:
 
         return S_idle
 
+    def _calcualte_gear_selection_score(self, gear_data, current_timestamp):
+        # Count gear changes
+        gear_changes = 0
+        for i in range(1, len(gear_data)):
+            prev_gear = gear_data[i-1][1]
+            curr_gear = gear_data[i][1]
+            if curr_gear != prev_gear:
+                gear_changes += 1
+
+        # Threshold for excessive gear changes (tunable)
+        threshold = self.config['GEAR_CHANGE_THRESHOLD']
+
+        if gear_changes > threshold:
+            self._log_message(
+                f"ECO: Excessive gear changes detected (Count: {gear_changes})",
+                current_timestamp
+            )
+            self._send_event(self.safety_score, self.eco_score, "Excessive gear changes detected")
+
+        # Score calculation: penalize if above threshold
+        penalty_factor = max(0, (gear_changes - threshold) / threshold)
+        score = max(0, 100 - penalty_factor * 100)
+
+        return score
+    
     def _calculate_safety_score(self, current_timestamp):
         # --- SAFETY SCORE USES A MIX OF TYPES ---
         if (current_timestamp - self.last_safety_window_reset_time >= self.config['SAFETY_WINDOW_DURATION_SEC']):
