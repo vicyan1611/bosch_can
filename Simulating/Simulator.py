@@ -44,7 +44,7 @@ class Simulator:
         running = True
 
         while running:
-            messages = bus.recv_many(timeout=0.5)
+            messages = self._recv_many(bus, timeout=timeout)
 
             if messages:
                 start_time = time.time()  # Reset timer when messages are received
@@ -107,3 +107,16 @@ class Simulator:
 
         plt.tight_layout() # Adjust layout to prevent overlapping
         plt.show()
+
+    def _recv_many(bus, timeout=0.5, max_msgs=50):
+        """
+        Fallback function to collect multiple messages within a timeout.
+        """
+        from time import time
+        messages = []
+        start = time()
+        while time() - start < timeout and len(messages) < max_msgs:
+            msg = bus.recv(timeout=0.1)
+            if msg:
+                messages.append(msg)
+        return messages
