@@ -145,8 +145,7 @@ class DrivingScoreEvaluator:
             payload = {"safety_score": safety_score, "eco_score": eco_score, "reminder": feedback}
             requests.post(url, json=payload)
         except requests.exceptions.ConnectionError:
-            # print("Dashboard is not running. Could not send update.")
-            pass
+            print("Dashboard is not running. Could not send update.")
 
     def process_can_data(self, new_can_data_packet):
         current_timestamp = new_can_data_packet.timestamp
@@ -178,6 +177,7 @@ class DrivingScoreEvaluator:
 
         if should_send_event:
             self._send_event(self.safety_score, self.eco_score, "")
+
         self._log_message(f"Time: {current_timestamp:.1f}s | Eco Score: {self.eco_score:.2f} | Safety Score: {self.safety_score:.2f}")
         return eco_score, safety_score
 
