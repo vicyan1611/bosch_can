@@ -50,12 +50,14 @@ def generate_driver_prompt(summary: Dict) -> str:
         f"- Total Score: {total_score}/100\n"
         f"- Driving violations detected:\n{violation_text}\n\n"
         f"Please generate a personalized advice summary for the driver to improve future driving behavior. Include:\n"
-        f"All the output will be displayed on website so answer straight to work\n"
+        f"All the output will be displayed on a small website text box so answer in 5 sentence\n"
         f"Do not mention again the violations\n"
         f"Friendly overall comment\n"
         f"Key mistakes and their impact\n"
         f"Practical advice for ECO and SAFETY improvement\n"
         f"Tone: supportive, concise, but technically accurate."
+        f"Use simple language and avoid jargon.\n"
+        f"Output format: plain text, no markdown or HTML.\n"
     )
     return prompt
 
@@ -66,6 +68,12 @@ def get_trip_advice(summary: Dict) -> str:
     try:
         model = genai.GenerativeModel("gemini-2.0-flash") 
         response = model.generate_content(prompt)
+        print(f"Generated advice: {response.text.strip()}")
         return response.text.strip()
     except Exception as e:
         return f"[ERROR] Failed to generate advice: {e}"
+
+if __name__ == "__main__":
+    # Example usage
+    advice = get_trip_advice(trip_summary)
+    

@@ -1,2 +1,4 @@
 /messages
 /data
+.env/
+serviceAccountKey.json
