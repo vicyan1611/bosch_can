@@ -1,5 +1,4 @@
-# Simulator.py
-
+from can import ASCReader
 from CANDataAdapter import CANDataAdapter
 from scoring.CANDataPackage import CANDataPackage
 import cantools
@@ -7,7 +6,8 @@ import can
 from scoring.DrivingScoreEvaluator import DrivingScoreEvaluator
 import time 
 
-DBC_FILE = 'BOSCH_CAN.dbc'
+DBC_FILE = 'data/BOSCH_CAN.dbc'
+ASC_FILE = 'data/CANWIN.asc'
 CAN_INTERFACE = 'vcan0'
 
 class Simulator:
@@ -120,3 +120,62 @@ class Simulator:
             if msg:
                 messages.append(msg)
         return messages
+    
+    def run_simulation_local(self):
+        try:
+            db = cantools.db.load_file(DBC_FILE)
+            print("DBC loaded.")
+        except FileNotFoundError:
+            print(f"Error: DBC file '{DBC_FILE}' not found.")
+            exit()
+
+        # Path to your CANWIN.asc file
+        print(f"Loading CAN log from {ASC_FILE}...")
+
+        # Only keep necessary CAN IDs
+        allowed_ids = {0x13C, 0x1D0, 0x191, 0x17C, 0x091}
+
+        # Read messages from .asc file
+        log = ASCReader(ASC_FILE)
+        messages = list(log)
+
+        print(f"{len(messages)} messages loaded from log.")
+
+        # Simulate real-time replay
+        last_time = None
+
+        for msg in messages:
+            if msg.arbitration_id not in allowed_ids:
+                continue  # Skip irrelevant messages
+
+            if last_time is not None:
+                sleep_time = msg.timestamp - last_time
+                if sleep_time > 0:
+                    time.sleep(sleep_time)
+            last_time = msg.timestamp
+
+            try:
+                decoded_data = db.decode_message(msg.arbitration_id, msg.data, decode_choices=False)
+            except Exception as e:
+                print(f"Failed to decode message {hex(msg.arbitration_id)}: {e}")
+                continue
+
+            normalized_data = {
+                k: v.value if hasattr(v, "value") else v for k, v in decoded_data.items()
+            }
+
+            timestamp = msg.timestamp
+            self.adapter.msg_to_package(timestamp, normalized_data)
+
+            can_package = self.adapter.get_data_package()
+            eco_score, safety_score = self.evaluator.process_can_data(can_package)
+
+            if eco_score is not None:
+                self.eco_scores_log.append(eco_score)
+                self.eco_timestamps_log.append(timestamp)
+                print(f"Time: {timestamp:.1f}s | Eco Score: {eco_score:.2f}")
+
+            if safety_score is not None:
+                self.safety_scores_log.append(safety_score)
+                self.safety_timestamps_log.append(timestamp)
+                print(f"Time: {timestamp:.1f}s | Safety Score: {safety_score:.2f}")

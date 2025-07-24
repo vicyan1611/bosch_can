@@ -18,7 +18,7 @@ class DrivingScoreEvaluator:
             # Eco-Friendly Thresholds & Weights
             'MIN_SPEED_FOR_RPM_RATIO_CALC': 5.0, # km/h
             'HIGH_RPM_THRESHOLD': 2500, # rpm
-            'MIN_DRIVING_SPEED_FOR_IDLE': 0.1, # km/h
+            'MIN_DRIVING_SPEED_FOR_IDLE': 0.5, # km/h
             'MIN_IDLE_RPM_THRESHOLD': 300, # rpm
             'AGGRESSIVE_ACCEL_DECEL_THRESHOLD_KMPHPS': 5.0, # km/h/s
             'GEAR_CHANGE_THRESHOLD': 3,
@@ -29,7 +29,7 @@ class DrivingScoreEvaluator:
             'k5_rpm_ratio': 0.001, 'k6_rpm_high': 0.1,
             'w5_rpm': 0.7, 'w6_rpm': 0.3,
 
-            'k7_idle_time': 0.1, 'k8_idle_is': 0.1,
+            'k7_idle_time': 0.2, 'k8_idle_is': 1.0,
             'w7_idle': 0.9, 'w8_idle': 0.1,
 
             'W_accel_overall': 0.4, 'W_rpm_overall': 0.2, 'W_idle_overall': 0.3, 'W_gear_overall': 0.1,
@@ -37,8 +37,8 @@ class DrivingScoreEvaluator:
             # Safety Thresholds & Weights
             'G_ACCEL_THRESHOLD_STATIC': 3.9, # m/s^2 (approx 0.4G)
             'G_BRAKE_THRESHOLD_STATIC': 5.8, # m/s^2 (approx 0.6G)
-            'G_MAX_EXPECTED_ACCEL': 9.8, # m/s^2 (approx 1.0G, for normalization)
-            'G_MAX_EXPECTED_BRAKE': 9.8, # m/s^2
+            'G_MAX_EXPECTED_ACCEL': 8.0, # m/s^2 (approx 1.0G, for normalization)
+            'G_MAX_EXPECTED_BRAKE': 10.0, # m/s^2
 
             'LAT_G_THRESHOLD_DYNAMIC_LOW_SPEED': 2.9, # m/s^2 (e.g., at 0-20 km/h)
             'LAT_G_THRESHOLD_DYNAMIC_HIGH_SPEED': 4.9, # m/s^2 (e.g., at >80 km/h)
@@ -55,9 +55,9 @@ class DrivingScoreEvaluator:
             'C_Steering': 15,
             'C_Intervention': 70,
 
-            'ALPHA_LON_G': 1.5,
-            'BETA_LAT_G_YAW': 1.0,
-            'GAMMA_STEERING': 1.0,
+            'ALPHA_LON_G': -1.5,
+            'BETA_LAT_G_YAW': -1.0,
+            'GAMMA_STEERING': -1.0,
             
             'EVENT_COOLDOWN_SEC': 0.5,
         }
@@ -145,7 +145,8 @@ class DrivingScoreEvaluator:
             payload = {"safety_score": safety_score, "eco_score": eco_score, "reminder": feedback}
             requests.post(url, json=payload)
         except requests.exceptions.ConnectionError:
-            print("Dashboard is not running. Could not send update.")
+            # print("Dashboard is not running. Could not send update.")
+            pass
 
     def process_can_data(self, new_can_data_packet):
         current_timestamp = new_can_data_packet.timestamp
@@ -172,7 +173,7 @@ class DrivingScoreEvaluator:
             self.safety_score = safety_score
             
         self._send_event(self.safety_score, self.eco_score, "")
-        self._log_message(f"Time: {current_timestamp:.1f}s | Eco Score: {eco_score:.2f} | Safety Score: {safety_score:.2f}")
+        self._log_message(f"Time: {current_timestamp:.1f}s | Eco Score: {self.eco_score:.2f} | Safety Score: {self.safety_score:.2f}")
         return eco_score, safety_score
 
     def _update_window_buffers(self, packet, current_timestamp):
@@ -212,7 +213,7 @@ class DrivingScoreEvaluator:
 
         s_accel = self._calculate_accel_smoothness_score(trq_req_data, pedal_pos_data, speed_data, current_timestamp)
         s_rpm = self._calculate_rpm_efficiency_score(rpm_data, speed_data, gear_data, current_timestamp)
-        s_idle = self._calculate_idling_score(speed_data, rpm_data, is_progress_data, current_timestamp)
+        s_idle = self._calculate_idling_score_alternative(speed_data, rpm_data, is_progress_data, current_timestamp)
         s_gear = self._calcualte_gear_selection_score(gear_data, current_timestamp)
 
         score_eco = (self.config['W_accel_overall'] * s_accel +
@@ -347,6 +348,101 @@ class DrivingScoreEvaluator:
 
         return S_idle
 
+    def _calculate_idling_score_alternative(self, speed_data, rpm_data, is_progress_data, current_timestamp):
+        """
+        Alternative approach: More granular detection of different idling patterns
+        """
+        
+        # Different categories of idling behavior
+        metrics = {
+            'normal_idle_time': 0.0,        # Reasonable idle (800-1200 RPM)
+            'high_idle_time': 0.0,          # Wasteful idle (1200-2000 RPM)  
+            'excessive_idle_time': 0.0,     # Very wasteful (>2000 RPM)
+            'engine_off_time': 0.0,         # Engine off while stationary (good!)
+            'total_stationary_time': 0.0,   # Total time not moving
+            'is_activations': 0,            # Idle-stop system uses
+            'total_duration': 0.0
+        }
+        
+        # Count idle-stop activations
+        for i in range(1, len(is_progress_data)):
+            if is_progress_data[i][1] == True and is_progress_data[i-1][1] == False:
+                metrics['is_activations'] += 1
+        
+        # Analyze each time segment
+        min_len = min(len(speed_data), len(rpm_data))
+        for i in range(1, min_len):
+            current_speed = speed_data[i][1]
+            current_rpm = rpm_data[i][1]
+            delta_t = speed_data[i][0] - speed_data[i-1][0]
+            
+            if delta_t > 0:
+                metrics['total_duration'] += delta_t
+                
+                # Only analyze when vehicle is stationary
+                if current_speed < self.config['MIN_DRIVING_SPEED_FOR_IDLE']:
+                    metrics['total_stationary_time'] += delta_t
+                    
+                    # Categorize the type of idling
+                    if current_rpm < 500:  # Engine likely off
+                        metrics['engine_off_time'] += delta_t
+                    elif current_rpm <= 1200:  # Normal idle range
+                        metrics['normal_idle_time'] += delta_t
+                    elif current_rpm <= 2000:  # High idle - wasteful
+                        metrics['high_idle_time'] += delta_t
+                    else:  # Excessive RPM - very wasteful
+                        metrics['excessive_idle_time'] += delta_t
+        
+        # Calculate efficiency score based on idling behavior
+        if metrics['total_stationary_time'] > 0:
+            # Percentages of stationary time spent in each mode
+            pct_engine_off = metrics['engine_off_time'] / metrics['total_stationary_time']
+            pct_normal_idle = metrics['normal_idle_time'] / metrics['total_stationary_time']
+            pct_high_idle = metrics['high_idle_time'] / metrics['total_stationary_time']
+            pct_excessive_idle = metrics['excessive_idle_time'] / metrics['total_stationary_time']
+            
+            # Scoring: Reward engine-off time, neutral for normal idle, penalize high/excessive
+            score_composition = (
+                pct_engine_off * 1.0 +      # Full points for engine off
+                pct_normal_idle * 0.7 +     # Reduced points for normal idle
+                pct_high_idle * 0.3 +       # Low points for high idle
+                pct_excessive_idle * 0.0    # No points for excessive idle
+            )
+            
+            # Add bonus for idle-stop usage
+            stationary_periods = metrics['total_stationary_time'] / 10  # Assume 10s per period
+            if stationary_periods > 0:
+                is_usage_bonus = min(0.2, metrics['is_activations'] / stationary_periods * 0.2)
+                score_composition += is_usage_bonus
+        else:
+            score_composition = 1.0  # No stationary time = perfect score
+        
+        S_idle = max(0, min(100, score_composition * 100))
+        
+        # Detailed logging
+        if metrics['total_stationary_time'] > 0:
+            stationary_pct = metrics['total_stationary_time'] / metrics['total_duration'] * 100
+            self._log_message(
+                f"ECO Idling Analysis - Stationary: {stationary_pct:.1f}% | "
+                f"Engine Off: {pct_engine_off:.1%}, Normal Idle: {pct_normal_idle:.1%}, "
+                f"High Idle: {pct_high_idle:.1%}, Excessive: {pct_excessive_idle:.1%} | "
+                f"IS Activations: {metrics['is_activations']}", 
+                current_timestamp
+            )
+            
+            # Generate specific feedback
+            if pct_excessive_idle > 0.1:  # >10% excessive idling
+                self._send_event(self.safety_score, self.eco_score, 
+                            'Excessive engine revving while stationary')
+            elif pct_high_idle > 0.3:  # >30% high idling  
+                self._send_event(self.safety_score, self.eco_score,
+                            'High RPM idling detected - consider idle-stop')
+            elif pct_normal_idle > 0.8 and metrics['is_activations'] == 0:  # Mostly normal idle, no IS
+                self._send_event(self.safety_score, self.eco_score,
+                            'Consider using idle-stop system to save fuel')
+        
+        return S_idle
+
     def _calcualte_gear_selection_score(self, gear_data, current_timestamp):
         # Count gear changes
         gear_changes = 0
@@ -395,25 +491,24 @@ class DrivingScoreEvaluator:
         if not all([last_lon_g_data, last_lat_g_data, last_yaw_data, last_steering_angle_data, last_speed_data]):
             return 100.0
 
-        self.current_safety_window_penalty_sum += \
-            self._detect_hard_long_g_event(last_lon_g_data, current_timestamp)
+        hard_lon_g_pen = self._detect_hard_long_g_event_alternative(last_lon_g_data, current_timestamp)
+        agg_corner_pen = self._detect_aggressive_cornering_event(last_lat_g_data, last_yaw_data, current_timestamp)
+        jerky_pen = self._detect_jerky_steering_event(last_steering_angle_data, current_timestamp)
+        sys_inter_pen = self._detect_system_intervention_event(last_vsa_tcs_act_data, last_abs_ebd_act_data, current_timestamp)
 
-        self.current_safety_window_penalty_sum += \
-            self._detect_aggressive_cornering_event(last_lat_g_data, last_yaw_data, current_timestamp)
-
-        self.current_safety_window_penalty_sum += \
-            self._detect_jerky_steering_event(last_steering_angle_data, current_timestamp)
-
-        self.current_safety_window_penalty_sum += \
-            self._detect_system_intervention_event(last_vsa_tcs_act_data, last_abs_ebd_act_data, current_timestamp)
-
+        self.current_safety_window_penalty_sum = 0
+        self.current_safety_window_penalty_sum += hard_lon_g_pen
+        self.current_safety_window_penalty_sum += agg_corner_pen
+        self.current_safety_window_penalty_sum += jerky_pen
+        self.current_safety_window_penalty_sum += sys_inter_pen
+            
         score_safety = max(0, 100 - self.current_safety_window_penalty_sum)
+        self._log_message(f"Safety Sub-Scores: Hard Long G={hard_lon_g_pen:.2f}, Aggressive Cornering={agg_corner_pen:.2f}, Jerky Steering={jerky_pen:.2f}, System Intervention={sys_inter_pen:.2f}, penalty={self.current_safety_window_penalty_sum:.2f}", current_timestamp)
         return score_safety
 
     def _detect_hard_long_g_event(self, current_lon_g_data, current_timestamp):
         penalty = 0.0
         # CORRECTED: Use .value for this complex signal
-        print(type(current_lon_g_data))
         current_g = float(current_lon_g_data[1])
         
         recent_speed_history = self.safety_buffers['speed_safety'].get_all_items()
@@ -448,14 +543,72 @@ class DrivingScoreEvaluator:
 
         return penalty
 
+    def _detect_hard_long_g_event_alternative(self, current_lon_g_data, current_timestamp):
+        """
+        Alternative approach with tiered penalty system
+        """
+        penalty = 0.0
+        current_g = float(current_lon_g_data[1])
+        
+        recent_speed_history = self.safety_buffers['speed_safety'].get_all_items()
+        current_speed = recent_speed_history[-1][1] if recent_speed_history else 0.0
+        
+        if current_speed < self.config['MIN_DRIVING_SPEED_FOR_IDLE']:
+            return 0.0
+
+        # --- TIERED ACCELERATION PENALTIES ---
+        if current_g > 0:  # Positive acceleration
+            if current_g > 7.0:  # Extreme acceleration (>0.7G)
+                penalty += 40
+                event_type = "Extreme"
+            elif current_g > 5.0:  # Hard acceleration (>0.5G)  
+                penalty += 25
+                event_type = "Hard"
+            elif current_g > self.config['G_ACCEL_THRESHOLD_STATIC']:  # Moderate but notable
+                penalty += 10
+                event_type = "Moderate"
+            else:
+                event_type = None
+                
+            if event_type and (current_timestamp - self.last_hard_accel_event_time >= self.config['EVENT_COOLDOWN_SEC']):
+                self._log_message(
+                    f"SAFETY: {event_type} Acceleration! G={current_g:.2f}m/s², Penalty={penalty:.0f}",
+                    current_timestamp
+                )
+                self._send_event(self.safety_score, self.eco_score, f"{event_type} Acceleration detected")
+                self.last_hard_accel_event_time = current_timestamp
+
+        # --- TIERED BRAKING PENALTIES ---
+        elif current_g < 0:  # Negative acceleration (braking)
+            abs_g = abs(current_g)
+            if abs_g > 8.0:  # Extreme braking (>0.8G)
+                penalty += 40
+                event_type = "Extreme"
+            elif abs_g > 6.0:  # Hard braking (>0.6G)
+                penalty += 25  
+                event_type = "Hard"
+            elif abs_g > self.config['G_BRAKE_THRESHOLD_STATIC']:  # Moderate but notable
+                penalty += 10
+                event_type = "Moderate"
+            else:
+                event_type = None
+                
+            if event_type and (current_timestamp - self.last_hard_brake_event_time >= self.config['EVENT_COOLDOWN_SEC']):
+                self._log_message(
+                    f"SAFETY: {event_type} Braking! G={current_g:.2f}m/s², Penalty={penalty:.0f}",
+                    current_timestamp
+                )
+                self._send_event(self.safety_score, self.eco_score, f"{event_type} Braking detected")
+                self.last_hard_brake_event_time = current_timestamp
+
+        return penalty
+
     def _detect_aggressive_cornering_event(self, current_lat_g_data, current_yaw_data, current_timestamp):
         penalty = 0.0
-        # CORRECTED: Use .value for these complex signals
         current_lat_g = float(current_lat_g_data[1])
         current_yaw = float(current_yaw_data[1])
         
         recent_speed_history = self.safety_buffers['speed_safety'].get_all_items()
-        # CORRECTED: Do NOT use .value for this primitive signal
         current_speed = recent_speed_history[-1][1] if recent_speed_history else 0.0
 
         if current_speed < self.config['MIN_DRIVING_SPEED_FOR_IDLE']:
@@ -469,6 +622,7 @@ class DrivingScoreEvaluator:
             
         lat_g_threshold = max(0.5, min(self.config['MAX_LAT_G'], lat_g_threshold))
         yaw_threshold = max(5, min(self.config['MAX_YAW_RATE'], yaw_threshold))
+
 
         if (abs(current_lat_g) > lat_g_threshold or abs(current_yaw) > yaw_threshold) and \
            (current_timestamp - self.last_aggressive_corner_event_time >= self.config['EVENT_COOLDOWN_SEC']):
@@ -497,7 +651,6 @@ class DrivingScoreEvaluator:
         angle_prev_ts, angle_prev_val = recent_steering_history[-2]
         angle_curr_ts, angle_curr_val = recent_steering_history[-1]
         
-        # CORRECTED: Use .value for these complex signals
         angle_prev = float(angle_prev_val)
         angle_curr = float(angle_curr_val)
 
@@ -540,7 +693,6 @@ class DrivingScoreEvaluator:
             penalty += new_penalty
             self._log_message(f"SAFETY: ABS/EBD Activation detected! Penalty={new_penalty:.2f}", current_timestamp)
             self._send_event(self.safety_score, self.eco_score, "JVSA/TCS Activation detected")
-
             self.last_vsa_abs_act_event_time = current_timestamp
 
         return penalty
