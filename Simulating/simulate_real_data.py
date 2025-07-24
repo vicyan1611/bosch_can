@@ -140,7 +140,7 @@ class DrivingScenarioSimulator:
             
             # Aggressive steering input (high rate of change)
             steering_freq = 0.5  # Fast steering changes
-            self.steering_angle = 45 * math.sin(self.current_time * steering_freq)
+            self.steering_angle = 70 * random.uniform(-1, 1) * math.sin(self.current_time * steering_freq)
             
             # Moderate pedal to maintain speed
             self.pedal_position = 30 + random.uniform(-5, 5)

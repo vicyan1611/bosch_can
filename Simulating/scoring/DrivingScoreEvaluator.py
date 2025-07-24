@@ -61,6 +61,7 @@ class DrivingScoreEvaluator:
             
             'IDLING_COOLDOWN_SEC': 10.0,  # Idling event cooldown
             'SCORE_UPDATE_COOLDOWN_SEC': 1.0,  # Score update cooldown
+            'EVENT_COOLDOWN_SEC': 0.5,  # General event cooldown
 
         }
         if config:
@@ -162,7 +163,8 @@ class DrivingScoreEvaluator:
             payload = {"safety_score": int(safety_score), "eco_score": int(eco_score), "reminder": feedback}
             requests.post(url, json=payload)
         except requests.exceptions.ConnectionError:
-            print("Dashboard is not running. Could not send update.")
+            # print("Dashboard is not running. Could not send update.")
+            pass
 
     def process_can_data(self, new_can_data_packet):
         current_timestamp = new_can_data_packet.timestamp
@@ -706,6 +708,7 @@ class DrivingScoreEvaluator:
         """
         penalty = 0.0
         recent_steering_history = self.safety_buffers['steering_angle'].get_all_items()
+        # print("DEBUG: Recent steering history for oscillation detection:", recent_steering_history)
 
         # Need minimum samples for oscillation detection
         if len(recent_steering_history) < 6:
