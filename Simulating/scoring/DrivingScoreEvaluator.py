@@ -59,7 +59,9 @@ class DrivingScoreEvaluator:
             'BETA_LAT_G_YAW': -1.0,
             'GAMMA_STEERING': -1.0,
             
-            'EVENT_COOLDOWN_SEC': 0.5,
+            'IDLING_COOLDOWN_SEC': 10.0,  # Idling event cooldown
+            'SCORE_UPDATE_COOLDOWN_SEC': 1.0,  # Score update cooldown
+
         }
         if config:
             self.config.update(config)
@@ -84,6 +86,21 @@ class DrivingScoreEvaluator:
             'abs_ebd_act': CircularBuffer(self.config['SAFETY_WINDOW_DURATION_SEC']),
         }
         
+        self.event_buffers = {
+            'score_update': 0.0,
+            'hard_accel': 0.0,
+            'hard_brake': 0.0,
+            'aggressive_cornering': 0.0,
+            'safety_intervention': 0.0,
+            'jerky_steering': 0.0,
+            'vsa_abs_act': 0.0,
+            'high_rpm': 0.0,
+            'idling': 0.0,
+            'gear_change': 0.0,
+
+
+        }
+
         # --- Persistent State for Scoring ---
         self.current_safety_window_penalty_sum = 0.0
         self.last_safety_window_reset_time = 0.0
@@ -142,7 +159,7 @@ class DrivingScoreEvaluator:
         import json
         url = "http://127.0.0.1:8000/event"
         try:
-            payload = {"safety_score": safety_score, "eco_score": eco_score, "reminder": feedback}
+            payload = {"safety_score": int(safety_score), "eco_score": int(eco_score), "reminder": feedback}
             requests.post(url, json=payload)
         except requests.exceptions.ConnectionError:
             # print("Dashboard is not running. Could not send update.")
@@ -218,7 +235,7 @@ class DrivingScoreEvaluator:
         s_accel = self._calculate_accel_smoothness_score(trq_req_data, pedal_pos_data, speed_data, current_timestamp)
         s_rpm = self._calculate_rpm_efficiency_score(rpm_data, speed_data, gear_data, current_timestamp)
         s_idle = self._calculate_idling_score_alternative(speed_data, rpm_data, is_progress_data, current_timestamp)
-        s_gear = self._calcualte_gear_selection_score(gear_data, current_timestamp)
+        s_gear = self._calculate_gear_selection_score(gear_data, current_timestamp)
 
         score_eco = (self.config['W_accel_overall'] * s_accel +
                      self.config['W_rpm_overall'] * s_rpm +
@@ -307,11 +324,15 @@ class DrivingScoreEvaluator:
         S_rpm = (self.config['w5_rpm'] * score_R_ratio +
                  self.config['w6_rpm'] * score_D_high_rpm) * 100
         
+        should_send_event = False
         if D_high_rpm_proportion > 0.05:
             self._log_message(f"ECO: Inefficient High RPM driving detected (Proportion: {D_high_rpm_proportion:.2f})", current_timestamp)
-            self._send_event(self.safety_score, self.eco_score, "Inefficient High RPM driving detected")
+            should_send_event = True
         if R_ratio > 40:
             self._log_message(f"ECO: High RPM/Speed Ratio (R_ratio: {R_ratio:.2f})", current_timestamp)
+            should_send_event = True
+            
+        if should_send_event: 
             self._send_event(self.safety_score, self.eco_score, "Inefficient High RPM driving detected")
 
         return S_rpm
@@ -435,19 +456,21 @@ class DrivingScoreEvaluator:
             )
             
             # Generate specific feedback
-            if pct_excessive_idle > 0.1:  # >10% excessive idling
-                self._send_event(self.safety_score, self.eco_score, 
-                            'Excessive engine revving while stationary')
-            elif pct_high_idle > 0.3:  # >30% high idling  
-                self._send_event(self.safety_score, self.eco_score,
-                            'High RPM idling detected - consider idle-stop')
-            elif pct_normal_idle > 0.8 and metrics['is_activations'] == 0:  # Mostly normal idle, no IS
-                self._send_event(self.safety_score, self.eco_score,
-                            'Consider using idle-stop system to save fuel')
+            if time.time() - self.event_buffers['idling'] > self.config['IDLING_COOLDOWN_SEC']:
+                if pct_excessive_idle > 0.1:  # >10% excessive idling
+                    self._send_event(self.safety_score, self.eco_score, 
+                                'Excessive engine revving while stationary')
+                elif pct_high_idle > 0.3:  # >30% high idling  
+                    self._send_event(self.safety_score, self.eco_score,
+                                'High RPM idling detected - consider idle-stop')
+                elif pct_normal_idle > 0.8 and metrics['is_activations'] == 0:
+                    self._send_event(self.safety_score, self.eco_score,
+                                'Consider using idle-stop system to save fuel')
+                self.event_buffers['idling'] = time.time()
         
         return S_idle
 
-    def _calcualte_gear_selection_score(self, gear_data, current_timestamp):
+    def _calculate_gear_selection_score(self, gear_data, current_timestamp):
         # Count gear changes
         gear_changes = 0
         for i in range(1, len(gear_data)):
