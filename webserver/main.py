@@ -3,6 +3,7 @@ from fastapi import FastAPI, WebSocket, Request
 from fastapi.responses import HTMLResponse
 import uvicorn
 import asyncio
+from llm import get_trip_advice
 
 app = FastAPI()
 
@@ -38,6 +39,11 @@ async def send_event(request: Request):
     for connection in connections:
         await connection.send_json(data)
     return {"status": "success", "data_sent": data}
+
+@app.post("/get_advice")
+async def get_advice():
+    advice = generate_driver_advice(current_trip)
+    return {"advice": advice}
 
 if __name__ == "__main__":
     # Runs the server on Pi's IP address, accessible from network
