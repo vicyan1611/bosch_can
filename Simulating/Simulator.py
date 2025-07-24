@@ -27,57 +27,60 @@ class Simulator:
         try:
             db = cantools.db.load_file(DBC_FILE)
             bus = can.interface.Bus(channel=CAN_INTERFACE, bustype='socketcan')
+            bus.set_filters([
+                {"can_id": 0x13C, "can_mask": 0x7FF},
+                {"can_id": 0x1D0, "can_mask": 0x7FF},
+                {"can_id": 0x191, "can_mask": 0x7FF},
+                {"can_id": 0x17C, "can_mask": 0x7FF},
+                {"can_id": 0x091, "can_mask": 0x7FF},
+            ])
             print(f"Detector started. Listening on {CAN_INTERFACE}...")
         except FileNotFoundError:
             print(f"Error: DBC file '{DBC_FILE}' not found.")
             exit()
 
-        timeout = 10.0  # seconds
+        timeout = 10.0  # seconds without any messages
         start_time = time.time()
-        timestamp = 0  # Logical time, updated every 5 messages
-        message_counter = 0
+        running = True
 
-        while True:
-            msg = bus.recv(timeout=1.0)
-            if msg is None:
+        while running:
+            messages = self._recv_many(bus)
+
+            if messages:
+                start_time = time.time()  # Reset timer when messages are received
+
+                for msg in messages:
+                    # print(f"Received Message with ID: {hex(msg.arbitration_id)}")
+
+                    try:
+                        decoded_data = db.decode_message(msg.arbitration_id, msg.data, decode_choices=False)
+                    except Exception as e:
+                        print(f"Failed to decode message {hex(msg.arbitration_id)}: {e}")
+                        continue
+
+                    normalized_data = {
+                        k: v.value if hasattr(v, "value") else v for k, v in decoded_data.items()
+                    }
+
+                    timestamp = msg.timestamp
+                    self.adapter.msg_to_package(timestamp, normalized_data)
+
+                    can_package = self.adapter.get_data_package()
+                    eco_score, safety_score = self.evaluator.process_can_data(can_package)
+
+                    if eco_score is not None:
+                        self.eco_scores_log.append(eco_score)
+                        self.eco_timestamps_log.append(timestamp)
+                        print(f"Time: {timestamp:.1f}s | Eco Score: {eco_score:.2f}")
+
+                    if safety_score is not None:
+                        self.safety_scores_log.append(safety_score)
+                        self.safety_timestamps_log.append(timestamp)
+                        print(f"Time: {timestamp:.1f}s | Safety Score: {safety_score:.2f}")
+            else:
                 if time.time() - start_time > timeout:
-                    print("No messages received for 5 seconds. Stopping.")
-                    break
-                continue
-
-            print(f"Received Message with ID: {hex(msg.arbitration_id)}")
-
-            start_time = time.time()
-            decoded_data = db.decode_message(msg.arbitration_id, msg.data)
-
-            normalized_data = {
-                k: v.value if hasattr(v, "value") else v for k, v in decoded_data.items()
-            }
-
-            # Use the *current* timestamp for this batch
-            self.adapter.msg_to_package(timestamp, normalized_data)
-
-            message_counter += 1
-
-            if message_counter % 5 == 0:
-                can_package = self.adapter.get_data_package()
-                eco_score, safety_score = self.evaluator.process_can_data(can_package)
-
-                current_sim_time = can_package.timestamp  # will equal `timestamp`
-
-                if eco_score is not None:
-                    self.eco_scores_log.append(eco_score)
-                    self.eco_timestamps_log.append(current_sim_time)
-                    print(f"Time: {current_sim_time:.1f}s | Eco Score: {eco_score:.2f}")
-
-                if safety_score is not None:
-                    self.safety_scores_log.append(safety_score)
-                    self.safety_timestamps_log.append(current_sim_time)
-                    print(f"Time: {current_sim_time:.1f}s | Safety Score: {safety_score:.2f}")
-
-                # Now that batch is processed, advance logical time
-                timestamp += 0.1
-
+                    print("No messages received for 10 seconds. Stopping.")
+                    running = False
 
 
     def plot_results(self):
@@ -104,3 +107,16 @@ class Simulator:
 
         plt.tight_layout() # Adjust layout to prevent overlapping
         plt.show()
+
+    def _recv_many(self, bus, dur=0.5, max_msgs=50):
+        """
+        Fallback function to collect multiple messages within a timeout.
+        """
+        from time import time
+        messages = []
+        start = time()
+        while time() - start < dur and len(messages) < max_msgs:
+            msg = bus.recv(timeout=0.1)
+            if msg:
+                messages.append(msg)
+        return messages
