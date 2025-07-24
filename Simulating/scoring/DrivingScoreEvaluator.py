@@ -47,8 +47,8 @@ class DrivingScoreEvaluator:
             'MAX_LAT_G': 9.8, # m/s^2
             'MAX_YAW_RATE': 80, # deg/s
 
-            'STEERING_RATE_THRESHOLD': 120, # deg/s
-            'MAX_STEERING_RATE': 756, # deg/s (e.g., lock-to-lock in ~1 sec)
+            'STEERING_RATE_THRESHOLD': 40, # deg/s
+            'MAX_STEERING_RATE': 300, # deg/s (e.g., lock-to-lock in ~1 sec)
 
             'C_LonG': 25,
             'C_LatG_Yaw': 35,
@@ -167,12 +167,17 @@ class DrivingScoreEvaluator:
             safety_score = self._calculate_safety_score(current_timestamp)
             self.last_safety_score_calc_time = current_timestamp
 
+        should_send_event = False
+
         if eco_score is not None:
             self.eco_score = eco_score
+            should_send_event = True
         if safety_score is not None:
             self.safety_score = safety_score
-            
-        self._send_event(self.safety_score, self.eco_score, "")
+            should_send_event = True
+
+        if should_send_event:
+            self._send_event(self.safety_score, self.eco_score, "")
         self._log_message(f"Time: {current_timestamp:.1f}s | Eco Score: {self.eco_score:.2f} | Safety Score: {self.safety_score:.2f}")
         return eco_score, safety_score
 
@@ -203,7 +208,6 @@ class DrivingScoreEvaluator:
             buffer.trim_older_than(oldest_safety_ts)
 
     def _calculate_eco_score(self, current_timestamp):
-        # --- ECO SCORE USES PRIMITIVE TYPES - NO .value NEEDED ---
         trq_req_data = self.eco_buffers['trq_req'].get_all_items()
         pedal_pos_data = self.eco_buffers['pedal_pos'].get_all_items()
         speed_data = self.eco_buffers['speed'].get_all_items()
@@ -493,7 +497,7 @@ class DrivingScoreEvaluator:
 
         hard_lon_g_pen = self._detect_hard_long_g_event_alternative(last_lon_g_data, current_timestamp)
         agg_corner_pen = self._detect_aggressive_cornering_event(last_lat_g_data, last_yaw_data, current_timestamp)
-        jerky_pen = self._detect_jerky_steering_event(last_steering_angle_data, current_timestamp)
+        jerky_pen = self._detect_jerky_steering_event_alternative(last_steering_angle_data, current_timestamp)
         sys_inter_pen = self._detect_system_intervention_event(last_vsa_tcs_act_data, last_abs_ebd_act_data, current_timestamp)
 
         self.current_safety_window_penalty_sum = 0
@@ -670,6 +674,101 @@ class DrivingScoreEvaluator:
                     self._send_event(self.safety_score, self.eco_score, "Jerky Steering detected")
 
                 self.last_jerky_steering_event_time = current_timestamp
+
+        return penalty
+
+    def _detect_jerky_steering_event_alternative(self, current_steering_angle_data, current_timestamp):
+        """
+        Oscillation-based jerky steering detection without speed filtering
+        """
+        penalty = 0.0
+        recent_steering_history = self.safety_buffers['steering_angle'].get_all_items()
+
+        # Need minimum samples for oscillation detection
+        if len(recent_steering_history) < 6:
+            self._log_message("DEBUG: Not enough steering data for oscillation detection", current_timestamp)
+            return 0.0
+
+        # Direction change frequency (oscillation detection)
+        direction_changes = 0
+        significant_changes = 0
+        total_angle_change = 0.0
+        
+        # Debug: collect steering angles for analysis
+        angles = [float(item[1]) for item in recent_steering_history]
+        
+        for i in range(2, len(recent_steering_history)):
+            prev_angle = float(recent_steering_history[i-2][1])
+            curr_angle = float(recent_steering_history[i-1][1])
+            next_angle = float(recent_steering_history[i][1])
+            
+            # Calculate direction vectors
+            dir1 = curr_angle - prev_angle
+            dir2 = next_angle - curr_angle
+            
+            # Check for direction change (oscillation)
+            if dir1 * dir2 < 0:  # Signs are different = direction change
+                direction_changes += 1
+                angle_change_magnitude = abs(dir1) + abs(dir2)
+                total_angle_change += angle_change_magnitude
+                
+                # Count only significant direction changes
+                if abs(dir1) > 3 and abs(dir2) > 3:  # Lowered threshold for more sensitivity
+                    significant_changes += 1
+        
+        # Time window for frequency calculation
+        time_window = recent_steering_history[-1][0] - recent_steering_history[0][0]
+        
+        if time_window > 0:
+            oscillation_frequency = direction_changes / time_window  # total changes per second
+            significant_frequency = significant_changes / time_window  # significant changes per second
+            avg_change_magnitude = total_angle_change / max(1, direction_changes)
+            
+            # Debug logging - always log for tuning
+            self._log_message(
+                f"DEBUG Steering: Total changes={direction_changes}, "
+                f"Significant={significant_changes}, "
+                f"Freq={oscillation_frequency:.2f}/s, "
+                f"Sig_freq={significant_frequency:.2f}/s, "
+                f"Avg_magnitude={avg_change_magnitude:.1f}°, "
+                f"Window={time_window:.1f}s",
+                current_timestamp
+            )
+            
+            # Detection criteria - more sensitive thresholds
+            jerky_detected = False
+            penalty_reason = ""
+            
+            # Primary detection: High frequency of significant direction changes
+            if significant_frequency > 1.5 and avg_change_magnitude > 8:
+                penalty += min(25, significant_frequency * 10 + avg_change_magnitude * 0.5)
+                jerky_detected = True
+                penalty_reason = f"High significant oscillation: {significant_frequency:.2f}/s, avg {avg_change_magnitude:.1f}°"
+                
+            # Secondary detection: Very high total oscillation frequency
+            elif oscillation_frequency > 3.0 and avg_change_magnitude > 5:
+                penalty += min(20, oscillation_frequency * 4)
+                jerky_detected = True
+                penalty_reason = f"High total oscillation: {oscillation_frequency:.2f}/s"
+                
+            # Tertiary detection: Moderate frequency but large angle changes
+            elif significant_frequency > 0.8 and avg_change_magnitude > 15:
+                penalty += min(15, avg_change_magnitude * 0.8)
+                jerky_detected = True
+                penalty_reason = f"Large angle oscillations: {avg_change_magnitude:.1f}° at {significant_frequency:.2f}/s"
+            
+            # Apply penalty if detected and cooldown period has passed
+            if jerky_detected and (current_timestamp - self.last_jerky_steering_event_time >= self.config['EVENT_COOLDOWN_SEC']):
+                self._log_message(
+                    f"SAFETY: Jerky Steering detected! {penalty_reason}, Penalty={penalty:.2f}",
+                    current_timestamp
+                )
+                self._send_event(self.safety_score, self.eco_score, "Jerky steering pattern detected")
+                self.last_jerky_steering_event_time = current_timestamp
+            elif jerky_detected:
+                # Reset penalty if still in cooldown
+                penalty = 0.0
+                self._log_message(f"DEBUG: Jerky steering detected but in cooldown period", current_timestamp)
 
         return penalty
 

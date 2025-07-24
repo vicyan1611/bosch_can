@@ -11,8 +11,8 @@ from pathlib import Path
 
 # --- Configuration ---
 BASE_DIR = Path(__file__).resolve().parent
-CSV_FILE_PATH = BASE_DIR / 'scoring' / 'driving_simulation_data.csv' # Make sure this matches your CSV file name
-DBC_FILE_PATH = 'BOSCH_CAN.dbc'     # Replace with the actual path to your DBC file
+CSV_FILE_PATH = 'data/decoded_can.csv' # Make sure this matches your CSV file name
+DBC_FILE_PATH = 'data/BOSCH_CAN.dbc'     # Replace with the actual path to your DBC file
 BUS_TYPE = 'socketcan'                  # 'virtual', 'socketcan', 'pcan', etc.
 CHANNEL = 'vcan0'                     # 'vcan0' for virtual, or specify your CAN interface
 
@@ -35,6 +35,7 @@ def simulate_can_traffic(csv_file: str, dbc_file: str, bus_type: str, channel: s
     print(f"Loading data from CSV file: {csv_file}")
     try:
         df = pd.read_csv(csv_file)
+        df.fillna(method='bfill', inplace=True)
         print("CSV file loaded successfully.")
         print(f"Number of data points: {len(df)}")
     except FileNotFoundError:

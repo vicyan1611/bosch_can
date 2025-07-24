@@ -44,7 +44,7 @@ class Simulator:
         running = True
 
         while running:
-            messages = self._recv_many(bus, timeout=timeout)
+            messages = self._recv_many(bus, timeout=0.5)
 
             if messages:
                 start_time = time.time()  # Reset timer when messages are received
