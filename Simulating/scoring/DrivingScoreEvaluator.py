@@ -12,8 +12,8 @@ class DrivingScoreEvaluator:
             'EVENT_CHECK_HISTORY_SEC': 1, # For rate-of-change/duration checks
 
             # Calculation Intervals (seconds)
-            'ECO_CALC_INTERVAL_SEC': 2.0,
-            'SAFETY_CALC_INTERVAL_SEC': 0.5,
+            'ECO_CALC_INTERVAL_SEC': 3.0,
+            'SAFETY_CALC_INTERVAL_SEC': 3.0,
 
             # Eco-Friendly Thresholds & Weights
             'MIN_SPEED_FOR_RPM_RATIO_CALC': 5.0, # km/h
@@ -47,7 +47,7 @@ class DrivingScoreEvaluator:
             'MAX_LAT_G': 9.8, # m/s^2
             'MAX_YAW_RATE': 80, # deg/s
 
-            'STEERING_RATE_THRESHOLD': 40, # deg/s
+            'STEERING_RATE_THRESHOLD': 5, # deg/s
             'MAX_STEERING_RATE': 300, # deg/s (e.g., lock-to-lock in ~1 sec)
 
             'C_LonG': 25,
@@ -57,7 +57,7 @@ class DrivingScoreEvaluator:
 
             'ALPHA_LON_G': -1.5,
             'BETA_LAT_G_YAW': -1.0,
-            'GAMMA_STEERING': -1.0,
+            'GAMMA_STEERING': 1.0,
             
             'IDLING_COOLDOWN_SEC': 10.0,  # Idling event cooldown
             'SCORE_UPDATE_COOLDOWN_SEC': 1.0,  # Score update cooldown
@@ -97,8 +97,6 @@ class DrivingScoreEvaluator:
             'high_rpm': 0.0,
             'idling': 0.0,
             'gear_change': 0.0,
-
-
         }
 
         # --- Persistent State for Scoring ---
@@ -514,6 +512,7 @@ class DrivingScoreEvaluator:
         last_speed_data = self.safety_buffers['speed_safety'].get_last_value()
         last_vsa_tcs_act_data = self.safety_buffers['vsa_tcs_act'].get_last_value()
         last_abs_ebd_act_data = self.safety_buffers['abs_ebd_act'].get_last_value()
+        pedal_pos_data = self.eco_buffers['pedal_pos'].get_all_items()
 
         if not all([last_lon_g_data, last_lat_g_data, last_yaw_data, last_steering_angle_data, last_speed_data]):
             return 100.0
@@ -522,15 +521,17 @@ class DrivingScoreEvaluator:
         agg_corner_pen = self._detect_aggressive_cornering_event(last_lat_g_data, last_yaw_data, current_timestamp)
         jerky_pen = self._detect_jerky_steering_event_alternative(last_steering_angle_data, current_timestamp)
         sys_inter_pen = self._detect_system_intervention_event(last_vsa_tcs_act_data, last_abs_ebd_act_data, current_timestamp)
+        pedal_pen = self._detect_pedal_press(pedal_pos_data, current_timestamp)
 
         self.current_safety_window_penalty_sum = 0
         self.current_safety_window_penalty_sum += hard_lon_g_pen
         self.current_safety_window_penalty_sum += agg_corner_pen
         self.current_safety_window_penalty_sum += jerky_pen
         self.current_safety_window_penalty_sum += sys_inter_pen
+        self.current_safety_window_penalty_sum += pedal_pen
             
         score_safety = max(0, 100 - self.current_safety_window_penalty_sum)
-        self._log_message(f"Safety Sub-Scores: Hard Long G={hard_lon_g_pen:.2f}, Aggressive Cornering={agg_corner_pen:.2f}, Jerky Steering={jerky_pen:.2f}, System Intervention={sys_inter_pen:.2f}, penalty={self.current_safety_window_penalty_sum:.2f}", current_timestamp)
+        self._log_message(f"Safety Sub-Scores: Hard Long G={hard_lon_g_pen:.2f}, Aggressive Cornering={agg_corner_pen:.2f}, Jerky Steering={jerky_pen:.2f}, System Intervention={sys_inter_pen:.2f}, Pedal={pedal_pen:.2f}, penalty={self.current_safety_window_penalty_sum:.2f}", current_timestamp)
         return score_safety
 
     def _detect_hard_long_g_event(self, current_lon_g_data, current_timestamp):
@@ -570,6 +571,164 @@ class DrivingScoreEvaluator:
 
         return penalty
 
+    def _detect_pedal_press(self, pedal_pos_data, current_timestamp):
+        """
+        Detects aggressive acceleration based on pedal position patterns.
+        Analyzes pedal press rate, sustained high pedal positions, and sudden changes.
+        """
+        penalty = 0.0
+        
+        if len(pedal_pos_data) < 2:
+            return 0.0
+        
+        # Extract pedal positions and timestamps
+        pedal_positions = [data[1] for data in pedal_pos_data]
+        timestamps = [data[0] for data in pedal_pos_data]
+        
+        # Calculate current pedal position and average
+        current_pedal_pos = pedal_positions[-1]
+        avg_pedal_pos = sum(pedal_positions) / len(pedal_positions)
+        max_pedal_pos = max(pedal_positions)
+        
+        # Calculate pedal press rates (change per second)
+        pedal_rates = []
+        for i in range(1, len(pedal_pos_data)):
+            dt = timestamps[i] - timestamps[i-1]
+            if dt > 0:
+                rate = (pedal_positions[i] - pedal_positions[i-1]) / dt
+                pedal_rates.append(rate)
+        
+        # Calculate metrics for aggressive detection
+        max_press_rate = max(pedal_rates) if pedal_rates else 0
+        avg_press_rate = sum([r for r in pedal_rates if r > 0]) / max(1, len([r for r in pedal_rates if r > 0]))
+        
+        # Calculate standard deviation of pedal position (indicates erratic behavior)
+        pedal_std_dev = 0
+        if len(pedal_positions) > 1:
+            mean_pos = sum(pedal_positions) / len(pedal_positions)
+            variance = sum((pos - mean_pos) ** 2 for pos in pedal_positions) / len(pedal_positions)
+            pedal_std_dev = variance ** 0.5
+        
+        # Count sudden pedal changes (aggressive inputs)
+        sudden_changes = 0
+        large_changes = 0
+        time_window = timestamps[-1] - timestamps[0] if len(timestamps) > 1 else 1.0
+        
+        SUDDEN_CHANGE_THRESHOLD = 15.0  # % change per second
+        LARGE_CHANGE_THRESHOLD = 25.0   # % absolute change
+        
+        for i in range(1, len(pedal_pos_data)):
+            dt = timestamps[i] - timestamps[i-1]
+            if dt > 0:
+                change_rate = abs(pedal_positions[i] - pedal_positions[i-1]) / dt
+                change_magnitude = abs(pedal_positions[i] - pedal_positions[i-1])
+                
+                if change_rate > SUDDEN_CHANGE_THRESHOLD:
+                    sudden_changes += 1
+                if change_magnitude > LARGE_CHANGE_THRESHOLD:
+                    large_changes += 1
+        
+        # Calculate frequencies
+        sudden_change_frequency = sudden_changes / time_window if time_window > 0 else 0
+        large_change_frequency = large_changes / time_window if time_window > 0 else 0
+        
+        # Calculate time spent at high pedal positions
+        high_pedal_time = 0.0
+        extreme_pedal_time = 0.0
+        total_time = time_window
+        
+        HIGH_PEDAL_THRESHOLD = 50.0    # % - sustained high acceleration
+        EXTREME_PEDAL_THRESHOLD = 70.0 # % - extreme acceleration
+        
+        for i in range(1, len(pedal_pos_data)):
+            dt = timestamps[i] - timestamps[i-1]
+            if dt > 0:
+                if pedal_positions[i] > EXTREME_PEDAL_THRESHOLD:
+                    extreme_pedal_time += dt
+                elif pedal_positions[i] > HIGH_PEDAL_THRESHOLD:
+                    high_pedal_time += dt
+        
+        high_pedal_proportion = high_pedal_time / total_time if total_time > 0 else 0
+        extreme_pedal_proportion = extreme_pedal_time / total_time if total_time > 0 else 0
+        
+        # Detection logic with tiered penalties
+        aggressive_detected = False
+        penalty_reason = ""
+        detection_method = ""
+        
+        # Method 1: Extremely rapid pedal press (slam acceleration)
+        if max_press_rate > 70:  # >80% per second change
+            penalty += min(35, max_press_rate * 0.3)
+            aggressive_detected = True
+            penalty_reason = f"Extreme pedal slam: {max_press_rate:.1f}%/s"
+            detection_method = "Pedal_Slam"
+            
+        # Method 2: Sustained extreme pedal position
+        elif extreme_pedal_proportion > 0.3:  # >30% of time at >90% pedal
+            penalty += min(30, extreme_pedal_proportion * 80)
+            aggressive_detected = True
+            penalty_reason = f"Sustained extreme acceleration: {extreme_pedal_proportion:.1%} at >{EXTREME_PEDAL_THRESHOLD}%"
+            detection_method = "Sustained_Extreme"
+            
+        # Method 3: High frequency of sudden pedal changes
+        elif sudden_change_frequency > 1.5:  # More than 1.5 sudden changes per second
+            penalty += min(25, sudden_change_frequency * 15)
+            aggressive_detected = True
+            penalty_reason = f"Frequent sudden pedal changes: {sudden_change_frequency:.2f}/s"
+            detection_method = "Frequent_Changes"
+            
+        # Method 4: High pedal position with erratic behavior
+        elif avg_pedal_pos > 75 and pedal_std_dev > 15:
+            penalty += min(20, (avg_pedal_pos - 50) * 0.3 + pedal_std_dev * 0.5)
+            aggressive_detected = True
+            penalty_reason = f"Erratic high pedal: avg={avg_pedal_pos:.1f}%, std={pedal_std_dev:.1f}%"
+            detection_method = "Erratic_High"
+            
+        # Method 5: High sustained pedal with rapid average press rate
+        elif high_pedal_proportion > 0.5 and avg_press_rate > 30:
+            penalty += min(20, high_pedal_proportion * 25 + avg_press_rate * 0.3)
+            aggressive_detected = True
+            penalty_reason = f"Sustained aggressive driving: {high_pedal_proportion:.1%} high pedal, avg rate {avg_press_rate:.1f}%/s"
+            detection_method = "Sustained_Aggressive"
+            
+        # Method 6: Large pedal changes with high frequency
+        elif large_change_frequency > 0.8 and max_pedal_pos > 80:
+            penalty += min(15, large_change_frequency * 15)
+            aggressive_detected = True
+            penalty_reason = f"Frequent large pedal changes: {large_change_frequency:.2f}/s, max {max_pedal_pos:.1f}%"
+            detection_method = "Large_Changes"
+        
+        # Apply penalty with cooldown (reuse existing event buffer)
+        if aggressive_detected:
+            # Check if we need to add a new cooldown timer for pedal events
+            if not hasattr(self, 'last_aggressive_pedal_event_time'):
+                self.last_aggressive_pedal_event_time = 0.0
+                
+            if (current_timestamp - self.last_aggressive_pedal_event_time >= self.config['EVENT_COOLDOWN_SEC']):
+                self._log_message(
+                    f"SAFETY: Aggressive Pedal Use detected ({detection_method})! {penalty_reason}, Penalty={penalty:.2f}",
+                    current_timestamp
+                )
+                self._send_event(self.safety_score, self.eco_score, f"Aggressive acceleration detected: {penalty_reason}")
+                self.last_aggressive_pedal_event_time = current_timestamp
+            else:
+                # Reset penalty if still in cooldown
+                penalty = 0.0
+                self._log_message(f"DEBUG: Aggressive pedal detected ({detection_method}) but in cooldown: {penalty_reason}", current_timestamp)
+        
+        # Debug logging for analysis
+        self._log_message(
+            f"DEBUG Pedal Analysis: "
+            f"Current={current_pedal_pos:.1f}%, Avg={avg_pedal_pos:.1f}%, Max={max_pedal_pos:.1f}%, "
+            f"Max_rate={max_press_rate:.1f}%/s, Avg_rate={avg_press_rate:.1f}%/s, "
+            f"Std_dev={pedal_std_dev:.1f}%, Sudden_freq={sudden_change_frequency:.2f}/s, "
+            f"High_time={high_pedal_proportion:.1%}, Extreme_time={extreme_pedal_proportion:.1%}",
+            current_timestamp
+        )
+        
+        return penalty
+            
+            
     def _detect_hard_long_g_event_alternative(self, current_lon_g_data, current_timestamp):
         """
         Alternative approach with tiered penalty system
@@ -702,7 +861,7 @@ class DrivingScoreEvaluator:
 
     def _detect_jerky_steering_event_alternative(self, current_steering_angle_data, current_timestamp):
         """
-        Oscillation-based jerky steering detection without speed filtering
+        Improved oscillation-based jerky steering detection with noise filtering
         """
         penalty = 0.0
         recent_steering_history = self.safety_buffers['steering_angle'].get_all_items()
@@ -712,86 +871,152 @@ class DrivingScoreEvaluator:
             self._log_message("DEBUG: Not enough steering data for oscillation detection", current_timestamp)
             return 0.0
 
-        # Direction change frequency (oscillation detection)
+        # Extract angles and apply noise filtering
+        raw_angles = [float(item[1]) for item in recent_steering_history]
+        timestamps = [item[0] for item in recent_steering_history]
+        
+        # Simple moving average filter to reduce noise (window size = 3)
+        filtered_angles = []
+        for i in range(len(raw_angles)):
+            if i < 1:
+                filtered_angles.append(raw_angles[i])
+            elif i < 2:
+                filtered_angles.append((raw_angles[i-1] + raw_angles[i]) / 2)
+            else:
+                filtered_angles.append((raw_angles[i-2] + raw_angles[i-1] + raw_angles[i]) / 3)
+        
+        # Calculate steering rates (degrees per second)
+        steering_rates = []
+        for i in range(1, len(filtered_angles)):
+            dt = timestamps[i] - timestamps[i-1]
+            if dt > 0:
+                rate = abs(filtered_angles[i] - filtered_angles[i-1]) / dt
+                steering_rates.append(rate)
+        
+        # Method 1: High steering rate detection (instantaneous)
+        max_steering_rate = max(steering_rates) if steering_rates else 0
+        avg_steering_rate = sum(steering_rates) / len(steering_rates) if steering_rates else 0
+        
+        # Method 2: Direction change analysis (improved)
         direction_changes = 0
         significant_changes = 0
         total_angle_change = 0.0
+        rapid_reversals = 0
         
-        # Debug: collect steering angles for analysis
-        angles = [float(item[1]) for item in recent_steering_history]
+        # Use a minimum threshold to ignore noise
+        NOISE_THRESHOLD = 1.0  # degrees - ignore changes smaller than this
+        SIGNIFICANT_CHANGE_THRESHOLD = 5.0 
         
-        for i in range(2, len(recent_steering_history)):
-            prev_angle = float(recent_steering_history[i-2][1])
-            curr_angle = float(recent_steering_history[i-1][1])
-            next_angle = float(recent_steering_history[i][1])
+        for i in range(2, len(filtered_angles)):
+            prev_angle = filtered_angles[i-2]
+            curr_angle = filtered_angles[i-1]
+            next_angle = filtered_angles[i]
             
-            # Calculate direction vectors
+            # Calculate direction vectors (with noise filtering)
             dir1 = curr_angle - prev_angle
             dir2 = next_angle - curr_angle
             
-            # Check for direction change (oscillation)
-            if dir1 * dir2 < 0:  # Signs are different = direction change
-                direction_changes += 1
-                angle_change_magnitude = abs(dir1) + abs(dir2)
-                total_angle_change += angle_change_magnitude
-                
-                # Count only significant direction changes
-                if abs(dir1) > 3 and abs(dir2) > 3:  # Lowered threshold for more sensitivity
-                    significant_changes += 1
+            # Only count if changes are above noise threshold
+            if abs(dir1) > NOISE_THRESHOLD and abs(dir2) > NOISE_THRESHOLD:
+                # Check for direction change (oscillation)
+                if dir1 * dir2 < 0:  # Signs are different = direction change
+                    direction_changes += 1
+                    angle_change_magnitude = abs(dir1) + abs(dir2)
+                    total_angle_change += angle_change_magnitude
+                    
+                    # Count significant direction changes
+                    if abs(dir1) > SIGNIFICANT_CHANGE_THRESHOLD and abs(dir2) > SIGNIFICANT_CHANGE_THRESHOLD:
+                        significant_changes += 1
+                    
+                    # Detect rapid reversals (large angle changes in short time)
+                    time_span = timestamps[i] - timestamps[i-2]
+                    if angle_change_magnitude > 15 and time_span < 1.0:  # >15° change in <1s
+                        rapid_reversals += 1
+        
+        # Method 3: Standard deviation of steering angle (indicates erratic behavior)
+        angle_std_dev = 0
+        if len(filtered_angles) > 1:
+            mean_angle = sum(filtered_angles) / len(filtered_angles)
+            variance = sum((angle - mean_angle) ** 2 for angle in filtered_angles) / len(filtered_angles)
+            angle_std_dev = variance ** 0.5
         
         # Time window for frequency calculation
         time_window = recent_steering_history[-1][0] - recent_steering_history[0][0]
         
         if time_window > 0:
-            oscillation_frequency = direction_changes / time_window  # total changes per second
-            significant_frequency = significant_changes / time_window  # significant changes per second
+            oscillation_frequency = direction_changes / time_window
+            significant_frequency = significant_changes / time_window
+            rapid_reversal_frequency = rapid_reversals / time_window
             avg_change_magnitude = total_angle_change / max(1, direction_changes)
             
-            # Debug logging - always log for tuning
+            # Enhanced debug logging
             self._log_message(
-                f"DEBUG Steering: Total changes={direction_changes}, "
-                f"Significant={significant_changes}, "
-                f"Freq={oscillation_frequency:.2f}/s, "
-                f"Sig_freq={significant_frequency:.2f}/s, "
-                f"Avg_magnitude={avg_change_magnitude:.1f}°, "
+                f"DEBUG Steering Analysis: "
+                f"Max_rate={max_steering_rate:.1f}°/s, Avg_rate={avg_steering_rate:.1f}°/s, "
+                f"Total_changes={direction_changes}, Significant={significant_changes}, "
+                f"Rapid_reversals={rapid_reversals}, "
+                f"Osc_freq={oscillation_frequency:.2f}/s, Sig_freq={significant_frequency:.2f}/s, "
+                f"Avg_magnitude={avg_change_magnitude:.1f}°, Std_dev={angle_std_dev:.1f}°, "
                 f"Window={time_window:.1f}s",
                 current_timestamp
             )
             
-            # Detection criteria - more sensitive thresholds
+            # Enhanced detection criteria
             jerky_detected = False
             penalty_reason = ""
+            detection_method = ""
             
-            # Primary detection: High frequency of significant direction changes
-            if significant_frequency > 1.5 and avg_change_magnitude > 8:
-                penalty += min(25, significant_frequency * 10 + avg_change_magnitude * 0.5)
+            # Method 1: Extremely high instantaneous steering rate
+            if max_steering_rate > 60:  # >60 degrees per second
+                penalty += min(30, max_steering_rate * 0.3)
                 jerky_detected = True
-                penalty_reason = f"High significant oscillation: {significant_frequency:.2f}/s, avg {avg_change_magnitude:.1f}°"
+                penalty_reason = f"Extreme steering rate: {max_steering_rate:.1f}°/s"
+                detection_method = "High_Rate"
                 
-            # Secondary detection: Very high total oscillation frequency
-            elif oscillation_frequency > 3.0 and avg_change_magnitude > 5:
-                penalty += min(20, oscillation_frequency * 4)
+            # Method 2: High frequency of rapid reversals
+            elif rapid_reversal_frequency > 0.5:  # More than 0.5 rapid reversals per second
+                penalty += min(25, rapid_reversal_frequency * 40)
                 jerky_detected = True
-                penalty_reason = f"High total oscillation: {oscillation_frequency:.2f}/s"
+                penalty_reason = f"Rapid steering reversals: {rapid_reversal_frequency:.2f}/s"
+                detection_method = "Rapid_Reversals"
                 
-            # Tertiary detection: Moderate frequency but large angle changes
-            elif significant_frequency > 0.8 and avg_change_magnitude > 15:
-                penalty += min(15, avg_change_magnitude * 0.8)
+            # Method 3: High standard deviation indicates erratic steering
+            elif angle_std_dev > 20 and avg_steering_rate > 15:
+                penalty += min(20, angle_std_dev * 0.8)
                 jerky_detected = True
-                penalty_reason = f"Large angle oscillations: {avg_change_magnitude:.1f}° at {significant_frequency:.2f}/s"
+                penalty_reason = f"Erratic steering pattern: std={angle_std_dev:.1f}°, avg_rate={avg_steering_rate:.1f}°/s"
+                detection_method = "Erratic_Pattern"
+                
+            # Method 4: High frequency of significant direction changes
+            elif significant_frequency > 1.0 and avg_change_magnitude > 10:
+                penalty += min(20, significant_frequency * 15)
+                jerky_detected = True
+                penalty_reason = f"Frequent significant oscillations: {significant_frequency:.2f}/s, avg {avg_change_magnitude:.1f}°"
+                detection_method = "Frequent_Oscillations"
+                
+            # Method 5: Moderate but sustained oscillation
+            elif oscillation_frequency > 2.0 and avg_change_magnitude > 5:
+                penalty += min(15, oscillation_frequency * 5)
+                jerky_detected = True
+                penalty_reason = f"Sustained oscillation: {oscillation_frequency:.2f}/s"
+                detection_method = "Sustained_Oscillation"
             
             # Apply penalty if detected and cooldown period has passed
             if jerky_detected and (current_timestamp - self.last_jerky_steering_event_time >= self.config['EVENT_COOLDOWN_SEC']):
                 self._log_message(
-                    f"SAFETY: Jerky Steering detected! {penalty_reason}, Penalty={penalty:.2f}",
+                    f"SAFETY: Jerky Steering detected ({detection_method})! {penalty_reason}, Penalty={penalty:.2f}",
                     current_timestamp
                 )
-                self._send_event(self.safety_score, self.eco_score, "Jerky steering pattern detected")
+                self._send_event(self.safety_score, self.eco_score, f"Jerky steering detected: {penalty_reason}")
                 self.last_jerky_steering_event_time = current_timestamp
             elif jerky_detected:
                 # Reset penalty if still in cooldown
                 penalty = 0.0
-                self._log_message(f"DEBUG: Jerky steering detected but in cooldown period", current_timestamp)
+                self._log_message(f"DEBUG: Jerky steering detected ({detection_method}) but in cooldown: {penalty_reason}", current_timestamp)
+            else:
+                # Log when no jerky steering is detected for debugging
+                if direction_changes > 0:
+                    self._log_message(f"DEBUG: Normal steering detected - no jerky behavior", current_timestamp)
 
         return penalty
 

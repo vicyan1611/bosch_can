@@ -77,8 +77,7 @@ class DrivingScenarioSimulator:
         
         while self.current_time < end_time:
             # Aggressive acceleration (should exceed 3.9 m/s^2 threshold)
-            self.acceleration = 6.0 + random.uniform(-1, 1)  # ~0.6G acceleration
-            self.speed = max(0, self.speed + self.acceleration * 3.6 * self.dt)
+            self.speed = 0
             
             # High RPM due to aggressive driving
             self.rpm = max(800, 2000 + self.speed * 40)
@@ -123,20 +122,23 @@ class DrivingScenarioSimulator:
         return packets
     
     def generate_aggressive_cornering(self, duration_sec: float) -> List[CANDataPacket]:
-        """Generate aggressive cornering with high lateral G and yaw rates"""
+        """Generate aggressive cornering with rapid, large steering changes."""
         packets = []
         end_time = self.current_time + duration_sec
-        
-        # Set a moderate speed for cornering
-        self.speed = 60.0
-        
+
+        self.speed = 60.0  # Stable cornering speed
+
+        # Steering change config
+        steering_amplitude = 120  # Large swings: ±120°
+        steering_freq = 4.0  # Rapid oscillation (4 full swings/sec)
+        jitter = 15  # Add randomness
+
         while self.current_time < end_time:
-            # Maintain speed through corner
-            self.acceleration = random.uniform(-0.5, 0.5)
+            # Minor acceleration fluctuation
+            self.acceleration = random.uniform(-0.3, 0.3)
             self.speed = max(0, self.speed + self.acceleration * 3.6 * self.dt)
-            
-            # RPM for constant speed
             self.rpm = 1500 + self.speed * 25
+<<<<<<< Updated upstream
             
             # Aggressive steering input (high rate of change)
             steering_freq = 0.5  # Fast steering changes
@@ -145,12 +147,24 @@ class DrivingScenarioSimulator:
             # Moderate pedal to maintain speed
             self.pedal_position = 30 + random.uniform(-5, 5)
             
+=======
+
+            # Force aggressive steering: sinusoidal + jitter
+            raw_angle = steering_amplitude * math.sin(2 * math.pi * steering_freq * self.current_time)
+            self.steering_angle = raw_angle + random.uniform(-jitter, jitter)
+
+            # Maintain moderate throttle
+            self.pedal_position = 30 + random.uniform(-3, 3)
+
+>>>>>>> Stashed changes
             packet = self._create_packet()
             packets.append(packet)
-            
+
             self.current_time += self.dt
-            
+
         return packets
+
+
     
     def generate_system_intervention(self, duration_sec: float) -> List[CANDataPacket]:
         """Generate scenarios where VSA/TCS or ABS systems activate"""
